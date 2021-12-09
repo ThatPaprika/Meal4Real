@@ -14,8 +14,13 @@
     <h3>If you are ready, put ready next to your name ! </h3>
     <span>Steven : Ready !</span><br>
     <span>Akram : </span><br>
+<<<<<<< Updated upstream
     <span>Mike : </span><br>
     <span>Michel : Ready </span><br>
+=======
+    <span>Mike : Ready !</span><br>
+    <span>Michel : </span><br>
+>>>>>>> Stashed changes
 
 
 </body>
