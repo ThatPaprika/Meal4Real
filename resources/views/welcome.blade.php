@@ -11,6 +11,7 @@
 
 <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <h1>Let's Go!!!</h1>
     <h3>If you are ready, put ready next to your name ! </h3>
     <span>Steven : Ready !</span><br>
@@ -24,6 +25,8 @@
     <span>Mike : Ready !</span><br>
 
 =======
+=======
+>>>>>>> main
     <div class="container-fluid">
         <div class="header d-flex justify-content-center align-items-center" style="height:80px;">
             
