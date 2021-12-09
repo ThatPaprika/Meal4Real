@@ -17,11 +17,11 @@
 
     <span>Akram : Ready </span><br>
 
-    
+
     <span>Michel : Ready </span><br>
 
     <span>Mike : Ready !</span><br>
-    
+
 
 
 
