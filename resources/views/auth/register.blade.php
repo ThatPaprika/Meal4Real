@@ -1,59 +1,58 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<html lang="en">
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+<body style="background-color:#E3E3E3">
+    <div class="container-fluid p-3">
+        <div style="height:10%"></div>
+        <div class="d-flex flex-column align-items-center justify-content-center" style="height:30%">
 
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
-
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+            <div class="mt-5 mb-5 logo" style="height:120px;width:120px;border-radius:140px;background-color:#C4C4C4">
             </div>
+        </div>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
+        <div class="d-flex justify-content-center align-items-center ">
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+            <form style="width : 100%;" method="POST" action="{{ route('register') }}">
+                @csrf
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
+                <div>
+                    <input type="text" name="first_name" placeholder="First Name" class="mt-2 mb-2" id="" style="width:100%;border-radius:10px;height:45px;border:0;">
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                </div>
+                <div>
+                    <input type="text" name="last_name" placeholder="Last Name" class="mt-2 mb-2" id="" style="width:100%;border-radius:10px;height:45px;border:0;">
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
+                </div>
+                <div style="width: 100%;">
+                    <input type="password" name="password" placeholder="Password" class="mt-2 mb-2" id="" style="width:100%;border-radius:10px;height:45px;border:0;">
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Confirm Password" class="mt-2 mb-2" id="" style="width:100%;border-radius:10px;height:45px;border:0;">
 
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+                </div>
+
+
+                <button class="mt-3" style="width:100%;height:54px;background-color:rgba(129, 178, 20, 0.9); border:0; border-radius:30px;font-weight:bold">
+                    Log In</button>
+
+                <div class="flex items-center justify-end mt-4 p-2">
+                    <a href="">
+                        <p style="color:black; font-weight:bold;margin:0;">Forgot your password?</p>
+                    </a>
+                    <a href="">
+                        <p style="color:black; font-weight:bold;">Sign Up</p>
+                    </a>
+
+                </div>
+            </form>
+        </div>
+    </div>
