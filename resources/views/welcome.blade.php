@@ -19,18 +19,14 @@
         </div>
 
 
-        <div class="d-flex flex-column justify-content-end" style="height:50%" >
+        <div class="d-flex flex-column justify-content-end" style="height:50%">
             <button class="mt-3"
                 style="width:100%;height:54px;background-color:rgba(129, 178, 20, 0.9); border:0; border-radius:30px;font-weight:bold">
                 Sign In</button>
             <button class="mt-3"
                 style="width:100%;height:54px;background-color:rgba(129, 178, 20, 0.9); border:0; border-radius:30px;font-weight:bold">
                 Sign Up</button>
-
         </div>
-    </div>
-
-
 
 
 </body>
