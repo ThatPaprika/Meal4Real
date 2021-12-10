@@ -4,29 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Welcome page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fruktur&family=Mochiy+Pop+P+One&display=swap"
+        rel="stylesheet">
 </head>
 
-<body style="background-color:#E3E3E3">
+<body style="background-color:#FF4B3A">
     <div class="container-fluid p-3">
-        <div style="height:10%"></div>
-        <div class="d-flex flex-column align-items-center justify-content-center" style="height:30%">
-            <h2>We are Meal4Real</h2>
-            <div class="mt-5 mb-5 logo" style="height:120px;width:120px;border-radius:140px;background-color:#C4C4C4">
+
+        <div class="d-flex align-items-start justify-content-start " style="height:30%;">
+            <div class="mt-4 mb-5 mx-2 logo" style="height:73px;width:73px;border-radius:140px;background-color:#C4C4C4">
             </div>
         </div>
-
-
-        <div class="d-flex flex-column justify-content-end" style="height:50%">
-            <button class="mt-3"
-                style="width:100%;height:54px;background-color:rgba(129, 178, 20, 0.9); border:0; border-radius:30px;font-weight:bold">
-                Sign In</button>
-            <button class="mt-3"
-                style="width:100%;height:54px;background-color:rgba(129, 178, 20, 0.9); border:0; border-radius:30px;font-weight:bold">
-                Sign Up</button>
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <h2
+                style="font-family: SF Pro Rounded;font-style: normal;font-weight: 800;font-size: 65px;line-height: 86.84%;color:white;">
+                Food for </h2>
+        </div>
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <h2
+                style="font-family: SF Pro Rounded;font-style: normal;font-weight: 800;font-size: 65px;line-height: 86.84%;color:white;">
+                Everyone</h2>
         </div>
 
+        <div class="d-flex flex-column justify-content-end align-items-end " style="height:50%;">
+            <div class="d-flex flex-column"> <a href=""
+                    style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
+                    Sign In</a>
+                <a href=""
+                    style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
+                    Sign Up</a>
+            </div>
+        </div>
+    </div>
 
 
 </body>
