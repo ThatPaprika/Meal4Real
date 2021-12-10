@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fruktur&family=Mochiy+Pop+P+One&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -27,6 +28,11 @@
         </div>
     </div>
 
+    <div class="d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;">
+        <div><i class="bi bi-house-door-fill" style="font-size: 25px; color: #FA4A0C;"></i></div>
+        <div><i class="bi bi-plus-circle" style="font-size: 25px; color: #FA4A0C;"></i></div>
+        <div><i class="bi bi-list-check" style="font-size: 25px; color: #FA4A0C;"></i></div>
+    </div>
 </body>
 
 </html>
