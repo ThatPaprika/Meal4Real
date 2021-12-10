@@ -25,13 +25,13 @@ class UserController extends Controller
     {
         return view('register');
     }
-    /*
+
     // Submit the form
     public function upload_file_submit(Request $request)
     {
         // File validation
         $request->validate([
-            'myFile' => 'required|mimes:jpeg,pdf'
+            'myFile' => 'required|mimes:jpeg,jpg,jfif,png,pdf'
         ]);
 
         // Rename the file with timestamp
@@ -43,7 +43,7 @@ class UserController extends Controller
         // Save the file in the public/uploads folder
         $request->myFile->move($publicPath, $fileName);
     }
-*/
+
     // Register : 
     public function register()
     {
