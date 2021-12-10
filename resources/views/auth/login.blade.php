@@ -9,15 +9,21 @@
     <title>Document</title>
 </head>
 
-<body style="background-color:#E3E3E3">
-    <div class="container-fluid p-3">
-        <div style="height:10%"></div>
-        <div class="d-flex flex-column align-items-center justify-content-center" style="height:30%">
-            <h2>We are Meal4Real</h2>
-            <div class="mt-5 mb-5 logo" style="height:120px;width:120px;border-radius:140px;background-color:#C4C4C4">
+<body style="background-color:#E5E5E5">
+    <div class="container-fluid p-0">
+
+    <div style="position: relative; height:400px">
+        <div class="d-flex flex-column justify-content-end"
+            style="width:100%;height:400px; background-color:white; box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);border-radius: 30px;top:-15px;position:absolute;top:-25px;">
+            <div class="d-flex justify-content-center">
+                <div style="width:130px;border-bottom:3px solid #FA4A0C;text-align: center;font-weight:bold">Login</div>
+                <div style="width:40px"></div>
+                <div style="width:130px;text-align: center;font-weight:bold">Sign Up</div>
             </div>
         </div>
+    </div>
 
+    <div class="p-5">
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -28,18 +34,30 @@
             @csrf
 
             <!-- Email Address -->
+            <div class="input-group mb-3 ">
+                <input id="email" type="email" class="form-control" name="email" placeholder="Email address" aria-label="Username" aria-describedby="basic-addon1" :value="old('email')" required
+                autofocus>
+            </div>
+            <div class="input-group mb-3 ">
+                <input id="password" type="password" class="form-control" name="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" :value="old('email')" required
+                autocomplete="current-password">
+            </div>
+
+            <!--
             <div>
-                <x-input id="email" class="" type="email" name="email" :value="old('email')"
+                <x-input id="email" class="" type="email" name="email" ://value="old('email')"
                     placeholder="Email" style="width:100%;height:54px;border-radius:10px; border:0;" required
                     autofocus />
             </div>
 
-            <!-- Password -->
+            <-- Password 
             <div class="mt-4">
                 <x-input id="password" class=""
                     style="width:100%;height:54px;border-radius:10px; border:0;" type="password" name="password"
                     placeholder=" Password" required autocomplete="current-password" />
             </div>
+
+            -->
 
             <!-- Remember Me -->
             <div class="block mt-4">
@@ -51,26 +69,25 @@
                 </label>
             </div>
 
+            <div class="flex items-center justify-end mt-4 p-2">
+                @if (Route::has('password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900"
+                        href="{{ route('password.request') }}" style="color:#FA4A0C;font-weight:bold;font-size:16px; text-decoration: none;">
+                        {{ __('Forgot password ?') }}
+                    </a><br>
+                @endif
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <button class="ml-3"
-                    style="width:100%;height:54px;background-color:rgba(129, 178, 20, 0.9); border:0; border-radius:30px;font-weight:bold;color:black;">
+                    style="width:100%;height:54px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
                     {{ __('Log in') }}
                 </button>
             </div>
 
-            <div class="flex items-center justify-end mt-4 p-2">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900"
-                        href="{{ route('password.request') }}" style="color:black;font-weight:bold;">
-                        {{ __('Forgot your password?') }}
-                    </a><br>
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900"
-                        href="{{ route('password.request') }}" style="color:black;font-weight:bold;">
-                        {{ __('Sign Up') }}
-                    </a>
-                @endif
-            </div>
+
         </form>
+    </div>
 
 
 </body>
