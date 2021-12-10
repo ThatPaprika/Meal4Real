@@ -4,55 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
-<body style="background-color:#E3E3E3">
-    <div class="container-fluid p-3">
-        <div style="height:10%"></div>
-        <div class="d-flex flex-column align-items-center justify-content-center" style="height:30%">
+<body style="background-color:#E5E5E5">
+    <div class="container-fluid p-0">
 
-            <div class="mt-5 mb-5 logo" style="height:120px;width:120px;border-radius:140px;background-color:#C4C4C4">
+        <div style="position: relative; height:400px">
+            <div class="d-flex flex-column justify-content-end"
+                style="width:100%;height:400px; background-color:white; box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);border-radius: 30px;top:-15px;position:absolute;top:-25px;">
+                <div class="d-flex justify-content-center">
+                    <div style="width:130px;text-align: center;font-weight:bold">Login
+                    </div>
+                    <div style="width:40px"></div>
+                    <div style="width:130px;text-align: center;font-weight:bold;border-bottom:3px solid #FA4A0C;">Sign Up</div>
+                </div>
             </div>
         </div>
 
+        <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <div class="d-flex justify-content-center align-items-center ">
-
-            <form style="width : 100%;" method="POST" action="{{ route('register') }}">
+        <div class="p-5">
+            <form method="POST" action="{{ route('register') }}">
                 @csrf
 
-                <div>
-                    <input type="text" name="first_name" placeholder="First Name" class="mt-2 mb-2" id="" style="width:100%;border-radius:10px;height:45px;border:0;">
-
+                <!-- Name -->
+                <div class="input-group mb-3 ">
+                    <input id="name" type="text" class="form-control" name="name" placeholder="Name" aria-label="name"
+                        aria-describedby="basic-addon1" :value="old('name')" required autofocus>
                 </div>
-                <div>
-                    <input type="text" name="last_name" placeholder="Last Name" class="mt-2 mb-2" id="" style="width:100%;border-radius:10px;height:45px;border:0;">
 
-                </div>
-                <div style="width: 100%;">
-                    <input type="password" name="password" placeholder="Password" class="mt-2 mb-2" id="" style="width:100%;border-radius:10px;height:45px;border:0;">
-
-                </div>
-                <div>
-                    <input type="password" name="password" placeholder="Confirm Password" class="mt-2 mb-2" id="" style="width:100%;border-radius:10px;height:45px;border:0;">
-
+                <!-- Email Address -->
+                <div class="input-group mb-3 ">
+                    <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="email"
+                        aria-describedby="basic-addon1" :value="old('email')" required>
                 </div>
 
 
-                <button class="mt-3" style="width:100%;height:54px;background-color:rgba(129, 178, 20, 0.9); border:0; border-radius:30px;font-weight:bold">
-                    Log In</button>
+                <!-- Password -->
+                <div class="input-group mb-3 ">
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" aria-label="password"
+                        aria-describedby="basic-addon1"  required autocomplete="new-password">
+                </div>
 
-                <div class="flex items-center justify-end mt-4 p-2">
-                    <a href="">
-                        <p style="color:black; font-weight:bold;margin:0;">Forgot your password?</p>
+
+                <!-- Confirm Password -->
+
+                <div class="input-group mb-3 ">
+                    <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" placeholder="Confirm password" aria-label="password"
+                        aria-describedby="basic-addon1"  required />
+                </div>
+
+
+                <div class="flex items-center justify-end mt-4">
+                    <a class="text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}" style="color:#FA4A0C;font-weight:bold;font-size:16px; text-decoration: none;">
+                        {{ __('Already registered?') }}
                     </a>
-                    <a href="">
-                        <p style="color:black; font-weight:bold;">Sign Up</p>
-                    </a>
-
                 </div>
+
+                <div class="flex items-center justify-end mt-4">
+                    <button class="ml-3"
+                        style="width:100%;height:54px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
+                        {{ __('Sign Up') }}
+                    </button>
+                </div>
+
             </form>
         </div>
+
     </div>
+
+
+</body>
+
+</html>
