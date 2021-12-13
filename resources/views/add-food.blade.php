@@ -25,7 +25,7 @@
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <div class="p-5 d-flex flex-column align-items-center">
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('profile') }}">
                 @csrf
 
                 <div class="d-flex justify-content-center">

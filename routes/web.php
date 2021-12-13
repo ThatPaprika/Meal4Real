@@ -19,15 +19,15 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home_page');
 });
-Route::get('/add_food', function () {
-    return view('add_food');
+Route::get('/add-food', function () {
+    return view('add-food');
 });
 Route::get('/thank_you', function () {
     return view('thank_you');
-});
+})->name('thank-you');
 Route::get('/profile', function () {
     return view('profile');
-});
+})->name('profile');
 
 Route::get('/detail_page', function () {
     return view('detail_page');
@@ -43,3 +43,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
+
+// Food routes
+
+// Show the form :
+Route::get('/books/create', [BookController::class, 'create']);
+// Submit the form :
+Route::post('/books/create', [BookController::class, 'store']);
