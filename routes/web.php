@@ -20,7 +20,7 @@ Route::get('/home', function () {
     return view('home_page');
 });
 Route::get('/add_food', function () {
-    return view('add_food');
+    return view('add-food');
 });
 
 Route::get('/add_food', function () {
@@ -37,7 +37,6 @@ Route::get('/food_list', function () {
 Route::get('/detail_page', function () {
     return view('detail_page');
 });
-
 Route::get('/profile', function () {
     return view('profile');
 });

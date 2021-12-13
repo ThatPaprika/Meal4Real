@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Requests\StoreFoodRequest;
+
 use Illuminate\Http\Request;
 use App\Models\Food;
 use Illuminate\Support\Facades\DB;
@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\DB;
 
 class AddFoodController extends Controller
 {
-    //predefined error message 
     /**
      * Display a listing of the resource.
      *
@@ -17,9 +16,7 @@ class AddFoodController extends Controller
      */
     public function index()
     {
-        $food = Food::all();
-
-        return view('food_list', ['food' => $food]);
+        //
     }
 
     /**
@@ -29,7 +26,16 @@ class AddFoodController extends Controller
      */
     public function create()
     {
-        return view('add_food');
+        $user = new Meal;
+        $user->type = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->password = $request->password;
+
+        if ($user->save())
+            return back()->with('success', 'User was created successfully');
+        else
+            return back()->with('error', 'Problem creating the user');
     }
 
     /**
@@ -38,7 +44,7 @@ class AddFoodController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFoodRequest $request)
+    public function store(Request $request)
     {
         // Validations
         $request->validated();

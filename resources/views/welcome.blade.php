@@ -17,7 +17,7 @@
 <body style="background-color:#FF4B3A">
     <div class="container-fluid p-3">
 
-        <div class="d-flex align-items-start justify-content-start " style="height:30%;">
+        <div class="d-flex align-items-start justify-content-start " style="height:300px;">
             <div class="mt-4 mb-5 mx-2 logo" style="height:73px;width:73px;border-radius:140px;background-color:#C4C4C4">
             </div>
         </div>
@@ -32,7 +32,7 @@
                 Everyone</h2>
         </div>
 
-        <div class="d-flex flex-column justify-content-end align-items-end " style="height:50%;">
+        <div class="d-flex flex-column justify-content-end align-items-end " style="height: calc(100vh - 460px);">
             <div class="d-flex flex-column"> <a href="./login"
                     style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
                     Sign In</a>
