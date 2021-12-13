@@ -22,9 +22,16 @@ Route::get('/home', function () {
 Route::get('/add_food', function () {
     return view('add_food');
 });
-Route::get('/thank_you', function () {
+
+Route::get('/thankyou', function () {
     return view('thank_you');
 });
+
+Route::get('/food_list', function () {
+    return view('food_list');
+});
+Route::get('/detail_page', function () {
+    return view('detail_page');
 Route::get('/profile', function () {
     return view('profile');
 });
