@@ -22,13 +22,9 @@ Route::get('/home', function () {
 Route::get('/add_food', function () {
     return view('add_food');
 });
-Route::get('/food_list', function () {
-    return view('food_list');
+Route::get('/thank_you', function () {
+    return view('thank_you');
 });
-
-
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
