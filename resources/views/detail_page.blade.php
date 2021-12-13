@@ -20,6 +20,7 @@
             <div><i class="far fa-user-circle" style="font-size: 50px; color: gray;"></i></div>
             <div><i class="fas fa-bars" style="font-size: 25px; color: gray;"></i></div>
         </div>
+        
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
