@@ -19,7 +19,8 @@
                     <div style="width:130px;text-align: center;font-weight:bold">Login
                     </div>
                     <div style="width:40px"></div>
-                    <div style="width:130px;text-align: center;font-weight:bold;border-bottom:3px solid #FA4A0C;">Sign Up</div>
+                    <div style="width:130px;text-align: center;font-weight:bold;border-bottom:3px solid #FA4A0C;">Sign
+                        Up</div>
                 </div>
             </div>
         </div>
@@ -33,34 +34,44 @@
 
                 <!-- Name -->
                 <div class="input-group mb-3 ">
-                    <input id="name" type="text" class="form-control" name="name" placeholder="Name" aria-label="name"
-                        aria-describedby="basic-addon1" :value="old('name')" required autofocus>
+                    <input id="first_name" type="text" class="form-control" name="first_name" placeholder="First Name"
+                        aria-label="first_name" aria-describedby="basic-addon1" :value="old('first_name')" required
+                        autofocus>
+                </div>
+
+                <!-- Name -->
+                <div class="input-group mb-3 ">
+                    <input id="last_name" type="text" class="form-control" name="last_name" placeholder="Last Name"
+                        aria-label="last_name" aria-describedby="basic-addon1" :value="old('last_name')" required
+                        autofocus>
                 </div>
 
                 <!-- Email Address -->
                 <div class="input-group mb-3 ">
-                    <input id="email" type="email" class="form-control" name="email" placeholder="Email" aria-label="email"
-                        aria-describedby="basic-addon1" :value="old('email')" required>
+                    <input id="email" type="email" class="form-control" name="email" placeholder="Email"
+                        aria-label="email" aria-describedby="basic-addon1" :value="old('email')" required>
                 </div>
 
 
                 <!-- Password -->
                 <div class="input-group mb-3 ">
-                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" aria-label="password"
-                        aria-describedby="basic-addon1"  required autocomplete="new-password">
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password"
+                        aria-label="password" aria-describedby="basic-addon1" required autocomplete="new-password">
                 </div>
 
 
                 <!-- Confirm Password -->
 
                 <div class="input-group mb-3 ">
-                    <input id="password_confirmation" type="password" class="form-control" name="password_confirmation" placeholder="Confirm password" aria-label="password"
-                        aria-describedby="basic-addon1"  required />
+                    <input id="password_confirmation" type="password" class="form-control"
+                        name="password_confirmation" placeholder="Confirm password" aria-label="password"
+                        aria-describedby="basic-addon1" required />
                 </div>
 
 
                 <div class="flex items-center justify-end mt-4">
-                    <a class="text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}" style="color:#FA4A0C;font-weight:bold;font-size:16px; text-decoration: none;">
+                    <a class="text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}"
+                        style="color:#FA4A0C;font-weight:bold;font-size:16px; text-decoration: none;">
                         {{ __('Already registered?') }}
                     </a>
                 </div>
