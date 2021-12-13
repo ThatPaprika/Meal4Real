@@ -33,10 +33,10 @@
         </div>
 
         <div class="d-flex flex-column justify-content-end align-items-end " style="height:50%;">
-            <div class="d-flex flex-column"> <a href=""
+            <div class="d-flex flex-column"> <a href="./login"
                     style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
                     Sign In</a>
-                <a href=""
+                <a href="./register"
                     style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
                     Sign Up</a>
             </div>

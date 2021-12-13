@@ -91,13 +91,14 @@
         </div>
 
 
-        <div class="d-flex justify-content-evenly align-items-center"
-            style="width:100%;position:fixed;bottom:0%;background-color: lightgray; height:80px;">
-            <div><i class="bi bi-house-door-fill" style="font-size: 25px; color: gray;"></i></div>
-            <div><i class="bi bi-plus-circle" style="font-size: 25px; color: #FA4A0C;"></i></div>
-            <div><i class="bi bi-list-check" style="font-size: 25px; color: gray;"></i></div>
+        <div class="m-0 d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;">
+            <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:gray;"></i></a>
+            </div>
+            <div><a href="./add_food"><i class="bi bi-plus-circle" style="font-size: 25px; color:gray;"></i></a>
+            </div>
+            <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color: #FA4A0C;"></i></a>
+            </div>
         </div>
-    </div>
 
 
 

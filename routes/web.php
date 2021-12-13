@@ -25,8 +25,14 @@ Route::get('/add_food', function () {
 Route::get('/thank_you', function () {
     return view('thank_you');
 });
-Route::get('/detail_page', function () {
-    return view('detail_page');
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/about', function () {
+    return view('about_us');
+});
+Route::get('/food_list', function () {
+    return view('food_list');
 });
 Route::get('/dashboard', function () {
     return view('dashboard');
