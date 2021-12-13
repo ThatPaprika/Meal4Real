@@ -41,23 +41,26 @@
                 <h3> Added sucessfully</h3>
                 <h3>thank you for saving the planet</h3>
             </div>
-            <div class="d-flex align-items-center justify-content-center p-4">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                    dolor.Aenean massa. Cum sociis natoque</p>
-            </div>
-            <div class="m-5  d-flex justify-content-center align-items-center ">
-                <div class="d-flex justify-content-center align-items-center "
-                    style="width:212px;height:120px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <i class="far fa-image"></i>
 
+            <div class="row">
+                <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
+                    <div class="d-flex justify-content-center align-items-center "
+                        style="width:212px;height:120px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                        <i class="far fa-image"></i>
+    
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                        dolor.Aenean massa. Cum sociis natoque</p>
                 </div>
             </div>
         </div>
-        <div class="m-0 d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;">
+        <div class="m-0  d-sm-none d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;">
             <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:white;"></i></a>
             </div>
             <div><a href="./add_food"><i class="bi bi-plus-circle" style="font-size: 25px; color:white;"></i></a> </div>
-            <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color: white;"></i></a>
+            <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color:white;"></i></a>
             </div>
         </div>
     </div>
