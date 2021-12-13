@@ -32,6 +32,7 @@ Route::get('/food_list', function () {
 });
 Route::get('/detail_page', function () {
     return view('detail_page');
+});
 Route::get('/profile', function () {
     return view('profile');
 });
