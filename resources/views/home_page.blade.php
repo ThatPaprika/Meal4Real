@@ -29,7 +29,7 @@
             <div><i class="far fa-user-circle" style="font-size: 50px; color: gray;"></i></div>
             <div><i class="fas fa-bars" style="font-size: 25px; color: gray;"></i></div>
         </div>-->
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light" style="min-height:80px">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Meal4Real</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
