@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreFoodRequest;
 use Illuminate\Http\Request;
 use App\Models\Food;
+use Illuminate\Support\Facades\DB;
+
 
 class AddFoodController extends Controller
 {
@@ -60,12 +62,12 @@ class AddFoodController extends Controller
         
         // STILL TO CHANGE !!!!!!
 
-        $result = DB::insert("INSERT INTO meal_details (type, meal_name, description, adress) VALUES(?, ?)", [$request->type, $request->meal_name, $request->description,$request->adress,]);
+        $result = DB::insert("INSERT INTO meal_details (type, meal_name, description, adress) VALUES(?, ?, ?, ?)", [$request->type, $request->meal_name, $request->description,$request->adress,]);
 
         if ($food->save())
             return back()->with('success', 'Your food was added succesfully');
         else
-            return back()->with('error', 'Something wrong with the DB.');
+            return back()->with('error', 'Something went wrong adding your food');
     }
 
     /**
@@ -78,7 +80,7 @@ class AddFoodController extends Controller
     {
         $food = Food::find($id);
 
-        return view('food_detail', ['food' => $food]);
+        return view('food_details', ['food' => $food]);
     }
 
     /**
@@ -89,9 +91,9 @@ class AddFoodController extends Controller
      */
     public function edit($id)
     {
-        $book = Food::find($id);
+        $food = Food::find($id);
 
-        return view('edit-book', ['food' => $book]);
+        return view('add_food', ['food' => $food]);
     }
 
     /**
@@ -101,17 +103,17 @@ class AddFoodController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreBookRequest $request, $id)
+    public function update(StoreFoodRequest $request, $id)
     {
         // Validations
         $request->validated();
 
-        $book = Book::find($id);
-        $book->title = $request->title;
-        $book->price = $request->price;
-        $book->type = $request->type;
+        $food = Food::find($id);
+        $food->type = $request->type;
+        $food->meal_name = $request->meal_name;
+        $food->type = $request->type;
 
-        if ($book->save())
+        if ($food->save())
             return back()->with('success', 'Updated in the DB');
         else
             return back()->with('error', 'Something wrong with the DB');
@@ -125,9 +127,10 @@ class AddFoodController extends Controller
      */
     public function destroy($id)
     {
-        /*$book = Book::find($id);
-        $book->delete();*/
-        $result = Book::destroy($id);
+        /*$food= Food::find($id);
+        $food->delete();*/
+
+        $result = Food ::destroy($id);
 
         if ($result)
             return back()->with('success', 'Book was deleted from the DB');
