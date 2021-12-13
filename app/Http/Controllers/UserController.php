@@ -1,6 +1,6 @@
 <?php
 
-/**
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -75,12 +75,11 @@ class UserController extends Controller
     }
 
     /**
- * Display the specified resource.
- *
- * @param  int  $id
- * @return \Illuminate\Http\Response
- */
-    /*
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function show($id)
     {
         if (is_numeric($id)) {
@@ -97,7 +96,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    /*
+
     public function edit($id)
     {
         $user = CustomUser::find($id);
@@ -112,7 +111,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    /*-
+
     public function update(StoreUserRequest $request, $id)
     {
         $user = CustomUser::find($id);
@@ -150,10 +149,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    /*
+
     public function destroy($id)
     {
         //
     }
 }
-*/
