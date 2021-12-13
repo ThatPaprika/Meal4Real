@@ -30,31 +30,9 @@ Route::get('/thankyou', function () {
 Route::get('/food_list', function () {
     return view('food_list');
 });
-
-Route::get('/forgot_password', function () {
-    return view('forgot_password');
+Route::get('/detail_page', function () {
+    return view('detail_page');
 });
-
-Route::get('/reset_password', function () {
-    return view('reset_password');
-});
-
-Route::get('/profile', function () {
-    return view('profile');
-});
-
-Route::get('/admin', function () {
-    return view('admin');
-});
-
-Route::get('/about_us', function () {
-    return view('about_us');
-});
-
-Route::get('/details', function () {
-    return view('details');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

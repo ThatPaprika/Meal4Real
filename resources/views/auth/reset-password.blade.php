@@ -1,10 +1,19 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color:#E5E5E5">
+    <div class="container-fluid p-4 d-flex flex-column align-items-center">
+
+        <i class="bi bi-key" style="font-size:150px"></i>
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
@@ -12,37 +21,44 @@
         <form method="POST" action="{{ route('password.update') }}">
             @csrf
 
+            <h2>Reset your Password !</h2>
             <!-- Password Reset Token -->
             <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
             <!-- Email Address -->
             <div>
-                <x-label for="email" :value="__('Email')" />
+                
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus />
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus placeholder="Email" style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;"/>
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                
 
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required />
+                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required placeholder="Password" style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;"/>
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                     type="password"
-                                    name="password_confirmation" required />
+                                    name="password_confirmation" required  placeholder="Confirm Password" style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;"/>
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-button>
+                <button class="ml-3"
+                    style="width:100%;height:54px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
+                 
                     {{ __('Reset Password') }}
-                </x-button>
+                </button>
             </div>
         </form>
-    </x-auth-card>
-</x-guest-layout>
+    </div>
+
+
+</body>
+
+</html>
