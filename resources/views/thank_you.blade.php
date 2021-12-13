@@ -15,39 +15,65 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
 <body style="background-color:#E5E5E5">
     <div class="container-fluid p-0">
 
-        <div class="p-3 d-flex justify-content-between align-items-center"
+        {{-- <div class="p-3 d-flex justify-content-between align-items-center"
             style="width:100%;background-color: #E5E5E5; height:80px;">
             <div><i class="far fa-user-circle" style="font-size: 50px; color: gray;"></i></div>
             <div><i class="fas fa-bars" style="font-size: 25px; color: gray;"></i></div>
-        </div>
+        </div> --}}
+        <nav class="navbar navbar-expand-sm navbar-light bg-light" style="min-height:80px">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Meal4Real</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/add_food">Add Food</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/food_list">Food List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about" tabindex="-1" aria-disabled="true">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <div class="p-0 d-flex flex-column align-items-center">
 
-
-            <div class="p-3 d-flex justify-content-center">
-                <img src="Logo.jpg" alt="" style="width:80px; height:100px">
-            </div>
-            <div class="p-3 d-flex justify-content-center">
-                <i class="fas fa-tint" style="font-size: 30px;color: rgb(39, 37, 37);"></i>
-            </div>
-            <div class="p-4 d-flex flex-column align-items-center justify-content-center">
-                <h3> Added sucessfully</h3>
-                <h3>thank you for saving the planet</h3>
-            </div>
-
             <div class="row">
+                <div class="p-5 d-flex justify-content-center  col-sx-12 col-sm-4 offset-sm-2">
+                    <img src="Logo.jpg" alt="" style="width:50%;">
+                </div>
+
+                <div
+                    class="col-sx-12 col-sm-4 offset-sm-2  d-flex flex-column align-items-center justify-content-center  ">
+                    <h3>Your food was sucessfully added thank you for saving the planet</h3>
+
+                </div>
+            </div>
+            <div class="row p-3">
                 <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
                     <div class="d-flex justify-content-center align-items-center "
-                        style="width:212px;height:120px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                        style="width:100%;height:300px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
                         <i class="far fa-image"></i>
-    
+
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
@@ -56,7 +82,8 @@
                 </div>
             </div>
         </div>
-        <div class="m-0  d-sm-none d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;">
+        <div class="m-0  d-sm-none d-flex justify-content-evenly align-items-center"
+            style="background: lightgray; height:80px;">
             <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:white;"></i></a>
             </div>
             <div><a href="./add_food"><i class="bi bi-plus-circle" style="font-size: 25px; color:white;"></i></a> </div>
@@ -64,4 +91,8 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="/js/sidebars.js"></script>
 </body>
