@@ -26,39 +26,50 @@
             <div><i class="far fa-user-circle" style="font-size: 50px; color: gray;"></i></div>
             <div><i class="fas fa-bars" style="font-size: 25px; color: gray;"></i></div>
         </div>
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
 
         <div class="p-0 d-flex flex-column align-items-center">
 
 
-            <div class="p-3 d-flex justify-content-center">
+            <div class=" d-flex justify-content-center">
                 <img src="Logo.jpg" alt="" style="width:80px; height:100px">
             </div>
-            <div class="p-3 d-flex justify-content-center">
-                <i class="fas fa-tint" style="font-size: 30px;color: rgb(39, 37, 37);"></i>
+
+            <div class=" d-flex flex-column align-items-center justify-content-center">
+                <h3> How we come to </h3>
+                <h3>this idea</h3>
             </div>
-            <div class="p-4 d-flex flex-column align-items-center justify-content-center">
-                <h3> Added sucessfully</h3>
-                <h3>thank you for saving the planet</h3>
+            <div class=" d-flex justify-content-center">
+                <h3>Team</h3>
             </div>
-            <div class="d-flex align-items-center justify-content-center p-4">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                    dolor.Aenean massa. Cum sociis natoque</p>
-            </div>
-            <div class="m-5  d-flex justify-content-center align-items-center ">
+
+            <div class="  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
                     style="width:212px;height:120px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
                     <i class="far fa-image"></i>
 
                 </div>
             </div>
+            <div class=" p-3 d-flex align-items-center justify-content-center">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                    dolor.Aenean massa. Cum sociis natoque</p>
+            </div>
+            <div class="  d-flex justify-content-center align-items-center ">
+                <div class="d-flex justify-content-center align-items-center "
+                    style="width:212px;height:120px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                    <i class="far fa-image"></i>
+
+                </div>
+            </div>
+            <div class="p-3 d-flex align-items-center justify-content-center ">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                    dolor.Aenean massa. Cum sociis natoque</p>
+            </div>
         </div>
-        <div class="m-0 d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;">
-            <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:white;"></i></a>
-            </div>
-            <div><a href="./add_food"><i class="bi bi-plus-circle" style="font-size: 25px; color:white;"></i></a> </div>
-            <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color: white;"></i></a>
-            </div>
+        <div class="m-0 d-flex justify-content-evenly align-items-center" style="background: lightgray; height:60px;">
+            <div><i class="bi bi-house-door-fill" style="font-size: 25px; color:white;"></i></div>
+            <div><i class="bi bi-plus-circle" style="font-size: 25px; color:white;"></i></div>
+            <div><i class="bi bi-list-check" style="font-size: 25px; color: white;"></i></div>
         </div>
     </div>
 </body>
