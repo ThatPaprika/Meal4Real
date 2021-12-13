@@ -27,11 +27,7 @@ Route::get('/thank_you', function () {
 });
 Route::get('/profile', function () {
     return view('profile');
-
-Route::get('/user/{id}/edit', [UserController::class, 'edit'], function () {
-    return view('edit-user');
-})->name('edit-user');
-
+});
 
 Route::get('/detail_page', function () {
     return view('detail_page');
