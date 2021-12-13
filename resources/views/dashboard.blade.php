@@ -14,4 +14,10 @@
             </div>
         </div>
     </div>
+    <div class="flex items-center justify-end mt-4">
+        <a class="text-sm text-gray-600 hover:text-gray-900" href="{{ route('edit-user') }}"
+            style="color:#FA4A0C;font-weight:bold;font-size:16px; text-decoration: none;">
+            {{ __('User information') }}
+        </a>
+    </div>
 </x-app-layout>
