@@ -10,22 +10,48 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Document</title>
+    <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
 <body style="background-color:#E5E5E5">
     <div class="container-fluid p-0">
 
-        <div class="p-3 d-flex justify-content-between align-items-center"
+        {{-- <div class="p-3 d-flex justify-content-between align-items-center"
             style="width:100%;background-color: #E5E5E5; height:80px;">
             <div><i class="far fa-user-circle" style="font-size: 50px; color: gray;"></i></div>
             <div><i class="fas fa-bars" style="font-size: 25px; color: gray;"></i></div>
-        </div>
+        </div> --}}
+        <nav class="navbar navbar-expand-sm navbar-light bg-light" style="min-height:80px">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Meal4Real</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/add_food">Add Food</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/food_list">Food List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about" tabindex="-1" aria-disabled="true">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <div class="p-5 d-flex flex-column align-items-center">
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('add_food') }}">
                 @csrf
 
                 <div class="d-flex justify-content-center">
@@ -86,7 +112,10 @@
 
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="/js/sidebars.js"></script>
 
 
 </body>

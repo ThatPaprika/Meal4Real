@@ -23,6 +23,10 @@ Route::get('/add_food', function () {
     return view('add-food');
 });
 
+Route::get('/add_food', function () {
+    return view('add_food');
+});
+
 Route::get('/thankyou', function () {
     return view('thank_you');
 });
@@ -36,12 +40,16 @@ Route::get('/detail_page', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+Route::post('/profile', function () {
+    return view('profile');
+})->name('profile');
 Route::get('/about', function () {
     return view('about_us');
 });
 Route::get('/food_list', function () {
     return view('food_list');
 });
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
