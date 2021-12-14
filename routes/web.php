@@ -39,6 +39,10 @@ Route::get('/detail_page', function () {
 });
 Route::get('/profile', function () {
     return view('profile');
+})->name('profile');
+
+Route::get('/detail_page', function () {
+    return view('detail_page');
 });
 Route::post('/profile', function () {
     return view('profile');
@@ -55,3 +59,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
+
+// Food routes
+
+// Show the form :
+Route::get('/books/create', [BookController::class, 'create']);
+// Submit the form :
+Route::post('/books/create', [BookController::class, 'store']);
