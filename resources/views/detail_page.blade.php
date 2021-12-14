@@ -59,7 +59,7 @@
                 <h4></h4>
                 <h4>Details page</h4>
             </div>
-            <div class="card mb-5" style="width: 18rem;border-radius:30px">
+            <div class="card mb-5" style="max-width:500px;width:100%;border-radius:30px">
                 <img src="spagetti.jpg" class="card-img-top" alt="..." style="border-radius:30px">
                 <div class="card-body">
 
