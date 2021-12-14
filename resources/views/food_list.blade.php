@@ -61,9 +61,9 @@
                 <h4>They share food</h4>
             </div>
             <div class="card mb-5" style="width: 18rem;border-radius:30px">
-
-                <img src="spagetti.jpg" class="img-fluid" alt="Responsive image style=border-radius:30px">
+                <img src="spagetti.jpg" class="card-img-top" alt="..." style="border-radius:30px">
                 <div class="card-body">
+
                     <h5 class="card-title">
                         <i class="fas fa-utensils"
                             style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
@@ -174,3 +174,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
