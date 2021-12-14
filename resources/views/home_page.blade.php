@@ -96,10 +96,12 @@
 
 
         </div>
-        <div class="d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;">
+        <div class="d-sm-none d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;">
             <div><i class="bi bi-house-door-fill" style="font-size: 25px; color: #FA4A0C;"></i></div>
             <div><i class="bi bi-plus-circle" style="font-size: 25px; color: darkgray;"></i></div>
             <div><i class="bi bi-list-check" style="font-size: 25px; color: darkgray;"></i></div>
+        </div>
+        <div style="background-color:green;height:120px;">
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
