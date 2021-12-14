@@ -21,9 +21,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home_page');
 });
-Route::get('/add-food', function () {
-    return view('add-food');
-})->name('add-food');
+
+
+
 
 Route::get('/thankyou', function () {
     return view('thank_you');
