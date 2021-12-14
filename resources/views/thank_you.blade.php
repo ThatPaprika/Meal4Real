@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Home page</title>
+    <title>Thank you page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -59,20 +59,22 @@
 
             <div class="row">
                 <div class="p-5 d-flex justify-content-center  col-sx-12 col-sm-4 offset-sm-2">
-                    <img src="Logo.jpg" alt="" style="width:50%;">
+
+                    <img src="Logo.jpg" class="img-fluid" alt="Responsive image">
                 </div>
 
                 <div
-                    class="col-sx-12 col-sm-4 offset-sm-2  d-flex flex-column align-items-center justify-content-center  ">
-                    <h3>Your food was sucessfully added thank you for saving the planet</h3>
+                    class="p-3 col-sx-12 col-sm-4 offset-sm-2  d-flex flex-column align-items-center justify-content-center  ">
+                    <h4>Your food was sucessfully added </h4>
+                    <h4>thank you for saving the planet</h4>
 
                 </div>
             </div>
-            <div class="row p-3">
+            <div class="row p-5">
                 <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
                     <div class="d-flex justify-content-center align-items-center "
-                        style="width:100%;height:300px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                        <i class="far fa-image"></i>
+                        style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                        <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
 
                     </div>
                 </div>

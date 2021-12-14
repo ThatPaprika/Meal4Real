@@ -18,7 +18,9 @@
     <div class="container-fluid p-3">
 
         <div class="d-flex align-items-start justify-content-start " style="height:300px;">
+            
             <div class="mt-4 mb-5 mx-2 logo" style="height:73px;width:73px;border-radius:140px;background-color:#C4C4C4">
+        
             </div>
         </div>
         <div class="d-flex flex-row justify-content-center align-items-center">
