@@ -17,31 +17,39 @@
 <body style="background-color:#FF4B3A">
     <div class="container-fluid p-3">
 
-        <div class="d-flex align-items-start justify-content-start " style="height:300px;">
-            
-            <div class="mt-4 mb-5 mx-2 logo" style="height:73px;width:73px;border-radius:140px;background-color:#C4C4C4">
-        
-            </div>
+        <div class="d-flex justify-content-center">
+            <img src="Logo.jpg" alt="" style="width:80px; height:100px">
         </div>
-        <div class="d-flex flex-row justify-content-center align-items-center">
-            <h2
-                style="font-family: SF Pro Rounded;font-style: normal;font-weight: 800;font-size: 65px;line-height: 86.84%;color:white;">
-                Food for </h2>
-        </div>
-        <div class="d-flex flex-row justify-content-center align-items-center">
-            <h2
-                style="font-family: SF Pro Rounded;font-style: normal;font-weight: 800;font-size: 65px;line-height: 86.84%;color:white;">
-                Everyone</h2>
-        </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center align-items-center">
+        <h2
+            style="font-family: SF Pro Rounded;font-style: normal;font-weight: 800;font-size: 65px;line-height: 86.84%;color:white;">
+            Food for </h2>
+    </div>
+    <div class="d-flex flex-row justify-content-center align-items-center">
+        <h2
+            style="font-family: SF Pro Rounded;font-style: normal;font-weight: 800;font-size: 65px;line-height: 86.84%;color:white;">
+            Everyone</h2>
+    </div>
 
-        <div class="d-flex flex-column justify-content-end align-items-end " style="height: calc(100vh - 460px);">
-            <div class="d-flex flex-column"> <a href="./login"
-                    style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
-                    Sign In</a>
-                <a href="./register"
-                    style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
-                    Sign Up</a>
-            </div>
+    <div class="d-block d-sm-none  d-flex flex-column justify-content-end align-items-end "
+        style="height: calc(100vh - 460px);">
+        <div class="d-flex flex-column"> <a href="./login"
+                style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
+                Sign In</a>
+            <a href="./register"
+                style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
+                Sign Up</a>
+        </div>
+    </div>
+
+    <div class="d-none d-sm-block d-flex flex-column  " style="height: calc(100vh - 460px);">
+        <div class="p-5 d-flex flex-column justify-content-center align-items-center"> <a href="./login"
+                style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
+                Sign In</a>
+            <a href="./register"
+                style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px;">
+                Sign Up</a>
         </div>
     </div>
 
