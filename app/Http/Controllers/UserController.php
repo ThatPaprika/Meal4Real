@@ -45,7 +45,7 @@ class UserController extends Controller
             //$books = DB::select('SELECT b.*, a.first_name, a.last_name FROM books b JOIN authors a ON b.author_id = a.id  WHERE b.id = ?', [$id]);
             $user = CustomUser::where('id', $id)->first();
 
-            return view('user-account', ['users' => $user]);
+            return view('profile', ['users' => $user]);
         }
     }
 

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AddFoodController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +21,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home_page');
 });
-Route::get('/add_food', function () {
+Route::get('/add-food', function () {
     return view('add-food');
-});
-
-Route::get('/add_food', function () {
-    return view('add_food');
-});
+})->name('add-food');
 
 Route::get('/thankyou', function () {
     return view('thank_you');
@@ -63,6 +61,13 @@ require __DIR__ . '/auth.php';
 // Food routes
 
 // Show the form :
-Route::get('/books/create', [BookController::class, 'create']);
+Route::get('/add-food', [AddFoodController::class, 'create'])->name('add-food');
 // Submit the form :
-Route::post('/books/create', [BookController::class, 'store']);
+Route::post('/add-food', [AddFoodController::class, 'store']);
+
+// User Controller
+
+// Show the form :
+Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
+// Submit the form :
+Route::post('/edit-user', [UserController::class, 'update']);

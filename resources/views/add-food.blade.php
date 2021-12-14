@@ -34,7 +34,7 @@
                             <a class="nav-link active" aria-current="page" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/add_food">Add Food</a>
+                            <a class="nav-link" href="/add-food">Add Food</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/food_list">Food List</a>
@@ -51,7 +51,7 @@
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <div class="p-5 d-flex flex-column align-items-center">
-            <form method="POST" action="{{ route('add_food') }}">
+            <form method="POST" action="{{ route('add-food') }}">
                 @csrf
 
                 <div class="d-flex justify-content-center">
@@ -78,7 +78,7 @@
                 <div class="mt-3">
                     <i class="fas fa-file-signature"
                         style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
-                    <input type="text" name="name" placeholder="Name"
+                    <input type="text" name="meal_name" placeholder="Meal Name"
                         style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
                 </div>
                 <div class="mt-3">
@@ -104,7 +104,7 @@
         <div class="m-0 d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;">
             <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:gray;"></i></a>
             </div>
-            <div><a href="./add_food"><i class="bi bi-plus-circle" style="font-size: 25px; color:#FA4A0C;"></i></a>
+            <div><a href="./add-food"><i class="bi bi-plus-circle" style="font-size: 25px; color:#FA4A0C;"></i></a>
             </div>
             <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color: gary;"></i></a>
             </div>
