@@ -16,7 +16,7 @@ class AddFoodController extends Controller
      */
     public function index()
     {
-        //
+        return view('auth.register');
     }
 
     /**
@@ -31,7 +31,6 @@ class AddFoodController extends Controller
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->password = $request->password;
-
         if ($user->save())
             return back()->with('success', 'User was created successfully');
         else
