@@ -47,6 +47,7 @@ class AddFoodController extends Controller
         $meal_details->meal_name = $request->meal_name;
         $meal_details->description = $request->description;
         $meal_details->address = $request->address;
+        $meal_details->picture = $request->picture;
 
         if ($meal_details->save())
             return back()->with('success', 'Updated in the DB');
@@ -96,6 +97,7 @@ class AddFoodController extends Controller
         $meal_details->meal_name = $request->meal_name;
         $meal_details->description = $request->description;
         $meal_details->address = $request->address;
+        $meal_details->picture = $request->picture;
 
         if ($meal_details->save())
             return back()->with('success', 'Updated in the DB');

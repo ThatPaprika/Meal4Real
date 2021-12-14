@@ -25,7 +25,7 @@ class StoreFoodRequest extends FormRequest
     {
         return [
             'type' => 'required|string|min:3|max:100',
-            //'meal_name' => 'required|string|min:3|max:30',
+            'meal_name' => 'required|string|min:3|max:30',
             'description' => 'required|string|min:3|max:200',
             'address' => 'required|string|min:3|max:100'
         ];
