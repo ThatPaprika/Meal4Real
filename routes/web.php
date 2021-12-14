@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AddFoodController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +21,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home_page');
 });
-Route::get('/add_food', function () {
+Route::get('/add-food', function () {
     return view('add-food');
-});
-
-Route::get('/add_food', function () {
-    return view('add_food');
-});
+})->name('add-food');
 
 Route::get('/thankyou', function () {
     return view('thank_you');
@@ -39,6 +37,10 @@ Route::get('/detail_page', function () {
 });
 Route::get('/profile', function () {
     return view('profile');
+})->name('profile');
+
+Route::get('/detail_page', function () {
+    return view('detail_page');
 });
 Route::post('/profile', function () {
     return view('profile');
@@ -55,3 +57,17 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
+
+// Food routes
+
+// Show the form :
+Route::get('/add-food', [AddFoodController::class, 'create'])->name('add-food');
+// Submit the form :
+Route::post('/add-food', [AddFoodController::class, 'store']);
+
+// User Controller
+
+// Show the form :
+Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
+// Submit the form :
+Route::post('/edit-user', [UserController::class, 'update']);

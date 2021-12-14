@@ -24,10 +24,10 @@ class StoreFoodRequest extends FormRequest
     public function rules()
     {
         return [
-            'type' =>'required|string|min:10|max:100',
-            'meal_name' => 'required|string|min:10|max:30',
-            'description'=> 'required|string|min:50|max:200',
-            'adress'=>'required|string|min:20|max:100'  
+            'type' => 'required|string|min:3|max:100',
+            //'meal_name' => 'required|string|min:3|max:30',
+            'description' => 'required|string|min:3|max:200',
+            'address' => 'required|string|min:3|max:100'
         ];
     }
 
@@ -36,17 +36,17 @@ class StoreFoodRequest extends FormRequest
     {
         return [
             'type.required' => 'Type is mandatory !',
-            'type.string'=>'Type must be only letters !',
-            'type.between'=>'Type must be between 10 and 100 !',
+            'type.string' => 'Type must be only letters !',
+            'type.between' => 'Type must be between 3 and 100 !',
             'meal_name.required' => 'Name is mandatory !',
             'meal_name.string' => 'Name must be only letters !',
-            'meal_name.between'=>'Name must be between 10 and 30 !',
+            'meal_name.between' => 'Name must be between 3 and 30 !',
             'description.required' => 'Description is mandatory !',
-            'description.string' => 'Description must only have letters !',
-            'description.between' => 'Description must be between 50 and 200 !',
-            'adress.required' => 'Adress is mandatory !',
-            'adress.string' => 'Adress must be only letters',
-            'adress.between' => 'Adress must be between 20 and 100'
+            'description.string' => 'Description must be a short text !',
+            'description.between' => 'Description must be between 3 and 200 characters !',
+            'address.required' => 'Adress is mandatory !',
+            'address.string' => 'Address must be valid !',
+            'address.between' => 'Address must be between 3 and 100 characters !'
         ];
     }
 }

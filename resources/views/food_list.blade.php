@@ -34,7 +34,7 @@
                             <a class="nav-link active" aria-current="page" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/add_food">Add Food</a>
+                            <a class="nav-link" href="/add-food">Add Food</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/food_list">Food List</a>

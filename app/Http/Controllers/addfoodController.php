@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreFoodRequest;
 use App\Models\Food;
+use App\Models\Meal;
 use Illuminate\Support\Facades\DB;
 
 
@@ -26,16 +28,7 @@ class AddFoodController extends Controller
      */
     public function create()
     {
-        $user = new Meal;
-        $user->type = $request->first_name;
-        $user->last_name = $request->last_name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-
-        if ($user->save())
-            return back()->with('success', 'User was created successfully');
-        else
-            return back()->with('error', 'Problem creating the user');
+        return view('add-food');
     }
 
     /**
@@ -44,38 +37,22 @@ class AddFoodController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreFoodRequest $request)
     {
         // Validations
         $request->validated();
 
-        $food = new Food;
-        $food->type = $request->type;
-        $food->meal_name = $request->meal_name;
-        $food->description = $request->description;
-        $food->adress = $request->adress;
+        $meal_details = new Meal;
+        $meal_details->type = $request->type;
+        $meal_details->meal_name = $request->meal_name;
+        $meal_details->description = $request->description;
+        $meal_details->address = $request->address;
 
-
-        
-        $validated = $request->validate([
-            
-                'type' =>'required|string|min:10|max:100',
-                'meal_name' => 'required|string|min:10|max:30',
-                'description'=> 'required|string|min:50|max:200',
-                'adress'=>'required|string|min:20|max:100'            
-        ]);
-
-        
-        // STILL TO CHANGE !!!!!!
-
-        $result = DB::insert("INSERT INTO meal_details (type, meal_name, description, adress) VALUES(?, ?, ?, ?)", [$request->type, $request->meal_name, $request->description,$request->adress,]);
-
-        if ($food->save())
-            return back()->with('success', 'Your food was added succesfully');
+        if ($meal_details->save())
+            return back()->with('success', 'Updated in the DB');
         else
-            return back()->with('error', 'Something went wrong adding your food');
+            return back()->with('error', 'Something wrong with the DB');
     }
-
     /**
      * Display the specified resource.
      *
@@ -84,9 +61,9 @@ class AddFoodController extends Controller
      */
     public function show($id)
     {
-        $food = Food::find($id);
+        $meal_details = Meal::find($id);
 
-        return view('food_details', ['food' => $food]);
+        return view('detail_page', ['meal_details' => $meal_details]);
     }
 
     /**
@@ -97,9 +74,9 @@ class AddFoodController extends Controller
      */
     public function edit($id)
     {
-        $food = Food::find($id);
+        $meal_details = Meal::find($id);
 
-        return view('add_food', ['food' => $food]);
+        return view('add-food', ['meal_details' => $meal_details]);
     }
 
     /**
@@ -114,12 +91,13 @@ class AddFoodController extends Controller
         // Validations
         $request->validated();
 
-        $food = Food::find($id);
-        $food->type = $request->type;
-        $food->meal_name = $request->meal_name;
-        $food->type = $request->type;
+        $meal_details = Meal::find($id);
+        $meal_details->type = $request->type;
+        $meal_details->meal_name = $request->meal_name;
+        $meal_details->description = $request->description;
+        $meal_details->address = $request->address;
 
-        if ($food->save())
+        if ($meal_details->save())
             return back()->with('success', 'Updated in the DB');
         else
             return back()->with('error', 'Something wrong with the DB');
@@ -136,10 +114,10 @@ class AddFoodController extends Controller
         /*$food= Food::find($id);
         $food->delete();*/
 
-        $result = Food ::destroy($id);
+        $result = Meal::destroy($id);
 
         if ($result)
-            return back()->with('success', 'Book was deleted from the DB');
+            return back()->with('success', 'Meal was deleted from the DB');
         else
             return back()->with('error', 'Something wrong with the DB.');
     }
