@@ -113,51 +113,53 @@
 
         </div>
 
-        </div>
-        <div class="d-sm-none d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
-            <div><i class="bi bi-house-door-fill" style="font-size: 25px; color: #FA4A0C;"></i></div>
-            <div><i class="bi bi-plus-circle" style="font-size: 25px; color: darkgray;"></i></div>
-            <div><i class="bi bi-list-check" style="font-size: 25px; color: darkgray;"></i></div>
-        </div>
+    </div>
+    <div class="d-sm-none d-flex justify-content-evenly align-items-center"
+        style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
+        <div><i class="bi bi-house-door-fill" style="font-size: 25px; color: #FA4A0C;"></i></div>
+        <div><i class="bi bi-plus-circle" style="font-size: 25px; color: darkgray;"></i></div>
+        <div><i class="bi bi-list-check" style="font-size: 25px; color: darkgray;"></i></div>
+    </div>
+    <footer class="d-none d-sm-block"
+        style="position:fixed;bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
 
-        <footer class="d-none d-sm-block" style="position:fixed;bottom: 0;width:100%">
-            <hr>
-            <div class="d-flex justify-content-evenly" style="background-color:lightgray;height:120px;">
-                
-                <div class="d-flex align-items-center">
-                    <div style="margin-right:10px">
-                        <img src="Logo.jpg" alt="" style="height:70px">
-                    </div>
-                    <div>
-                        <h4>Meal4Real</h4>
-                        <span>Numericall</span><br>
-                        <span>14 Porte de france L-4360</span><br>
-                        <span>+352 691 123 456</span><br>
-                    </div>
+        <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
+
+            <div class="d-flex align-items-center">
+                <div style="margin-right:10px">
+                    <img src="Logo.jpg" alt="" style="height:70px">
                 </div>
-                <div >
-                    <h4>Follow Us</h4>
-                    <div class="d-flex flex-row justify-content-evenly" >
-                        <i class="bi bi-facebook"></i>
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-twitter"></i>
-                    </div>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <h4>Visit Us</h4>
-                    <span>Maps & Directions</span>
-                    <span>About Us</span>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <h4>Support Us</h4>
-                    <span>Make a gift</span><br>
+                <div>
+                    <h4>Meal4Real</h4>
+                    <span>Numericall</span><br>
+                    <span>14 Porte de france L-4360</span><br>
+                    <span>+352 691 123 456</span><br>
                 </div>
             </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
-        <script src="/js/sidebars.js"></script>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="d-flex flex-row justify-content-evenly">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-twitter"></i>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h4>Visit Us</h4>
+                <span>Maps & Directions</span>
+                <span>About Us</span>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h4>Support Us</h4>
+                <span>Make a gift</span><br>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="/js/sidebars.js"></script>
+
 </body>
 
 </html>
