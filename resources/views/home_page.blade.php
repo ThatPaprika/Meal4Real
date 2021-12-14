@@ -65,37 +65,53 @@
                 <img src="Logo.jpg" alt="" style="width:80px; height:100px">
                 -->
             </div>
-            <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="col-sx-12 col-sm-4 offset-sm-2 d-flex flex-column align-items-center justify-content-center">
                 <h1>Respect for food</h1>
                 <h1>is a respect for life</h1>
             </div>
-            <div class="d-flex justify-content-center align-items-center ">
+
+        </div>
+        <div class="row p-5">
+            <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
-                    style="width:212px;height:120px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <i class="far fa-image"></i>
+                    style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
 
                 </div>
             </div>
-
-            <div class="d-flex align-items-center justify-content-center p-3">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-                    Aenean
-                    massa.
-                    Cum sociis natoque</p>
-            </div>
-            <div class="d-flex justify-content-center align-items-center ">
-                <div class="d-flex justify-content-center align-items-center"
-                    style="width:212px;height:120px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <i class="far fa-image"></i>
-
-                </div>
-            </div>
-            <div class="d-flex align-items-center justify-content-center p-3">
+            <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
                     dolor.Aenean massa. Cum sociis natoque</p>
             </div>
+        </div>
+        <div class="row p-5">
+            <div
+                class="d-block d-sm-none col-xs-12 col-sm-6 d-md-none  d-flex justify-content-center align-items-center ">
+                <div class="d-flex justify-content-center align-items-center "
+                    style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
 
+                </div>
+            </div>
+            <div class="d-block d-sm-none col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                    dolor.Aenean massa. Cum sociis natoque</p>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                    dolor.Aenean massa. Cum sociis natoque</p>
+            </div>
+            <div class="d-none d-sm-block col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
+                <div class="d-flex justify-content-center align-items-center "
+                    style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
 
+                </div>
+            </div>
+
+        </div>
 
         </div>
         <div class="d-sm-none d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
