@@ -68,35 +68,91 @@
                 <h3>Team</h3>
             </div>
 
-            <div class="  d-flex justify-content-center align-items-center ">
-                <div class="d-flex justify-content-center align-items-center "
-                    style="width:212px;height:120px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <i class="far fa-image"></i>
+            <div class="row p-5">
+                <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
+                    <div class="d-flex justify-content-center align-items-center "
+                        style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                        <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
 
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                        dolor.Aenean massa. Cum sociis natoque</p>
                 </div>
             </div>
-            <div class=" p-3 d-flex align-items-center justify-content-center">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                    dolor.Aenean massa. Cum sociis natoque</p>
-            </div>
-            <div class="  d-flex justify-content-center align-items-center ">
-                <div class="d-flex justify-content-center align-items-center "
-                    style="width:212px;height:120px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <i class="far fa-image"></i>
+            <div class="row p-5">
+                <div
+                    class="d-block d-sm-none col-xs-12 col-sm-6 d-md-none  d-flex justify-content-center align-items-center ">
+                    <div class="d-flex justify-content-center align-items-center "
+                        style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                        <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
 
+                    </div>
+                </div>
+                <div class="d-block d-sm-none col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                        dolor.Aenean massa. Cum sociis natoque</p>
                 </div>
             </div>
-            <div class="p-3 d-flex align-items-center justify-content-center ">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                    dolor.Aenean massa. Cum sociis natoque</p>
+            <div class="row p-5">
+                <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                        dolor.Aenean massa. Cum sociis natoque</p>
+                </div>
+                <div class="d-none d-sm-block col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
+                    <div class="d-flex justify-content-center align-items-center "
+                        style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                        <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
+
+                    </div>
+                </div>
+
             </div>
-        </div>
-        <div class="m-0 d-flex justify-content-evenly align-items-center" style="background: lightgray; height:60px;">
-            <div><i class="bi bi-house-door-fill" style="font-size: 25px; color:white;"></i></div>
-            <div><i class="bi bi-plus-circle" style="font-size: 25px; color:white;"></i></div>
-            <div><i class="bi bi-list-check" style="font-size: 25px; color: white;"></i></div>
         </div>
     </div>
+    <div class="d-sm-none d-flex justify-content-evenly align-items-center"
+        style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
+        <div><i class="bi bi-house-door-fill" style="font-size: 25px; color:white;"></i></div>
+        <div><i class="bi bi-plus-circle" style="font-size: 25px; color:white;"></i></div>
+        <div><i class="bi bi-list-check" style="font-size: 25px; color: white;"></i></div>
+    </div>
+
+    <footer class="d-none d-sm-block"
+        style="position:fixed;bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
+
+        <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
+
+            <div class="d-flex align-items-center">
+                <div style="margin-right:10px">
+                    <img src="Logo.jpg" alt="" style="height:70px">
+                </div>
+                <div>
+                    <h4>Meal4Real</h4>
+                    <span>Numericall</span><br>
+                    <span>14 Porte de france L-4360</span><br>
+                    <span>+352 691 123 456</span><br>
+                </div>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="d-flex flex-row justify-content-evenly">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-twitter"></i>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h4>Visit Us</h4>
+                <span>Maps & Directions</span>
+                <span>About Us</span>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h4>Support Us</h4>
+                <span>Make a gift</span><br>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
