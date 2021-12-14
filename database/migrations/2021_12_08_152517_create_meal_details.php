@@ -15,6 +15,7 @@ class CreateMealDetails extends Migration
     {
         Schema::create('meal_details', function (Blueprint $table) {
             $table->id();
+            $table->string('type');
             $table->string('meal_name');
             $table->string('description');
             $table->string('address');
