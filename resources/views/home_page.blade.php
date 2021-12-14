@@ -120,10 +120,10 @@
         <div><i class="bi bi-plus-circle" style="font-size: 25px; color: darkgray;"></i></div>
         <div><i class="bi bi-list-check" style="font-size: 25px; color: darkgray;"></i></div>
     </div>
+    <footer class="d-none d-sm-block"
+        style="position:fixed;bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
 
-    <footer class="d-none d-sm-block" style="position:fixed;bottom: 0;width:100%">
-        <hr>
-        <div class="d-flex justify-content-evenly" style="background-color:lightgray;height:120px;">
+        <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
 
             <div class="d-flex align-items-center">
                 <div style="margin-right:10px">
@@ -159,6 +159,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <script src="/js/sidebars.js"></script>
+
 </body>
 
 </html>
