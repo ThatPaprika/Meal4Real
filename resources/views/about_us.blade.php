@@ -113,9 +113,12 @@
     </div>
     <div class="d-sm-none d-flex justify-content-evenly align-items-center"
         style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
-        <div><i class="bi bi-house-door-fill" style="font-size: 25px; color:white;"></i></div>
-        <div><i class="bi bi-plus-circle" style="font-size: 25px; color:white;"></i></div>
-        <div><i class="bi bi-list-check" style="font-size: 25px; color: white;"></i></div>
+        <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:gray;"></i></a>
+        </div>
+        <div><a href="./add-food"><i class="bi bi-plus-circle" style="font-size: 25px; color:gray;"></i></a>
+        </div>
+        <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color:gray;"></i></a>
+        </div>
     </div>
 
     <footer class="d-none d-sm-block"
