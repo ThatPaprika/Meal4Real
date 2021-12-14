@@ -21,12 +21,8 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home_page');
 });
-Route::get('/add-food', function () {
-    return view('add-food');
-})->name('add-food');
 
-Route::post('/add_food', [AddFoodController::class, 'index'])
-    ->name('add_food');
+
 
 
 Route::get('/thankyou', function () {

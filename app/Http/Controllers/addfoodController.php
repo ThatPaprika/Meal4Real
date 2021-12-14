@@ -18,7 +18,7 @@ class AddFoodController extends Controller
      */
     public function index()
     {
-        return view('auth.register');
+        //return view('auth.register');
     }
 
     /**
@@ -28,15 +28,7 @@ class AddFoodController extends Controller
      */
     public function create()
     {
-        $user = new Meal;
-        $user->type = $request->first_name;
-        $user->last_name = $request->last_name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        if ($user->save())
-            return back()->with('success', 'User was created successfully');
-        else
-            return back()->with('error', 'Problem creating the user');
+        return view('add-food');
     }
 
     /**
