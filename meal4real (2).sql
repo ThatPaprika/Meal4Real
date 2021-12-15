@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2021 at 04:00 PM
+-- Generation Time: Dec 15, 2021 at 12:20 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -76,7 +76,8 @@ CREATE TABLE `meal_details` (
 INSERT INTO `meal_details` (`id`, `type`, `meal_name`, `description`, `address`, `picture`, `user_id`, `created_at`, `updated_at`) VALUES
 (1, 'Pizza', 'Diavola', 'Hot Hot Hot', '14 porte de france', 'test_photo', 0, '2021-12-14 12:57:45', '2021-12-14 12:57:45'),
 (2, 'Pizza', 'Tuna', 'Fishy', '14 orte des sciences', 'test', 2, '2021-12-14 13:36:26', '2021-12-14 13:36:26'),
-(3, 'Pizza', 'Block', 'No comment', '14 dont know', 'C:\\xampp\\tmp\\phpBA0D.tmp', 2, '2021-12-14 13:57:19', '2021-12-14 13:57:19');
+(3, 'Pizza', 'Block', 'No comment', '14 dont know', 'C:\\xampp\\tmp\\phpBA0D.tmp', 2, '2021-12-14 13:57:19', '2021-12-14 13:57:19'),
+(4, 'Noodles', 'Carbonara', 'noodles with sauce', '13, rue lux', '1639560605.png', 3, '2021-12-15 08:30:05', '2021-12-15 08:30:05');
 
 -- --------------------------------------------------------
 
@@ -179,7 +180,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `email_verified_at`, `street_nr`, `street_name`, `zip_code`, `city`, `country`, `type`, `phone_number`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Michel', 'Lambert', 'michel@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$2y$10$COwWzJlXXdpkqphUicvM1ekPhm.bEUtdYSKMKYfvUsKXF.er7L9wi', NULL, '2021-12-14 08:23:44', '2021-12-14 08:23:44'),
-(2, 'Michel', 'Lambert', 'lambert@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$2y$10$jHTYbtWvETzAdVxUOA24/eJVZJ/ukSCqvtP87wFEPxfcQhfIU6YiG', NULL, '2021-12-14 12:53:47', '2021-12-14 12:53:47');
+(2, 'Michel', 'Lambert', 'lambert@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$2y$10$jHTYbtWvETzAdVxUOA24/eJVZJ/ukSCqvtP87wFEPxfcQhfIU6YiG', NULL, '2021-12-14 12:53:47', '2021-12-14 12:53:47'),
+(3, 'Michel', 'lam', 'lami@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$2y$10$IMs5Ds9zAqwkfw06yEzQpuoO4muBmPyfaF8T3BNrlrMZUWRAOkHpu', NULL, '2021-12-15 08:29:22', '2021-12-15 08:29:22');
 
 --
 -- Indexes for dumped tables
@@ -262,7 +264,7 @@ ALTER TABLE `meals_list`
 -- AUTO_INCREMENT for table `meal_details`
 --
 ALTER TABLE `meal_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `meal_pickups_by_user`
@@ -286,7 +288,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
