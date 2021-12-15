@@ -57,7 +57,7 @@
                 <div class="d-flex justify-content-center">
                     <img src="Logo.jpg" alt="" style="width:80px; height:100px">
                 </div>
-                <div class="mb-5">
+                <div class="mb-5 mt-2 d-flex justify-content-center">
                     <h2>Edit meal details</h2>
 
                 </div>
@@ -66,7 +66,7 @@
                     <span class="btn btn-info fileinput-button" style="background-color: #FFFFFF;border:0px"><i
                             class="far fa-image"></i>
                         <div style="position: relative">
-                            <i style="position: absolute;bottom:-50px; right:-80px" class="fas fa-plus-circle"></i>
+
                             <input type="file" name="meal_picture" style="opacity: 0;">
                     </span>
                 </div>
@@ -97,7 +97,7 @@
         <div class="d-flex justify-content-center mt-4" style="width:100%">
             <button class="ml-3"
                 style="width:74px;height:31px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
-                {{ __('Update') }}
+                {{ __('Update.') }}
             </button>
         </div>
 

@@ -62,7 +62,7 @@
                 <div class="d-flex justify-content-center">
                     <img src="Logo.jpg" alt="" style="width:80px; height:100px">
                 </div>
-                <div class="mb-5">
+                <div class="mb5 ">
                     <h2>Don't waste your food</h2>
                     <h2>Give it to someone else </h2>
                 </div>
