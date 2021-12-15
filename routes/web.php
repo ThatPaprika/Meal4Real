@@ -66,3 +66,8 @@ Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
 Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
 // Submit the form :
 Route::post('/edit-user', [UserController::class, 'update']);
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
