@@ -15,37 +15,29 @@ use App\Http\Controllers\UserController;
 |
 */
 
+// Routes for guests
+
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/home', function () {
     return view('home_page');
 });
 
-Route::get('/thankyou', function () {
-    return view('thank_you');
-});
-
-// Show the form :
-Route::get('/food_list', [AddFoodController::class, 'index']);
-
-Route::get('/detail_page', function () {
-    return view('detail_page');
-});
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
-
-
-Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
-
-Route::post('/profile', function () {
-    return view('profile');
-})->name('profile');
 Route::get('/about', function () {
     return view('about_us');
 });
 
+// Only for logged in users
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+
+Route::get('/thankyou', function () {
+    return view('thank_you');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -59,6 +51,14 @@ require __DIR__ . '/auth.php';
 Route::get('/add-food', [AddFoodController::class, 'create'])->name('add-food');
 // Submit the form :
 Route::post('/add-food', [AddFoodController::class, 'store']);
+// Food list
+Route::get('/food_list', [AddFoodController::class, 'index']);
+// Meal detail page
+Route::get('/detail_page', function () {
+    return view('detail_page');
+});
+
+Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
 
 // User Controller
 
@@ -66,4 +66,3 @@ Route::post('/add-food', [AddFoodController::class, 'store']);
 Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
 // Submit the form :
 Route::post('/edit-user', [UserController::class, 'update']);
-
