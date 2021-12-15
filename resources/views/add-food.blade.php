@@ -71,7 +71,7 @@
                     <span class="btn btn-info fileinput-button" style="background-color: #FFFFFF;border:0px"><i
                             class="far fa-image"></i>
                         <div style="position: relative">
-                            <i style="position: absolute;bottom:-50px; right:-80px" class="fas fa-plus-circle"></i>
+
                             <input type="file" name="meal_picture" style="opacity: 0;">
                     </span>
                 </div>
