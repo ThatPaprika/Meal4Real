@@ -11,6 +11,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Document</title>
     <link rel="stylesheet" href="/css/sidebar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/googleAPI.js"></script>
 </head>
 
 <body style="background-color:#E5E5E5">
@@ -51,6 +53,18 @@
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <div class="p-5 d-flex flex-column align-items-center">
+            <!-- test -->
+            
+            <p>Query suggestions for 'pizza near Syd':</p>
+            <input id="myInput" type="text" name="myCountry" placeholder="Country">
+            <ul id="results"></ul>
+        
+            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA&callback=initService&libraries=places&v=weekly"
+              async
+            ></script>
+            
             <form method="POST" action="{{ route('add-food') }}" enctype="multipart/form-data">
                 @csrf
 
@@ -102,6 +116,7 @@
 
             </form>
         </div>
+
         <div class="d-sm-none d-flex justify-content-evenly align-items-center"
             style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
             <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:gray;"></i></a>
