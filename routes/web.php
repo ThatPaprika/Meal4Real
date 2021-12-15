@@ -38,6 +38,9 @@ Route::get('/profile', function () {
 Route::get('/thankyou', function () {
     return view('thank_you');
 });
+Route::get('/edit-food', function () {
+    return view('edit_food');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
