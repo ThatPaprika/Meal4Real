@@ -63,8 +63,6 @@
 
             @if (!empty($meals))
                 @foreach ($meals as $meal)
-
-
                     <div class="card mb-5" style="max-width:500px;width:100%;border-radius:30px">
                         <img src="uploads/<?php echo $meal->picture; ?>" class="card-img-top" alt="..." style="border-radius:30px">
                         <div class="card-body">
@@ -75,52 +73,16 @@
                             </h5>
                             <p class="card-text">{{ $meal->description }}</p>
                             <div class="d-flex justify-content-center">
-                                <a href="#" class="p-3 pt-2 pb-2"
+                                <a href="detail_page/{{$meal->id}}" class="p-3 pt-2 pb-2"
                                     style="width:100px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;text-align:center">Take</a>
                             </div>
                         </div>
-
                     </div>
                 @endforeach
             @else
                 <p>No Meals in my DB.</p>
             @endif
-            <div class="card mb-5" style="max-width:500px;width:100%;border-radius:30px">
-                <img src="spagetti.jpg" class="card-img-top" alt="..." style="border-radius:30px">
-                <div class="card-body">
-
-                    <h5 class="card-title">
-                        <i class="fas fa-utensils"
-                            style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
-                        Spagetti
-                    </h5>
-                    <p class="card-text">Spagetti is spagetti nice ! Spagetti is spagetti nice ! Spagetti is
-                        spagetti nice ! Spagetti is spagetti nice !</p>
-                    <div class="d-flex justify-content-center">
-                        <a href="#" class="p-3 pt-2 pb-2"
-                            style="width:100px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;text-align:center">Take</a>
-                    </div>
-
-                </div>
-            </div>
-            <div class="card mb-5" style="max-width:500px;width:100%;border-radius:30px">
-                <img src="spagetti.jpg" class="card-img-top" alt="..." style="border-radius:30px">
-                <div class="card-body">
-
-                    <h5 class="card-title">
-                        <i class="fas fa-utensils"
-                            style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
-                        Spagetti
-                    </h5>
-                    <p class="card-text">Spagetti is spagetti nice ! Spagetti is spagetti nice ! Spagetti is
-                        spagetti nice ! Spagetti is spagetti nice !</p>
-                    <div class="d-flex justify-content-center">
-                        <a href="#" class="p-3 pt-2 pb-2"
-                            style="width:100px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;text-align:center">Take</a>
-                    </div>
-
-                </div>
-            </div>
+            
             <div style="height:50px"></div>
 
         </div>

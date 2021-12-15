@@ -36,9 +36,9 @@ Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
 
-Route::get('/detail_page', function () {
-    return view('detail_page');
-});
+
+Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
+
 Route::post('/profile', function () {
     return view('profile');
 })->name('profile');
