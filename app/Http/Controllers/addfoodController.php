@@ -24,7 +24,6 @@ class AddFoodController extends Controller
         //$meals = DB::select('SELECT * FROM meal_details');
         $meals = Meal::all();
         return view('food_list', ['meals' => $meals]);
-
     }
 
     /**
@@ -139,5 +138,14 @@ class AddFoodController extends Controller
             return back()->with('success', 'Meal was deleted from the DB');
         else
             return back()->with('error', 'Something wrong with the DB.');
+    }
+
+    public function setInterval($f, $milliseconds)
+    {
+        $seconds = (int)$milliseconds / 1000;
+        while (true) {
+            $f();
+            sleep($seconds);
+        }
     }
 }

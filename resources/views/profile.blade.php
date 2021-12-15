@@ -68,10 +68,97 @@
                         style="background-color: #FA4A0C;width:203px;height:78px;">Edit
                         user
                         information</button>
-                    <button type="button" class="mb-5 btn btn-primary btn-lg"
-                        style="background-color: #FA4A0C;width:203px;height:78px;">Previous pickups</button>
-                    <button type="button" class=" btn btn-primary btn-lg"
-                        style="background-color: #FA4A0C;width:203px;height:78px;">Previous giveaways</button>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5  offset-sm-1">
+                        <div class="d-flex align-items-center justify-content-sm-center m-5 " style="width: 60%;">
+                            <h2>previous pickups</h2>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4  offset-sm-2">
+                        <div class="d-flex align-items-center justify-content-center m-5" style="width: 70%;">
+                            <h2>previous giveaways</h2>
+
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
