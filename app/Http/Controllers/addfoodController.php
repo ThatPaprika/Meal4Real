@@ -17,9 +17,14 @@ class AddFoodController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //shows food in the food List
     public function index()
     {
-        //return view('auth.register');
+        //$meals = DB::select('SELECT * FROM meal_details');
+        $meals = Meal::all();
+        return view('food_list', ['meals' => $meals]);
+
     }
 
     /**
@@ -57,7 +62,7 @@ class AddFoodController extends Controller
         $meal_details->meal_name = $request->meal_name;
         $meal_details->description = $request->description;
         $meal_details->address = $request->address;
-        $meal_details->picture = $request->meal_picture;
+        $meal_details->picture = $fileName;
         $meal_details->user_id = Auth::id();
 
         if ($meal_details->save())
