@@ -125,6 +125,18 @@
                             aria-label="Username" aria-describedby="basic-addon1" :value="old('email')" required
                             autocomplete="current-password">
                     </div>
+                    <!-- Captcha Form ! (put to false if u wanna hidde it) -->
+                    <div class="mb-3 mt-5">
+                        {!! NoCaptcha::renderJs('ja', false, 'onloadCallback') !!}
+                        {!! NoCaptcha::display() !!}                       
+                    </div>
+
+                    
+
+
+
+                   
+
     
                     <!--
                 <div>
@@ -161,6 +173,11 @@
                             </a><br>
                         @endif
                     </div>
+
+
+    
+                    
+
     
                     <div class="flex items-center justify-end mt-4">
                         <button class="ml-3"
@@ -178,7 +195,14 @@
 
     </div>
 
+    <script type="text/javascript">
+        var onloadCallback = function() {
+          alert("grecaptcha is ready!");
+        };
+      </script>
+
 
 </body>
+
 
 </html>

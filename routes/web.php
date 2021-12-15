@@ -71,6 +71,8 @@ Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
 Route::post('/edit-user', [UserController::class, 'update']);
 
 
+
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
