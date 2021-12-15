@@ -60,14 +60,13 @@
         <div class="d-flex flex-column align-items-center">
 
 
-            <div class="d-flex justify-content-center">
-                <!--
-                <img src="Logo.jpg" alt="" style="width:80px; height:100px">
-                -->
-            </div>
-            <div class="col-sx-12 col-sm-4 offset-sm-2 d-flex flex-column align-items-center justify-content-center">
-                <h1>Respect for food</h1>
-                <h1>is a respect for life</h1>
+            <div class="d-flex justify-content-center" style="width:100%">
+
+                <div
+                    class="col-sx-12 col-sm-4 offset-sm-2 d-flex flex-column align-items-center justify-content-center">
+                    <h1 style="width:100%">Respect for food</h1>
+                    <h1 style="width:100%">is a respect for life</h1>
+                </div>
             </div>
 
         </div>
@@ -89,7 +88,7 @@
                 class="d-block d-sm-none col-xs-12 col-sm-6 d-md-none  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
                     style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
+                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius: 30px">
 
                 </div>
             </div>
@@ -106,7 +105,7 @@
             <div class="d-none d-sm-block col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
                     style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
+                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius: 30px">
 
                 </div>
             </div>
@@ -124,7 +123,7 @@
         </div>
     </div>
     <footer class="d-none d-sm-block"
-        style="position:fixed;bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
+        style="bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
 
         <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
 
