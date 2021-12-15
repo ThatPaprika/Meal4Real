@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreFoodRequest;
 use App\Models\Food;
 use App\Models\Meal;
+use DateInterval;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,7 +23,7 @@ class AddFoodController extends Controller
     public function index()
     {
         //$meals = DB::select('SELECT * FROM meal_details');
-        $meals = Meal::all();
+        $meals = DB::table('meal_details')->where('reserved', false)->get();
         return view('food_list', ['meals' => $meals]);
     }
 
@@ -140,12 +141,8 @@ class AddFoodController extends Controller
             return back()->with('error', 'Something wrong with the DB.');
     }
 
-    public function setInterval($f, $milliseconds)
+    public function reservation($id)
     {
-        $seconds = (int)$milliseconds / 1000;
-        while (true) {
-            $f();
-            sleep($seconds);
-        }
+        $meal = Meal::where('id', $id)->update(['reserved' => true]);
     }
 }
