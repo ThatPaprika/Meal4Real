@@ -65,11 +65,11 @@
                     <h5 class="card-title">
                         <i class="fas fa-utensils"
                             style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
-                        {{$meal_details->meal_name}}
+                        {{ $meal_details->meal_name }}
                     </h5>
-                    <p class="card-text">{{$meal_details->description}}</p>
+                    <p class="card-text">{{ $meal_details->description }}</p>
                     <div class="d-flex justify-content-center">
-                        <a href="#" class="p-3 pt-2 pb-2"
+                        <a href="/detail_page/{{ $meal_details->id }}/reserve" class="p-3 pt-2 pb-2 takeBtn"
                             style="width:100px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;text-align:center">Take</a>
                     </div>
 
