@@ -38,6 +38,9 @@ Route::get('/profile', function () {
 Route::get('/thankyou', function () {
     return view('thank_you');
 });
+Route::get('/edit-food', function () {
+    return view('edit_food');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -68,3 +71,8 @@ Route::get('/detail_page/{id}/reserve', [AddFoodController::class, 'reservation'
 Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
 // Submit the form :
 Route::post('/edit-user', [UserController::class, 'update']);
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
