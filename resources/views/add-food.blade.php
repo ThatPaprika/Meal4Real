@@ -11,7 +11,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Document</title>
     <link rel="stylesheet" href="/css/sidebar.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
     <script src="./js/googleAPI.js"></script>
 </head>
 
@@ -53,18 +54,8 @@
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <div class="p-5 d-flex flex-column align-items-center">
-            <!-- test -->
-            
-            <p>Query suggestions for 'pizza near Syd':</p>
-            <input id="myInput" type="text" name="myCountry" placeholder="Country">
-            <ul id="results"></ul>
-        
-            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-            <script
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA&callback=initService&libraries=places&v=weekly"
-              async
-            ></script>
-            
+
+
             <form method="POST" action="{{ route('add-food') }}" enctype="multipart/form-data">
                 @csrf
 
@@ -80,7 +71,7 @@
                     <i class="far fa-image"></i>
                     <div style="position: relative">
                         <i style="position: absolute;bottom:-50px; right:-80px" class="fas fa-plus-circle"></i>
-                        <input type="file" name="meal_picture">
+                        <input type="file" name="meal_picture" >
                     </div>
                 </div>
 
@@ -103,8 +94,8 @@
                 </div>
                 <div class="mt-3">
                     <i class="fas fa-map-pin" style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
-                    <input type="text" name="address" placeholder="Address"
-                        style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
+                    <input id="my-input-searchbox" type="text" placeholder="Address" name="address" style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
+                    <div id="map"></div>
                 </div>
 
                 <div class="d-flex justify-content-center mt-4" style="width:100%">
@@ -167,8 +158,10 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <script src="/js/sidebars.js"></script>
-
-
+    <!-- Google API -->
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA&libraries=places">
+    </script>
 </body>
 
 </html>
