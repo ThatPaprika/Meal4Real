@@ -20,6 +20,7 @@ class CreateMealDetails extends Migration
             $table->string('description');
             $table->string('address');
             $table->string('picture');
+            $table->boolean('reserved')->default(false);
             // foreign key
             $table->foreignId('user_id')->constrained('users');
 

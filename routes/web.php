@@ -60,6 +60,8 @@ Route::get('/detail_page', function () {
 
 Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
 
+Route::get('/detail_page/{id}/reserve', [AddFoodController::class, 'reservation']);
+
 // User Controller
 
 // Show the form :
