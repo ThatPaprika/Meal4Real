@@ -51,7 +51,7 @@
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
         <div class="p-5 d-flex flex-column align-items-center">
-            <form method="POST" action="{{ route('add-food') }}">
+            <form method="POST" action="{{ route('add-food') }}" enctype="multipart/form-data">
                 @csrf
 
                 <div class="d-flex justify-content-center">
@@ -66,6 +66,7 @@
                     <i class="far fa-image"></i>
                     <div style="position: relative">
                         <i style="position: absolute;bottom:-50px; right:-80px" class="fas fa-plus-circle"></i>
+                        <input type="file" name="meal_picture">
                     </div>
                 </div>
 
@@ -102,7 +103,7 @@
             </form>
         </div>
         <div class="d-sm-none d-flex justify-content-evenly align-items-center"
-        style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
+            style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
             <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:gray;"></i></a>
             </div>
             <div><a href="./add-food"><i class="bi bi-plus-circle" style="font-size: 25px; color:#FA4A0C;"></i></a>

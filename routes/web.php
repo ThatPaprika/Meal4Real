@@ -22,16 +22,13 @@ Route::get('/home', function () {
     return view('home_page');
 });
 
-
-
-
 Route::get('/thankyou', function () {
     return view('thank_you');
 });
 
-Route::get('/food_list', function () {
-    return view('food_list');
-});
+// Show the form :
+Route::get('/food_list', [AddFoodController::class, 'index']);
+
 Route::get('/detail_page', function () {
     return view('detail_page');
 });
@@ -39,18 +36,16 @@ Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
 
-Route::get('/detail_page', function () {
-    return view('detail_page');
-});
+
+Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
+
 Route::post('/profile', function () {
     return view('profile');
 })->name('profile');
 Route::get('/about', function () {
     return view('about_us');
 });
-Route::get('/food_list', function () {
-    return view('food_list');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -71,3 +66,4 @@ Route::post('/add-food', [AddFoodController::class, 'store']);
 Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
 // Submit the form :
 Route::post('/edit-user', [UserController::class, 'update']);
+

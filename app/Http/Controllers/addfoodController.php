@@ -7,6 +7,7 @@ use App\Http\Requests\StoreFoodRequest;
 use App\Models\Food;
 use App\Models\Meal;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class AddFoodController extends Controller
@@ -16,9 +17,14 @@ class AddFoodController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //shows food in the food List
     public function index()
     {
-        //return view('auth.register');
+        //$meals = DB::select('SELECT * FROM meal_details');
+        $meals = Meal::all();
+        return view('food_list', ['meals' => $meals]);
+
     }
 
     /**
@@ -42,12 +48,22 @@ class AddFoodController extends Controller
         // Validations
         $request->validated();
 
+        // Rename the file with timestamp
+        $fileName = time() . '.' . $request->meal_picture->extension();
+
+        // Save the public path
+        $publicPath = public_path('uploads');
+
+        // Save the file in the public/uploads folder
+        $request->meal_picture->move($publicPath, $fileName);
+
         $meal_details = new Meal;
         $meal_details->type = $request->type;
         $meal_details->meal_name = $request->meal_name;
         $meal_details->description = $request->description;
         $meal_details->address = $request->address;
-        $meal_details->picture = $request->picture;
+        $meal_details->picture = $fileName;
+        $meal_details->user_id = Auth::id();
 
         if ($meal_details->save())
             return back()->with('success', 'Updated in the DB');
@@ -98,6 +114,7 @@ class AddFoodController extends Controller
         $meal_details->description = $request->description;
         $meal_details->address = $request->address;
         $meal_details->picture = $request->picture;
+        $meal_details->user_id = Auth::id();
 
         if ($meal_details->save())
             return back()->with('success', 'Updated in the DB');

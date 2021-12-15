@@ -27,7 +27,8 @@ class StoreFoodRequest extends FormRequest
             'type' => 'required|string|min:3|max:100',
             'meal_name' => 'required|string|min:3|max:30',
             'description' => 'required|string|min:3|max:200',
-            'address' => 'required|string|min:3|max:100'
+            'address' => 'required|string|min:3|max:100',
+            'meal_picture' => 'required|mimes:jpeg,jpg,jfif,png,pdf'
         ];
     }
 
@@ -46,7 +47,8 @@ class StoreFoodRequest extends FormRequest
             'description.between' => 'Description must be between 3 and 200 characters !',
             'address.required' => 'Adress is mandatory !',
             'address.string' => 'Address must be valid !',
-            'address.between' => 'Address must be between 3 and 100 characters !'
+            'address.between' => 'Address must be between 3 and 100 characters !',
+            'meal_picture.required' => 'Picture must have one of the following file type: jpeg,jpg,jfif,png,pdf !',
         ];
     }
 }
