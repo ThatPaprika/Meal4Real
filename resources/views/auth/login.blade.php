@@ -127,7 +127,7 @@
                     </div>
                     <!-- Captcha Form ! (put to false if u wanna hidde it) -->
                     <div class="mb-3 mt-5">
-                        {!! NoCaptcha::renderJs('ja', false, 'onloadCallback') !!}
+                        {!! NoCaptcha::renderJs('en', false, 'onloadCallback') !!}
                         {!! NoCaptcha::display() !!}                       
                     </div>
 
