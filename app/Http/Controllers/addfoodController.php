@@ -142,7 +142,7 @@ class AddFoodController extends Controller
             return back()->with('error', 'Something wrong with the DB.');
     }
 
-    public function reservation($id)
+    public function reservation($id,$request,$message)
     {
         Meal::where('id', $id)->update(['reserved' => true]);
 
@@ -154,5 +154,8 @@ class AddFoodController extends Controller
         }
 
         return view('thank_you');
+    
     }
+
+    
 }
