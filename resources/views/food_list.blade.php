@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script>
 </head>
 
-<body style="background-color:#E5E5E5" onload="loadDistance()">
+<body style="background-color:#E5E5E5" >
     <div class="container-fluid p-0">
 
         {{-- <div class="p-3 d-flex justify-content-between align-items-center"

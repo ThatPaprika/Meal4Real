@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreUserRequest;
 use App\Models\CustomUser;
+use App\Models\Meal;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -49,6 +51,15 @@ class UserController extends Controller
         }
     }
 
+    public function showUserInformation() {
+
+        $user = CustomUser::where('id', Auth::id())->first();
+        $pickups = Meal::where('user_id', Auth::id())->limit(5)->get();
+
+        return view('profile', ['users' => $user, 'pickups' => $pickups]);
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -56,10 +67,10 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function edit($id)
+    public function edit()
     {
-        $user = CustomUser::find($id);
-
+        $user = CustomUser::find(Auth::id());
+        
         return view('edit-user', ['user' => $user]);
     }
 
@@ -71,12 +82,36 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function update(StoreUserRequest $request, $id)
+    public function update(Request $request)
     {
-        $user = CustomUser::find($id);
+        //$result = CustomUser::update('UPDATE users SET first_name = ? WHERE id = ?', [$request->title, Auth::id()]);
+        //return 'Update in the DB';
 
+        //$request->validated();
+
+        $user = CustomUser::find(Auth::id());
         $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->street_nr = $request->street_nr;
+        $user->street_name = $request->street_name;
+        $user->zip_code = $request->zip_code;
+        $user->city = $request->city;
+        $user->country = $request->country;
+        $user->phone_number = $request->phone_number;
 
+        $user->save();
+
+
+        $user = CustomUser::find(Auth::id());
+        return view('profile', ['users' => $user]);
+
+    
+        //$user = CustomUser::find(Auth::id());
+
+        //$user->first_name = $request->first_name;
+        
+        /*
         $user->last_name = $request->last_name;
 
         $user->email = $request->email;
@@ -92,14 +127,10 @@ class UserController extends Controller
         $user->country = $request->country;
 
         $user->phone_number = $request->phone_number;
+        */
+        //$user->save();
 
-        $user->save();
 
-        if ($user->save()) {
-            return back()->with('success', 'Inserted in the DB');
-        } else {
-            return back()->with('error', 'Something went wrong in the DB');
-        }
     }
 
     /**

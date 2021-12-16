@@ -29,11 +29,7 @@ Route::get('/about', function () {
     return view('about_us');
 });
 
-// Only for logged in users
 
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
 
 Route::get('/thankyou', function () {
     return view('thank_you');
@@ -65,12 +61,13 @@ Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
 
 Route::get('/detail_page/{id}/reserve', [AddFoodController::class, 'reservation']);
 
-// User Controller
+
+Route::get('/profile', [UserController::class, 'showUserInformation']);
 
 // Show the form :
 Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
 // Submit the form :
-Route::post('/edit-user', [UserController::class, 'update']);
+Route::post('/edit-user', [UserController::class, 'update'])->name('edit-user');
 
 
 
