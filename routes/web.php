@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddFoodController;
+use App\Http\Controllers\MailerController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -15,12 +16,17 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// Routes for guests
+
+
 
 Route::get('/', function () {
     return view('welcome');
 });
+// Test Email
+Route::get("email", [MailerController::class, "email"])->name("email");
+Route::post("send-email", [MailerController::class, "composeEmail"])->name("send-email");
 
+// Routes for guests
 Route::get('/home', function () {
     return view('home_page');
 });
@@ -44,7 +50,7 @@ Route::get('/edit-food', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth','verified'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
 
@@ -71,6 +77,7 @@ Route::get('/detail_page/{id}/reserve', [AddFoodController::class, 'reservation'
 Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
 // Submit the form :
 Route::post('/edit-user', [UserController::class, 'update']);
+
 
 
 
