@@ -7,6 +7,7 @@ use App\Http\Requests\StoreFoodRequest;
 use App\Models\Food;
 use App\Models\Meal;
 use DateInterval;
+use DateTime;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -143,6 +144,15 @@ class AddFoodController extends Controller
 
     public function reservation($id)
     {
-        $meal = Meal::where('id', $id)->update(['reserved' => true]);
+        Meal::where('id', $id)->update(['reserved' => true]);
+
+        $date = new DateTime('now');
+        $interval = $date->add(new DateInterval('PT1M'));
+
+        if ($interval) {
+            Meal::where('id', $id)->update(['reserved' => false]);
+        }
+
+        return view('thank_you');
     }
 }
