@@ -21,6 +21,7 @@
 </head>
 
 <body style="background-color:#E5E5E5">
+<<<<<<< HEAD
     <nav class="navbar navbar-expand-sm navbar-light bg-light" style="min-height:80px">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" style="color:FA4A0C;font-weight:bold">Meal4Real</a>
@@ -43,6 +44,153 @@
                         <a class="nav-link" href="/about" tabindex="-1" aria-disabled="true">About Us</a>
                     </li>
                 </ul>
+=======
+    <div class="container-fluid p-0">
+
+
+
+        <div class="p-3"
+            style="width:100%;background-color:white; box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);border-radius: 30px;top:-15px;position:absolute;top:-10px;">
+
+            <nav class="navbar navbar-expand-sm navbar-light bg-light" style="min-height:80px">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#" style="color:FA4A0C;font-weight:bold">Meal4Real</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/add-food">Add Food</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/food_list">Food List</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about" tabindex="-1" aria-disabled="true">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="">
+                <div class="p-3 d-flex justify-content-center align-items-center"><i class="far fa-user-circle"
+                        style="font-size: 120px; color: blue;"></i>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <h1>Name</h1>
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-center ">
+                    <i class="fas fa-location-arrow">Location</i>
+                </div>
+                <div class="m-5 d-flex flex-column justify-content-center align-items-center">
+                    <button type="button" class="m-5 btn btn-primary btn-lg"
+                        style="background-color: #FA4A0C;width:203px;height:78px;">Edit
+                        user
+                        information</button>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5  offset-sm-1">
+                        <div class="d-flex align-items-center justify-content-sm-center m-5 " style="width: 60%;">
+                            <h2>previous pickups</h2>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4  offset-sm-2">
+                        <div class="d-flex align-items-center justify-content-center m-5" style="width: 70%;">
+                            <h2>previous giveaways</h2>
+
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
+
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-utensils"
+                                        style="width:10px;font-size: 20px; color: gray;margin-right:15px">
+                                    </i>
+
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+>>>>>>> a13ef55420270151a4e0205b88802944a6ddb3df
             </div>
         </div>
     </nav>
@@ -87,8 +235,7 @@
         <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color:gary;"></i></a>
         </div>
     </div>
-    <footer class="d-none d-sm-block"
-        style="position:fixed;bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
+    <footer class="d-none d-sm-block bg-light" style="bottom: 0;width:100%; border-top:1px solid gray; height:150px">
 
         <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
 

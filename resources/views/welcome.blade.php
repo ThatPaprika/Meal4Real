@@ -24,12 +24,12 @@
     <div class="d-flex flex-row justify-content-center align-items-center">
         <h2
             style="font-family: SF Pro Rounded;font-style: normal;font-weight: 800;font-size: 65px;line-height: 86.84%;color:white;">
-            Food for </h2>
+            COME FIGHT FOOD </h2>
     </div>
     <div class="d-flex flex-row justify-content-center align-items-center">
         <h2
             style="font-family: SF Pro Rounded;font-style: normal;font-weight: 800;font-size: 65px;line-height: 86.84%;color:white;">
-            Everyone</h2>
+            WASTE WITH US</h2>
     </div>
 
     <div class="d-block d-sm-none  d-flex flex-column justify-content-end align-items-end "
