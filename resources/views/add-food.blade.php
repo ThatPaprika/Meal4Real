@@ -16,7 +16,7 @@
     <script src="./js/googleAPI.js"></script>
 </head>
 
-<body style="background-color:#E5E5E5">
+<body style="background-color:#E5E5E5" >
     <div class="container-fluid p-0">
 
         {{-- <div class="p-3 d-flex justify-content-between align-items-center"
@@ -72,7 +72,7 @@
                             class="far fa-image"></i>
                         <div style="position: relative">
 
-                            <input type="file" name="meal_picture" style="opacity: 0;">
+                            <input style="height:50px;opacity:0;" type="file" name="meal_picture">
                     </span>
                 </div>
         </div>
