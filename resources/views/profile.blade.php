@@ -76,7 +76,8 @@
                         </div>
                         <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
 
-                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <i class="fas fa-utensils"
@@ -89,7 +90,8 @@
                         </div>
                         <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
 
-                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <i class="fas fa-utensils"
@@ -102,7 +104,8 @@
                         </div>
                         <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
 
-                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <i class="fas fa-utensils"
@@ -121,7 +124,8 @@
                         </div>
                         <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
 
-                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <i class="fas fa-utensils"
@@ -134,7 +138,8 @@
                         </div>
                         <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
 
-                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <i class="fas fa-utensils"
@@ -147,7 +152,8 @@
                         </div>
                         <div class="card mb-5" style="max-width:400px;width:100%;border-radius:30px">
 
-                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image">
+                            <img src="spagetti.jpg" class="img-fluid" alt="Responsive image"
+                                style="border-radius:30px">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <i class="fas fa-utensils"
@@ -174,7 +180,7 @@
         </div>
     </div>
     <footer class="d-none d-sm-block"
-        style="position:fixed;bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
+        style="bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
 
         <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
 

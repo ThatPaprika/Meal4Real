@@ -96,48 +96,50 @@
         <div class="p-5" style="height:40%;background-color:lightgray">
             <div style="width:200px">
                 <h2>Sign in</h2>
-                <p>Bla dmlk lkhj mlkj mlkj mlkj mlkj mlkj dsf ds dsf sdf dsf sdf sdf sdf sdf sdf sdf  </p>
+                <p>Bla dmlk lkhj mlkj mlkj mlkj mlkj mlkj dsf ds dsf sdf dsf sdf sdf sdf sdf sdf sdf </p>
             </div>
         </div>
 
-        <div style="position: absolute; right:120px; top:60px;height:800px;width:500px;background-color:white;box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);border-radius: 30px;">
+        <div
+            style="position: absolute; right:120px; top:60px;height:800px;width:500px;background-color:white;box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);border-radius: 30px;">
             <div class="p-5">
                 <!-- Session Status -->
                 <x-auth-session-status class="mb-4" :status="session('status')" />
-    
+
                 <!-- Validation Errors -->
                 <x-auth-validation-errors class="mb-4" :errors="$errors" />
-    
+
                 <h3>Welcome to Mael4Real</h3>
                 <h1>Sign In</h1>
                 <form method="POST" action="{{ route('login') }}" class="mt-5">
                     @csrf
-    
+
                     <!-- Email Address -->
                     <div class="mb-3 mt-2">
                         <label for="email" style="font-weight:bold">Enter your email address</label><br>
                         <input id="email" type="email" class="form-control" name="email" placeholder="Email address"
-                            aria-label="Username" aria-describedby="basic-addon1" :value="old('email')" required autofocus>
+                            aria-label="Username" aria-describedby="basic-addon1" :value="old('email')" required
+                            autofocus>
                     </div>
                     <div class="mb-3 mt-5">
                         <span for="password" style="font-weight:bold">Enter your password</span><br>
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Password"
-                            aria-label="Username" aria-describedby="basic-addon1" :value="old('email')" required
-                            autocomplete="current-password">
+                        <input id="password" type="password" class="form-control" name="password"
+                            placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"
+                            :value="old('email')" required autocomplete="current-password">
                     </div>
                     <!-- Captcha Form ! (put to false if u wanna hidde it) -->
                     <div class="mb-3 mt-5">
-                        {!! NoCaptcha::renderJs('ja', false, 'onloadCallback') !!}
-                        {!! NoCaptcha::display() !!}                       
+                        {!! NoCaptcha::renderJs('en', false, 'onloadCallback') !!}
+                        {!! NoCaptcha::display() !!}
                     </div>
 
-                    
 
 
 
-                   
 
-    
+
+
+
                     <!--
                 <div>
                     <x-input id="email" class="" type="email" name="email" ://value="old('email')"
@@ -153,7 +155,7 @@
                 </div>
     
                 -->
-    
+
                     <!-- Remember Me -->
                     <div class="block mt-4">
                         <label for="remember_me" class="inline-flex items-center">
@@ -163,7 +165,7 @@
                             <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                         </label>
                     </div>
-    
+
                     <div class="flex items-center justify-end mt-4 p-2">
                         @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900"
@@ -175,21 +177,21 @@
                     </div>
 
 
-    
-                    
 
-    
+
+
+
                     <div class="flex items-center justify-end mt-4">
                         <button class="ml-3"
                             style="width:100%;height:54px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
                             {{ __('Log in') }}
                         </button>
                     </div>
-    
-    
+
+
                 </form>
             </div>
-        
+
         </div>
 
 
@@ -197,9 +199,9 @@
 
     <script type="text/javascript">
         var onloadCallback = function() {
-          alert("grecaptcha is ready!");
+            alert("grecaptcha is ready!");
         };
-      </script>
+    </script>
 
 
 </body>
