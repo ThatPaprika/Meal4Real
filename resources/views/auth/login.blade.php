@@ -133,6 +133,7 @@
                         {!! NoCaptcha::display() !!}
                     </div>
 
+<<<<<<< HEAD
 
 
 
@@ -140,6 +141,10 @@
 
 
 
+=======
+                    
+    
+>>>>>>> 2cfb0bf26a12ae7fc547bfaada838b0b74f35d37
                     <!--
                 <div>
                     <x-input id="email" class="" type="email" name="email" ://value="old('email')"

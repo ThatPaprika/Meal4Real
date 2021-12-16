@@ -11,9 +11,12 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Document</title>
     <link rel="stylesheet" href="/css/sidebar.css">
+    <script src="/js/googleAPI.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script>
 </head>
 
-<body style="background-color:#E5E5E5">
+<body style="background-color:#E5E5E5" onload="loadDistance()">
     <div class="container-fluid p-0">
 
         {{-- <div class="p-3 d-flex justify-content-between align-items-center"
@@ -73,6 +76,11 @@
                                 {{ $meal->meal_name }}
                             </h5>
                             <p class="card-text">{{ $meal->description }}</p>
+                            <span id="distance">
+                                <i class="fas fa-car"></i> : {{ $meal->distance }}</span><br>
+                            <span id="distance">
+                                <i class="bi bi-stopwatch"></i> : {{ $meal->time }}
+                            </span>
                             <div class="d-flex justify-content-center">
                                 <a href="detail_page/{{ $meal->id }}" class="p-3 pt-2 pb-2"
                                     style="width:100px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;text-align:center">Take</a>
@@ -84,7 +92,7 @@
                 <p>No Meals in my DB.</p>
             @endif
 
-            <div style="height:50px"></div>
+            <div style="height:100px"></div>
 
         </div>
 

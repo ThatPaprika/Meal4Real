@@ -16,7 +16,11 @@
     <script src="./js/googleAPI.js"></script>
 </head>
 
+<<<<<<< HEAD
 <body>
+=======
+<body style="background-color:#E5E5E5" >
+>>>>>>> 2cfb0bf26a12ae7fc547bfaada838b0b74f35d37
     <div class="container-fluid p-0">
 
         {{-- <div class="p-3 d-flex justify-content-between align-items-center"
