@@ -10,7 +10,7 @@ use DateInterval;
 use DateTime;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Http;
 
 class AddFoodController extends Controller
 {
@@ -25,7 +25,27 @@ class AddFoodController extends Controller
     {
         //$meals = DB::select('SELECT * FROM meal_details');
         $meals = DB::table('meal_details')->where('reserved', false)->get();
+        
+        $addresses = array();
+        foreach($meals as $key => $meal){
+            $address = $meal->address;
+            $response = Http::get("https://maps.googleapis.com/maps/api/distancematrix/json?origins=Belval%2Luxembourg&destinations={$address}&departure_time=now&key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA");
+            //$addresses[$key] = $response;
+            $meal->distance =  $response->object()->rows[0]->elements[0]->distance->text;
+            $meal->time =  $response->object()->rows[0]->elements[0]->duration_in_traffic->text;
+            
+        }
+        //dd($meals);
+        //dd($meals[0]->address);
+        // origin : Belval 
+        $response = Http::get('https://maps.googleapis.com/maps/api/distancematrix/json?origins=Belval%2Luxembourg&destinations=Kayl%2Luxembourg&departure_time=now&key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA');
+        //dd($response->object());
+        //dd($response->object()->rows[0]->elements[0]->distance->text);
+
+        $distance = $response->object()->rows[0]->elements[0]->distance->text;
+
         return view('food_list', ['meals' => $meals]);
+        
     }
 
     /**

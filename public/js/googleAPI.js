@@ -45,3 +45,18 @@ function initAutocomplete() {
 document.addEventListener("DOMContentLoaded", function(event) {
   initAutocomplete();
 });
+
+
+function loadDistance(){
+  console.log("Steven");
+  $.ajax({
+    url:"https://maps.googleapis.com/maps/api/distancematrix/json?origins=Boston%2CMA%7CCharlestown%2CMA&destinations=Lexington%2CMA%7CConcord%2CMA&departure_time=now&key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA",
+    type:"GET",
+    success: function(result){
+      console.log(result);
+    },
+    error: function(error) {
+      console.log(error);
+    }
+  })
+}
