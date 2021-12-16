@@ -48,6 +48,10 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
+Route::get('/edit-user', function () {
+    return view('edit-user');
+})->name('edit-user');
+
 // Food routes
 
 // Show the form :
@@ -68,9 +72,9 @@ Route::get('/detail_page/{id}/reserve', [AddFoodController::class, 'reservation'
 // User Controller
 
 // Show the form :
-Route::get('/edit-user', [UserController::class, 'edit'])->name('edit-user');
+Route::get('/edit-user/{id}', [UserController::class, 'edit'])->name('edit-user');
 // Submit the form :
-Route::post('/edit-user', [UserController::class, 'update']);
+Route::post('/edit-user/{id}', [UserController::class, 'update']);
 
 
 

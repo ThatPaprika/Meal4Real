@@ -144,15 +144,29 @@ class AddFoodController extends Controller
 
     public function reservation($id)
     {
-        Meal::where('id', $id)->update(['reserved' => true]);
+        $meal = Meal::where('id', $id)->update(['reserved' => true]);
 
+        /*
         $date = new DateTime('now');
         $interval = $date->add(new DateInterval('PT1M'));
+*/
+        /*
+        $wait = sleep(10);
+        
 
-        if ($interval) {
+        if ($wait = true) {
             Meal::where('id', $id)->update(['reserved' => false]);
         }
+*/
+        //$sleepuntil = date('Y-m-d H:i:s');
+        $sleepuntil = new DateTime();
+        $sleepuntil->getTimestamp('Y-m-d H:i:s');
+        return $sleepuntil;
+        /*
+        while (time() < $sleepuntil)
+            time_sleep_until($sleepuntil);
 
-        return view('thank_you');
+
+        return view('thank_you');*/
     }
 }
