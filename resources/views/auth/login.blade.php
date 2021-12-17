@@ -130,24 +130,11 @@
                     <!-- Captcha Form ! (put to false if u wanna hidde it) -->
                     <div class="mb-3 mt-5">
                         {!! NoCaptcha::renderJs('en', false, 'onloadCallback') !!}
-<<<<<<< HEAD
                         {!! NoCaptcha::display() !!}
                     </div>
 
 
 
-
-
-
-
-
-=======
-                        {!! NoCaptcha::display() !!}                       
-                    </div>
-
-                    
-    
->>>>>>> 2cfb0bf26a12ae7fc547bfaada838b0b74f35d37
                     <!--
                 <div>
                     <x-input id="email" class="" type="email" name="email" ://value="old('email')"

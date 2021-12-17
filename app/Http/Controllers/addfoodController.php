@@ -11,6 +11,8 @@ use DateTime;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
+use TCG\Voyager\Http\Controllers\ContentTypes\Timestamp;
 
 class AddFoodController extends Controller
 {
@@ -23,17 +25,54 @@ class AddFoodController extends Controller
     //shows food in the food List
     public function index()
     {
+
+        $reservedMeals = DB::table('meal_details')->where('reserved', true)->get('updated_at');
+        //dd($reservedMeals);
+
+        $currentTimestamp = new DateTime();
+        //dd($currentTimestamp);
+
+        $timeDifference = date_sub($currentTimestamp, date_interval_create_from_date_string('2 minutes'));
+        //dd($timeDifference);
+
+        //$time = strtotime($timeDifference->date);
+        dd($timeDifference);
+        //$timeDifference2 = $currentTimestamp->sub(new DateInterval("P1D"));
+        //dd($timeDifference2);
+
+
+        foreach ($reservedMeals as $id => $reservedMeal) {
+            //dd(strtotime($reservedMeal->updated_at));
+            if (strtotime($reservedMeal->updated_at) <= $time) {
+                Meal::where('id', $id)->update(['reserved' => false]);
+
+                //DB::table('meal_details')->where('id', $id)->update(['reserved' => false]);
+            }
+        }
+        /*
+        $formattedDate->add(strtotime('+ 120 seconds'));
+
+        if ($reservedMeal < time()) {
+            Meal::where('id', $id)->update(['reserved' => false]);
+        }
+*/
+        /*
+        if ((int)Storage::disk('public')->get('timestamp.txt') < time()) {
+            Meal::where('id', $id)->update(['reserved' => false]);
+        }
+        */
+
         //$meals = DB::select('SELECT * FROM meal_details');
         $meals = DB::table('meal_details')->where('reserved', false)->get();
-        
+
+
         $addresses = array();
-        foreach($meals as $key => $meal){
+        foreach ($meals as $key => $meal) {
             $address = $meal->address;
             $response = Http::get("https://maps.googleapis.com/maps/api/distancematrix/json?origins=Belval%2Luxembourg&destinations={$address}&departure_time=now&key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA");
             //$addresses[$key] = $response;
             $meal->distance =  $response->object()->rows[0]->elements[0]->distance->text;
             $meal->time =  $response->object()->rows[0]->elements[0]->duration_in_traffic->text;
-            
         }
         //dd($meals);
         //dd($meals[0]->address);
@@ -45,7 +84,6 @@ class AddFoodController extends Controller
         $distance = $response->object()->rows[0]->elements[0]->distance->text;
 
         return view('food_list', ['meals' => $meals]);
-        
     }
 
     /**
@@ -164,29 +202,8 @@ class AddFoodController extends Controller
 
     public function reservation($id)
     {
-        $meal = Meal::where('id', $id)->update(['reserved' => true]);
+        Meal::where('id', $id)->update(['reserved' => true]);
 
-        /*
-        $date = new DateTime('now');
-        $interval = $date->add(new DateInterval('PT1M'));
-*/
-        /*
-        $wait = sleep(10);
-        
-
-        if ($wait = true) {
-            Meal::where('id', $id)->update(['reserved' => false]);
-        }
-*/
-        //$sleepuntil = date('Y-m-d H:i:s');
-        $sleepuntil = new DateTime();
-        $sleepuntil->getTimestamp('Y-m-d H:i:s');
-        return $sleepuntil;
-        /*
-        while (time() < $sleepuntil)
-            time_sleep_until($sleepuntil);
-
-
-        return view('thank_you');*/
+        return view('thank_you');
     }
 }
