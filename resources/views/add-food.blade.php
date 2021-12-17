@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col p-0">
                 <div class="d-flex justify-content-center">
-                    <img src="Logo.jpg" alt="" style="width:80px; height:100px">
+                    <img src="Logo.png" alt="" style="width:200px;">
                 </div>
             </div>
         </div>
