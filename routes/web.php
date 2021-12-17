@@ -49,15 +49,12 @@ Route::get('/edit-food', function () {
 
 
 
-<<<<<<< HEAD
-=======
 
 
 Route::get('/edit-user', function () {
     return view('edit-user');
 })->name('edit-user');
 
->>>>>>> 1d49cfb249d3574ab999d5031126575e52a42f9d
 // Food routes
 
 // Show the form :
