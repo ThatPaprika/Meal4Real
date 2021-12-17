@@ -30,7 +30,7 @@
 
         <div class="p-5 d-flex flex-column align-items-center">
             <div class="d-flex justify-content-center">
-                <img src="Logo.jpg" alt="" style="width:80px; height:100px">
+                <img src="Logo.png" alt="" style="width:400px;">
 
             </div>
             <div class="mb-5">

@@ -15,13 +15,13 @@
 </head>
 
 <body style="background-color:#FF4B3A">
-    <div class="container-fluid p-3">
+    <div class="container-fluid p-0 ">
 
         <div class="d-flex justify-content-center">
             <img src="Logo.png" alt="" style="width:400px;">
         </div>
     </div>
-    <div class="mt-5 pt-5 d-flex flex-row justify-content-center align-items-center">
+    <div class="mt-3 pt-3 d-flex flex-row justify-content-center align-items-center">
         <h2
             style="font-family: SF Pro Rounded;font-style: normal;font-weight: 800;font-size: 7vw;line-height: 86.84%;color:white;">
             COME FIGHT FOOD </h2>
@@ -33,7 +33,7 @@
     </div>
 
     <div class="d-block d-sm-none  d-flex flex-column justify-content-end align-items-end "
-        style="height: calc(100vh - 350px);">
+        style="height: calc(100vh - 450px);">
         <div class="d-flex flex-column"> <a href="./login"><button class="mt-3 bg-danger "
                     style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 17px;line-height: 20px; border-radius:20px; border:3px solid white">Sign
                     In</button></a></a>
@@ -44,13 +44,13 @@
         </div>
     </div>
 
-    <div class="d-none d-sm-block d-flex flex-column m-5 p-5 ">
-        <div class="p-5  mt-5 d-flex flex-column justify-content-center align-items-center"> <a href="./login">
-                <button class="mt-3 bg-danger "
+    <div class="d-none d-sm-block d-flex flex-column mt-5 pt-5 " style="height: calc(100vh - 450px);">
+        <div class=" d-flex flex-column justify-content-center align-items-center"> <a href="./login">
+                <button class="mt-5 bg-danger "
                     style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 25px;line-height: 40px; border-radius:20px; border:3px solid white">Sign
                     In</button>
             </a>
-            <a href="./register"> <button class="mt-3 bg-danger "
+            <a href="./register"> <button class="mt-5 bg-danger "
                     style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 25px;line-height: 40px; border-radius:20px; border:3px solid white">Sign
                     Up</button>
             </a>
