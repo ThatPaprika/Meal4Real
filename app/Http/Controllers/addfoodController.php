@@ -26,43 +26,22 @@ class AddFoodController extends Controller
     public function index()
     {
 
-        //$reservedMeals = DB::table('meal_details')->where('reserved', true)->get('updated_at');
-        //dd($reservedMeals);
+        $reservedMeals = DB::table('meal_details')->where('reserved', true)->get();
 
-        // $currentTimestamp = new DateTime();
-        //dd($currentTimestamp);
+        foreach ($reservedMeals as $reservedMeal) {
 
-        //$timeDifference = date_sub($currentTimestamp, date_interval_create_from_date_string('2 minutes'));
-        //dd($timeDifference);
+            $reservedTime = $reservedMeal->updated_at;
+            $reservedTimeTimestamp = strtotime($reservedTime) + 60 * 1;
 
-        //$time = strtotime($timeDifference->date);
-        //dd((int)$timeDifference);
-        //$timeDifference2 = $currentTimestamp->sub(new DateInterval("P1D"));
-        //dd($timeDifference2);
 
-        /*
-        foreach ($reservedMeals as $id => $reservedMeal) {
-            //dd(strtotime($reservedMeal->updated_at));
-            if (strtotime($reservedMeal->updated_at) <= $timeDifference) {
-                Meal::where('id', $id)->update(['reserved' => false]);
+            if ($reservedTimeTimestamp < strtotime("now")) {
 
-                //DB::table('meal_details')->where('id', $id)->update(['reserved' => false]);
+                Meal::where('id', $reservedMeal->id)->update(['reserved' => false]);
             }
-        }*/
-        /*
-        $formattedDate->add(strtotime('+ 120 seconds'));
-
-        if ($reservedMeal < time()) {
-            Meal::where('id', $id)->update(['reserved' => false]);
         }
-*/
-        /*
-        if ((int)Storage::disk('public')->get('timestamp.txt') < time()) {
-            Meal::where('id', $id)->update(['reserved' => false]);
-        }
-        */
 
-        //$meals = DB::select('SELECT * FROM meal_details');
+
+
         $meals = DB::table('meal_details')->where('reserved', false)->get();
 
 
@@ -202,6 +181,7 @@ class AddFoodController extends Controller
 
     public function reservation($id)
     {
+
         Meal::where('id', $id)->update(['reserved' => true]);
 
         $meal_details = Meal::all();
