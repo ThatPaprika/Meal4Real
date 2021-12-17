@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script>
 </head>
 
-<body style="background-color:#E5E5E5" onload="loadDistance()">
+<body style="background-color:#E5E5E5" >
     <div class="container-fluid p-0">
 
         {{-- <div class="p-3 d-flex justify-content-between align-items-center"
@@ -108,8 +108,8 @@
         </div>
     </div>
 
-    <footer class="d-none d-sm-block"
-        style="position:fixed;bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
+    <footer class="d-none d-sm-block bg-light"
+        style="bottom: 0;width:100%; border-top:1px solid gray; height:150px">
 
         <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
 

@@ -74,7 +74,7 @@
             <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
                     style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image">
+                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
 
                 </div>
             </div>
@@ -88,7 +88,7 @@
                 class="d-block d-sm-none col-xs-12 col-sm-6 d-md-none  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
                     style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius: 30px">
+                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
 
                 </div>
             </div>
@@ -105,7 +105,7 @@
             <div class="d-none d-sm-block col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
                     style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius: 30px">
+                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
 
                 </div>
             </div>
@@ -122,8 +122,7 @@
         <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color:gary;"></i></a>
         </div>
     </div>
-    <footer class="d-none d-sm-block"
-        style="bottom: 0;width:100%; background-color:lightgray;border-top:2px solid gray; height:150px">
+    <footer class="d-none d-sm-block bg-light" style="bottom: 0;width:100%; border-top:1px solid gray; height:150px">
 
         <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
 
