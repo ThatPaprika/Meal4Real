@@ -52,7 +52,7 @@
             </a>
             <a href="./register"> <button class="mt-3 bg-danger "
                     style="color:white;font-family: SF Pro Text;font-style: normal;font-weight: 600;font-size: 25px;line-height: 40px; border-radius:20px; border:3px solid white">Sign
-                    up</button>
+                    Up</button>
             </a>
         </div>
     </div>

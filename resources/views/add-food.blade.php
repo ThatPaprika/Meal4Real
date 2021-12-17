@@ -17,7 +17,7 @@
 </head>
 
 <body class="m-0 p-0" style="background-image: url(icon.jpg);">
-    
+
     <div class="container-fluid">
 
         <div class="row">
@@ -42,25 +42,28 @@
         </div>
         <div class="row">
             <div class="col-sx-12 col-sm-4 offset-sm-2 p-4">
-                
-                    <div   style="position: relative;background-color: #c71212;border:0px;max-width:200px;height:200px;max-height:200px;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;s">
-                        <img id="preview-image" src="" alt="" style="max-width:500px;max-height:200px;border-radius: 30px;">
-                        <i class="far fa-image pt-2 d-flex justify-content-center " style="position:absolute;top:50%;left:50%"></i>
-                        <input id="image" type="file" name="meal_picture" style="opacity:0;background-color:white;height:200px; width:100%; position:absolute;top:0;">
-                    </div>
-                
+
+                <div
+                    style="position: relative;background-color: #bbb1b1;border:0px;max-width:200px;height:200px;max-height:200px;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;margin-left:70px">
+                    <img id="preview-image" src="" alt="" style="max-width:500px;max-height:200px;border-radius: 30px;">
+                    <i class="far fa-image pt-2 d-flex justify-content-center "
+                        style="position:absolute;top:50%;left:50%"></i>
+                    <input id="image" type="file" name="meal_picture"
+                        style="opacity:0;background-color:white;height:200px; width:100%; position:absolute;top:0;">
+                </div>
+
 
             </div>
             <script type="text/javascript">
-                $('#image').change(function(){
-                       
-                let reader = new FileReader();
-                reader.onload = (e) => { 
-                  $('#preview-image').attr('src', e.target.result); 
-                }
-                reader.readAsDataURL(this.files[0]); 
-              
-               });
+                $('#image').change(function() {
+
+                    let reader = new FileReader();
+                    reader.onload = (e) => {
+                        $('#preview-image').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+
+                });
             </script>
             <div class="col-sx-12 col-sm-6 p-0">
                 <div
@@ -91,7 +94,7 @@
                         <div id="map"></div>
                     </div>
 
-                    <div class="d-flex justify-content-start mt-2" >
+                    <div class="d-flex justify-content-start mt-2">
                         <button class="ml-5"
                             style="width:150px;height:35px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
                             {{ __('Add') }}
