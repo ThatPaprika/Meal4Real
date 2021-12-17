@@ -25,7 +25,7 @@ Route::get('/', function () {
 //Email verification Working dont touch
 Route::get('/home', function () {
     return view('home_page');
-})->middleware(['auth','verified'])->name('home');
+})->middleware(['auth', 'verified'])->name('home');
 require __DIR__ . '/auth.php';
 
 // Routes for guests

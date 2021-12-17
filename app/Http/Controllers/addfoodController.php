@@ -27,26 +27,24 @@ class AddFoodController extends Controller
     {
 
         $reservedMeals = DB::table('meal_details')->where('reserved', true)->get();
-        
+
         foreach ($reservedMeals as $reservedMeal) {
 
             $reservedTime = $reservedMeal->updated_at;
-            $reservedTimeTimestamp = strtotime($reservedTime) + 60*1;
-    
-            
-            if($reservedTimeTimestamp < strtotime("now")) {
-                
-                Meal::where('id', $reservedMeal->id)->update(['reserved' => false]);
-                
-            }
+            $reservedTimeTimestamp = strtotime($reservedTime) + 60 * 1;
 
+
+            if ($reservedTimeTimestamp < strtotime("now")) {
+
+                Meal::where('id', $reservedMeal->id)->update(['reserved' => false]);
+            }
         }
 
 
-        
+
         $meals = DB::table('meal_details')->where('reserved', false)->get();
 
-        
+
         $addresses = array();
         foreach ($meals as $key => $meal) {
             $address = $meal->address;
@@ -186,9 +184,19 @@ class AddFoodController extends Controller
 
         Meal::where('id', $id)->update(['reserved' => true]);
 
-        return view('thank_you');
-    
-    }
+        $meal_details = Meal::all();
+        $email = Auth::user()->email;
+        dd($email);
 
-    
+        // the message
+        $msg = "Dear\nThank you for picking up " . $meal_details->meal_name .  "." . "\nWe appreciate your help to reduce food waste.\nHere are the details of your meal: \n" . $meal_details->picture . "\nFood type:" . $meal_details->type . "\nName:" . $meal_details->meal_name . "\nDescription:" . $meal_details->description . "\nAddress:" . $meal_details->address;
+
+        // use wordwrap() if lines are longer than 70 characters
+        $msg = wordwrap($msg, 70);
+
+        // send email
+        mail($email, "Your meal pick up ;-)", $msg);
+
+        return view('thank_you');
+    }
 }
