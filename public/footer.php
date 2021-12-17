@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./css/mobile_footer.css">
+
 <div class="bg-light d-sm-none d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
     <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:gray;"></i></a>
     </div>
