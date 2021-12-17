@@ -4,13 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddFoodController;
 use App\Http\Controllers\MailerController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
+| Here is where you can register web routes for‚ your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
@@ -22,6 +23,7 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 //Email verification Working dont touch
 Route::get('/home', function () {
     return view('home_page');
@@ -33,6 +35,9 @@ Route::get('/about', function () {
     return view('about_us');
 });
 
+//Contact(Test)
+Route::get('/contact-form', [App\Http\Controllers\ContactController::class, 'contactForm'])->name('contact-form');
+Route::post('/contact-form', [App\Http\Controllers\ContactController::class, 'storeContactForm'])->name('contact-form.store');
 
 
 Route::get('/thankyou', function () {
@@ -41,8 +46,6 @@ Route::get('/thankyou', function () {
 Route::get('/edit-food', function () {
     return view('edit_food');
 });
-
-
 
 
 
