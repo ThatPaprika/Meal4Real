@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="p-5 d-flex justify-content-center  col-sx-12 col-sm-4 offset-sm-2">
 
-                    <img src="Logo.jpg" class="img-fluid" alt="Responsive image">
+                    <img src="Logo.png" class="img-fluid" alt="Responsive image">
                 </div>
 
                 <div
