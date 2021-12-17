@@ -16,173 +16,86 @@
     <script src="./js/googleAPI.js"></script>
 </head>
 
-<<<<<<< HEAD
-<body>
-=======
-<body style="background-color:#E5E5E5" >
->>>>>>> 2cfb0bf26a12ae7fc547bfaada838b0b74f35d37
-    <div class="container-fluid p-0">
+<body class="m-0 p-0" style="background-image: url(icon.jpg);">
+    
+    <div class="container-fluid">
 
-        {{-- <div class="p-3 d-flex justify-content-between align-items-center"
-            style="width:100%;background-color: #E5E5E5; height:80px;">
-            <div><i class="far fa-user-circle" style="font-size: 50px; color: gray;"></i></div>
-            <div><i class="fas fa-bars" style="font-size: 25px; color: gray;"></i></div>
-        </div> --}}
-        <nav class="navbar navbar-expand-sm navbar-light bg-light" style="min-height:80px">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Meal4Real</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/add-food">Add Food</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/food_list">Food List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about" tabindex="-1" aria-disabled="true">About Us</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="row">
+            <div class="col p-0">
+                <?php include 'navbar.php'; ?>
             </div>
-        </nav>
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <div class="p-5 d-flex flex-column align-items-center" style=" overflow: hidden;
-        position: relative;">
-            {{-- <img src="icon.jpg" alt="" style="opacity: 0.1;
-            position: absolute;
-        
-            top: 0;
-            width: 100%;
-            height: auto;
-            " /> --}}
-            <div style="background-image: url(icon.jpg);position:absolute;
-            height:100%;width:100%;opacity:0.1;top:0;background-repeat-repeat-y;"></div>
-
-
-
-            <form method="POST" action="{{ route('add-food') }}" enctype="multipart/form-data"
-                style="position: relative;">
-                @csrf
-
-
+        </div>
+        <div class="row">
+            <div class="col p-0">
                 <div class="d-flex justify-content-center">
                     <img src="Logo.jpg" alt="" style="width:80px; height:100px">
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-0">
                 <div class="mb-0 d-flex flex-column justify-content-center  align-items-center ">
                     <h2>Earn happyness by</h2>
                     <h2>sharing your meal </h2>
                 </div>
-                <div class="row p-5 pt-0">
-
-                    <div class="mt-5 pt-0 col-sx-12 col-sm-4 offset-sm-2 d-flex justify-content-center align-items-center"
-                        style="max-width:500px;height:170px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                        <span class="btn btn-info fileinput-button pt-0" style="background-color: #FFFFFF;border:0px">
-
-                            <i class="far fa-image pt-2 d-flex justify-content-center "></i>
-                            <input type="file" name="meal_picture" style="opacity: 0;height:120px">
-
-
-                        </span>
-                    </div>
-                    <div
-                        class="row flex-wrap  col-sx-12 col-sm-5 offset-sm-1 pt-4 p-2 d-flex justify-content-center align-items-center">
-
-                        <div class="mt-3 ">
-                            <i class="fas fa-utensils"
-                                style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
-                            <input type="text" name="type" placeholder="Type"
-                                style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
-                        </div>
-                        <div class="mt-3">
-                            <i class="fas fa-file-signature"
-                                style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
-                            <input type="text" name="meal_name" placeholder="Meal Name"
-                                style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
-                        </div>
-                        <div class="mt-3">
-                            <i class="fas fa-pizza-slice"
-                                style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
-                            <input type="text" name="description" placeholder="Description"
-                                style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
-                        </div>
-                        <div class="mt-3">
-                            <i class="fas fa-map-pin"
-                                style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
-                            <input id="my-input-searchbox" type="text" placeholder="Address" name="address"
-                                style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
-                            <div id="map"></div>
-                        </div>
-
-                        <div class="d-flex justify-content-start mt-4" style="width:80%">
-                            <button class="ml-5"
-                                style="width:150px;height:35px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
-                                {{ __('Add') }}
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-
-
-            </form>
-        </div>
-
-        <div class="d-sm-none d-flex justify-content-evenly align-items-center"
-            style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
-            <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:gray;"></i></a>
-            </div>
-            <div><a href="./add-food"><i class="bi bi-plus-circle" style="font-size: 25px; color:#FA4A0C;"></i></a>
-            </div>
-            <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color: gary;"></i></a>
             </div>
         </div>
+        <div class="row">
+            <div class="col-sx-12 col-sm-4 offset-sm-2 p-4">
+                <div style="max-width:500px;height:170px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                    <span  style="background-color: #ffffff;border:0px;">
+                        <i class="far fa-image pt-2 d-flex justify-content-center "></i>
+                        <input type="file" name="meal_picture" style="opacity: 0;height:80%; width:100%">
+                    </span>
+                </div>
 
-        <footer class="d-none d-sm-block bg-light"
-            style="position:fixed;bottom: 0;width:100%;border-top:1px solid gray; height:150px">
-
-            <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
-
-                <div class="d-flex align-items-center">
-                    <div style="margin-right:10px">
-                        <img src="Logo.jpg" alt="" style="height:70px">
-                    </div>
-                    <div>
-                        <h4>Meal4Real</h4>
-                        <span>Numericall</span><br>
-                        <span>14 Porte de france L-4360</span><br>
-                        <span>+352 691 123 456</span><br>
-                    </div>
-                </div>
-                <div>
-                    <h4>Follow Us</h4>
-                    <div class="d-flex flex-row justify-content-evenly">
-                        <i class="bi bi-facebook"></i>
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-twitter"></i>
-                    </div>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <h4>Visit Us</h4>
-                    <span>Maps & Directions</span>
-                    <span>About Us</span>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <h4>Support Us</h4>
-                    <span>Make a gift</span><br>
-                </div>
             </div>
-        </footer>
+            <div class="col-sx-12 col-sm-6 p-0">
+                <div
+                    class=" col-sx-12 col-sm-5 offset-sm-1 pt-4 p-2 d-flex flex-column justify-content-center align-items-center">
+
+                    <div class="mt-1 ">
+                        <i class="fas fa-utensils"
+                            style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
+                        <input type="text" name="type" placeholder="Type"
+                            style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
+                    </div>
+                    <div class="mt-3">
+                        <i class="fas fa-file-signature"
+                            style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
+                        <input type="text" name="meal_name" placeholder="Meal Name"
+                            style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
+                    </div>
+                    <div class="mt-3">
+                        <i class="fas fa-pizza-slice"
+                            style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
+                        <input type="text" name="description" placeholder="Description"
+                            style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
+                    </div>
+                    <div class="mt-3">
+                        <i class="fas fa-map-pin" style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
+                        <input id="my-input-searchbox" type="text" placeholder="Address" name="address"
+                            style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
+                        <div id="map"></div>
+                    </div>
+
+                    <div class="d-flex justify-content-start mt-2" >
+                        <button class="ml-5"
+                            style="width:150px;height:35px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
+                            {{ __('Add') }}
+                        </button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-0">
+                <?php include 'footer.php'; ?>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
