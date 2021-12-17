@@ -25,7 +25,7 @@ Route::get('/', function () {
 //Email verification Working dont touch
 Route::get('/home', function () {
     return view('home_page');
-})->middleware(['auth','verified'])->name('home');
+})->middleware(['auth', 'verified'])->name('home');
 require __DIR__ . '/auth.php';
 
 // Routes for guests
@@ -68,21 +68,13 @@ Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
 Route::get('/detail_page/{id}/reserve', [AddFoodController::class, 'reservation']);
 
 
-<<<<<<< HEAD
-// User Controller
-=======
 Route::get('/profile', [UserController::class, 'showUserInformation']);
->>>>>>> 7f01c705a6de4ac2151f9b197b4e3746b0df53b2
 
 // Show the form :
 Route::get('/edit-user/{id}', [UserController::class, 'edit'])->name('edit-user');
 // Submit the form :
-<<<<<<< HEAD
-Route::post('/edit-user/{id}', [UserController::class, 'update']);
-=======
 Route::post('/edit-user', [UserController::class, 'update'])->name('edit-user');
 
->>>>>>> 7f01c705a6de4ac2151f9b197b4e3746b0df53b2
 
 
 

@@ -26,29 +26,29 @@ class AddFoodController extends Controller
     public function index()
     {
 
-        $reservedMeals = DB::table('meal_details')->where('reserved', true)->get('updated_at');
+        //$reservedMeals = DB::table('meal_details')->where('reserved', true)->get('updated_at');
         //dd($reservedMeals);
 
-        $currentTimestamp = new DateTime();
+        // $currentTimestamp = new DateTime();
         //dd($currentTimestamp);
 
-        $timeDifference = date_sub($currentTimestamp, date_interval_create_from_date_string('2 minutes'));
+        //$timeDifference = date_sub($currentTimestamp, date_interval_create_from_date_string('2 minutes'));
         //dd($timeDifference);
 
         //$time = strtotime($timeDifference->date);
-        dd($timeDifference);
+        //dd((int)$timeDifference);
         //$timeDifference2 = $currentTimestamp->sub(new DateInterval("P1D"));
         //dd($timeDifference2);
 
-
+        /*
         foreach ($reservedMeals as $id => $reservedMeal) {
             //dd(strtotime($reservedMeal->updated_at));
-            if (strtotime($reservedMeal->updated_at) <= $time) {
+            if (strtotime($reservedMeal->updated_at) <= $timeDifference) {
                 Meal::where('id', $id)->update(['reserved' => false]);
 
                 //DB::table('meal_details')->where('id', $id)->update(['reserved' => false]);
             }
-        }
+        }*/
         /*
         $formattedDate->add(strtotime('+ 120 seconds'));
 
@@ -200,13 +200,23 @@ class AddFoodController extends Controller
             return back()->with('error', 'Something wrong with the DB.');
     }
 
-    public function reservation($id,$request,$message)
+    public function reservation($id)
     {
         Meal::where('id', $id)->update(['reserved' => true]);
 
-        return view('thank_you');
-    
-    }
+        $meal_details = Meal::all();
+        $email = Auth::user()->email;
+        dd($email);
 
-    
+        // the message
+        $msg = "Dear\nThank you for picking up " . $meal_details->meal_name .  "." . "\nWe appreciate your help to reduce food waste.\nHere are the details of your meal: \n" . $meal_details->picture . "\nFood type:" . $meal_details->type . "\nName:" . $meal_details->meal_name . "\nDescription:" . $meal_details->description . "\nAddress:" . $meal_details->address;
+
+        // use wordwrap() if lines are longer than 70 characters
+        $msg = wordwrap($msg, 70);
+
+        // send email
+        mail($email, "Your meal pick up ;-)", $msg);
+
+        return view('thank_you');
+    }
 }
