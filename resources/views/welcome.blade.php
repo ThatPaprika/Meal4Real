@@ -18,7 +18,7 @@
     <div class="container-fluid p-3">
 
         <div class="d-flex justify-content-center">
-            <img src="Logo.jpg" alt="" style="width:80px; height:100px">
+            <img src="Logo.png" alt="" style="width:400px;">
         </div>
     </div>
     <div class="mt-5 pt-5 d-flex flex-row justify-content-center align-items-center">
