@@ -126,14 +126,11 @@
                         <input id="password" type="password" class="form-control" name="password"
                             placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"
                             :value="old('email')" required autocomplete="current-password">
-<<<<<<< HEAD
                     </div>
                     <!-- Captcha Form ! (put to false if u wanna hidde it) -->
                     <div class="mb-3 mt-5">
                         {!! NoCaptcha::renderJs('en', false, 'onloadCallback') !!}
                         {!! NoCaptcha::display() !!}
-=======
->>>>>>> 7f01c705a6de4ac2151f9b197b4e3746b0df53b2
                     </div>
                    
 
@@ -143,11 +140,8 @@
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7f01c705a6de4ac2151f9b197b4e3746b0df53b2
                     <!--
                 <div>
                     <x-input id="email" class="" type="email" name="email" ://value="old('email')"
@@ -205,15 +199,11 @@
 
     </div>
 
-<<<<<<< HEAD
     <script type="text/javascript">
         var onloadCallback = function() {
             alert("grecaptcha is ready!");
         };
     </script>
-=======
-   
->>>>>>> 7f01c705a6de4ac2151f9b197b4e3746b0df53b2
 
 
 </body>
