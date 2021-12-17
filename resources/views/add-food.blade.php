@@ -42,14 +42,26 @@
         </div>
         <div class="row">
             <div class="col-sx-12 col-sm-4 offset-sm-2 p-4">
-                <div style="max-width:500px;height:170px;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <span  style="background-color: #ffffff;border:0px;">
-                        <i class="far fa-image pt-2 d-flex justify-content-center "></i>
-                        <input type="file" name="meal_picture" style="opacity: 0;height:80%; width:100%">
-                    </span>
-                </div>
+                
+                    <div   style="position: relative;background-color: #c71212;border:0px;max-width:200px;height:200px;max-height:200px;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;s">
+                        <img id="preview-image" src="" alt="" style="max-width:500px;max-height:200px;border-radius: 30px;">
+                        <i class="far fa-image pt-2 d-flex justify-content-center " style="position:absolute;top:50%;left:50%"></i>
+                        <input id="image" type="file" name="meal_picture" style="opacity:0;background-color:white;height:200px; width:100%; position:absolute;top:0;">
+                    </div>
+                
 
             </div>
+            <script type="text/javascript">
+                $('#image').change(function(){
+                       
+                let reader = new FileReader();
+                reader.onload = (e) => { 
+                  $('#preview-image').attr('src', e.target.result); 
+                }
+                reader.readAsDataURL(this.files[0]); 
+              
+               });
+            </script>
             <div class="col-sx-12 col-sm-6 p-0">
                 <div
                     class=" col-sx-12 col-sm-5 offset-sm-1 pt-4 p-2 d-flex flex-column justify-content-center align-items-center">
