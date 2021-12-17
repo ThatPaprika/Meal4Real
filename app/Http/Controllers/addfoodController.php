@@ -11,6 +11,8 @@ use DateTime;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
+use TCG\Voyager\Http\Controllers\ContentTypes\Timestamp;
 
 class AddFoodController extends Controller
 {
@@ -23,17 +25,33 @@ class AddFoodController extends Controller
     //shows food in the food List
     public function index()
     {
-        //$meals = DB::select('SELECT * FROM meal_details');
+
+        $reservedMeals = DB::table('meal_details')->where('reserved', true)->get();
+
+        foreach ($reservedMeals as $reservedMeal) {
+
+            $reservedTime = $reservedMeal->updated_at;
+            $reservedTimeTimestamp = strtotime($reservedTime) + 60 * 1;
+
+
+            if ($reservedTimeTimestamp < strtotime("now")) {
+
+                Meal::where('id', $reservedMeal->id)->update(['reserved' => false]);
+            }
+        }
+
+
+
         $meals = DB::table('meal_details')->where('reserved', false)->get();
-        
+
+
         $addresses = array();
-        foreach($meals as $key => $meal){
+        foreach ($meals as $key => $meal) {
             $address = $meal->address;
             $response = Http::get("https://maps.googleapis.com/maps/api/distancematrix/json?origins=Belval%2Luxembourg&destinations={$address}&departure_time=now&key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA");
             //$addresses[$key] = $response;
             $meal->distance =  $response->object()->rows[0]->elements[0]->distance->text;
             $meal->time =  $response->object()->rows[0]->elements[0]->duration_in_traffic->text;
-            
         }
         //dd($meals);
         //dd($meals[0]->address);
@@ -45,7 +63,6 @@ class AddFoodController extends Controller
         $distance = $response->object()->rows[0]->elements[0]->distance->text;
 
         return view('food_list', ['meals' => $meals]);
-        
     }
 
     /**
@@ -162,20 +179,24 @@ class AddFoodController extends Controller
             return back()->with('error', 'Something wrong with the DB.');
     }
 
-    public function reservation($id,$request,$message)
+    public function reservation($id)
     {
+
         Meal::where('id', $id)->update(['reserved' => true]);
 
-        $date = new DateTime('now');
-        $interval = $date->add(new DateInterval('PT1M'));
+        $meal_details = Meal::all();
+        $email = Auth::user()->email;
+        dd($email);
 
-        if ($interval) {
-            Meal::where('id', $id)->update(['reserved' => false]);
-        }
+        // the message
+        $msg = "Dear\nThank you for picking up " . $meal_details->meal_name .  "." . "\nWe appreciate your help to reduce food waste.\nHere are the details of your meal: \n" . $meal_details->picture . "\nFood type:" . $meal_details->type . "\nName:" . $meal_details->meal_name . "\nDescription:" . $meal_details->description . "\nAddress:" . $meal_details->address;
+
+        // use wordwrap() if lines are longer than 70 characters
+        $msg = wordwrap($msg, 70);
+
+        // send email
+        mail($email, "Your meal pick up ;-)", $msg);
 
         return view('thank_you');
-    
     }
-
-    
 }

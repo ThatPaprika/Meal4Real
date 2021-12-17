@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="./css/mobile_footer.css">
+
 <div class="bg-light d-sm-none d-flex justify-content-evenly align-items-center" style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
     <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:gray;"></i></a>
     </div>
@@ -7,13 +9,13 @@
     </div>
 </div>
 
-<footer class="d-none d-sm-block bg-light" style="position:fixed;bottom: 0;width:100%;border-top:1px solid gray; height:150px">
+<footer class="d-none d-sm-block bg-light" style="bottom: 0;width:100%;border-top:1px solid gray; height:150px">
 
     <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
 
         <div class="d-flex align-items-center">
             <div style="margin-right:10px">
-                <img src="Logo.jpg" alt="" style="height:70px">
+                <img src="Logo.png" alt="" style="width:150px;">
             </div>
             <div>
                 <h4>Meal4Real</h4>
