@@ -22,9 +22,11 @@
 
 <body style="background-color:#E5E5E5">
 
+
     <div class="row">
-        <div class="col p-0">
+        <div class="col p-0" >
             <?php include 'navbar.php'; ?>
+            
         </div>
     </div>
     <div class="container-fluid p-2">
