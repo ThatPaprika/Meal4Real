@@ -135,10 +135,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> fcbc6875fc36279cdc8d9c4787d423e50f5644db
                     <!--
                 <div>
                     <x-input id="email" class="" type="email" name="email" ://value="old('email')"

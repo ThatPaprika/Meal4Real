@@ -22,15 +22,13 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
-// Test Email
-Route::get("email", [MailerController::class, "email"])->name("email");
-Route::post("send-email", [MailerController::class, "composeEmail"])->name("send-email");
-
-// Routes for guests
+//Email verification Working dont touch
 Route::get('/home', function () {
     return view('home_page');
-});
+})->middleware(['auth','verified'])->name('home');
+require __DIR__ . '/auth.php';
 
+// Routes for guests
 Route::get('/about', function () {
     return view('about_us');
 });
@@ -44,11 +42,9 @@ Route::get('/edit-food', function () {
     return view('edit_food');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth','verified'])->name('dashboard');
 
-require __DIR__ . '/auth.php';
+
+
 
 // Food routes
 
