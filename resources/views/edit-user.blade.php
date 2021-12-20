@@ -31,21 +31,21 @@
                 <!-- Name -->
                 <div class="input-group mb-3 ">
                     <input id="first_name" type="text" class="form-control" name="first_name" placeholder="Firstname"
-                        aria-label="first_name" aria-describedby="basic-addon1" value="<?php echo $user['first_name'] ?>" required
+                        aria-label="first_name" aria-describedby="basic-addon1" value="<?php echo $user ?? ''['first_name'] ?>" required
                         autofocus>
                 </div>
 
                 <!-- Name -->
                 <div class="input-group mb-3 ">
                     <input id="last_name" type="text" class="form-control" name="last_name" placeholder="Lastname"
-                        aria-label="last_name" aria-describedby="basic-addon1" value="<?php echo $user['last_name'] ?>" required
+                        aria-label="last_name" aria-describedby="basic-addon1" value="<?php echo $user ?? ''['last_name'] ?>" required
                         autofocus>
                 </div>
 
                 <!-- Email Address -->
                 <div class="input-group mb-3 ">
                     <input id="email" type="email" class="form-control" name="email" placeholder="Email"
-                        aria-label="email" aria-describedby="basic-addon1" value="<?php echo $user['email'] ?>"required>
+                        aria-label="email" aria-describedby="basic-addon1" value="<?php echo $user ?? ''['email'] ?>"required>
                 </div>
 
 
@@ -54,7 +54,7 @@
                     <input id="street_nr" type="street_nr" class="form-control" name="street_nr"
                         placeholder="Street nr" aria-label="street_nr" aria-describedby="basic-addon1"
                         autocomplete="new-street_nr"
-                        value="<?php echo $user['street_name'] ?>"
+                        value="<?php echo $user ?? ''['street_name'] ?>"
                         >
                 </div>
 
@@ -64,7 +64,7 @@
                 <div class="input-group mb-3 ">
                     <input id="street_name" type="text" class="form-control" name="street_name"
                         placeholder="Street name" aria-label="street_name" aria-describedby="basic-addon1" 
-                        value="<?php echo $user['street_name'] ?>"/>
+                        value="<?php echo $user ?? ''['street_name'] ?>"/>
                 </div>
 
                 <!-- Zip code -->
@@ -72,14 +72,14 @@
                 <div class="input-group mb-3 ">
                     <input id="zip_code" type="text" class="form-control" name="zip_code" placeholder="Zip Code"
                         aria-label="zip_code" aria-describedby="basic-addon1" 
-                        value="<?php echo $user['zip_code'] ?>"/>
+                        value="<?php echo $user ?? ''['zip_code'] ?>"/>
                 </div>
 
                 <!-- City -->
 
                 <div class="input-group mb-3 ">
                     <input id="city" type="text" class="form-control" name="city" placeholder="City" aria-label="city"
-                        aria-describedby="basic-addon1" value="<?php echo $user['city'] ?>"/>
+                        aria-describedby="basic-addon1" value="<?php echo $user ?? ''['city'] ?>"/>
                         
                 </div>
 
@@ -87,7 +87,7 @@
 
                 <div class="input-group mb-3 ">
                     <input id="country" type="text" class="form-control" name="country" placeholder="Country"
-                        aria-label="country" aria-describedby="basic-addon1" value="<?php echo $user['country'] ?>"/>
+                        aria-label="country" aria-describedby="basic-addon1" value="<?php echo $user ?? ''['country'] ?>"/>
                 </div>
 
                 <!-- Phone number -->
@@ -95,7 +95,7 @@
                 <div class="input-group mb-3 ">
                     <input id="phone_number" type="text" class="form-control" name="phone_number"
                         placeholder="Phone Number" aria-label="phone_number" aria-describedby="basic-addon1"
-                        value="<?php echo $user['phone_number'] ?>" />
+                        value="<?php echo $user ?? ''['phone_number'] ?>" />
                 </div>
 
 
