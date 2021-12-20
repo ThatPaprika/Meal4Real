@@ -127,11 +127,7 @@
                             placeholder="Password" aria-label="Username" aria-describedby="basic-addon1"
                             :value="old('email')" required autocomplete="current-password">
                     </div>
-                    <!-- Captcha Form ! (put to false if u wanna hidde it) -->
-                    <div class="mb-3 mt-5">
-                        {!! NoCaptcha::renderJs('en', false, 'onloadCallback') !!}
-                        {!! NoCaptcha::display() !!}
-                    </div>
+
                    
 
 
