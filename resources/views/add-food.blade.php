@@ -41,7 +41,7 @@
             </div>
         </div>
         <form method="POST" action="{{ route('add-food') }}" enctype="multipart/form-data">
-            <div class="row">
+            <div class="row" style="margin-bottom:300px;">
 
                 @csrf
                 <div class="col-sx-12 col-sm-4 offset-sm-2 p-4">
