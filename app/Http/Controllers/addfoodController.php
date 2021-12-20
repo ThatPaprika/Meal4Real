@@ -184,12 +184,12 @@ class AddFoodController extends Controller
 
         Meal::where('id', $id)->update(['reserved' => true]);
 
-        $meal_details = Meal::all();
+        $meal_details = Meal::find($id);
         $email = Auth::user()->email;
-        dd($email);
+        //dd($email);
 
         // the message
-        $msg = "Dear\nThank you for picking up " . $meal_details->meal_name .  "." . "\nWe appreciate your help to reduce food waste.\nHere are the details of your meal: \n" . $meal_details->picture . "\nFood type:" . $meal_details->type . "\nName:" . $meal_details->meal_name . "\nDescription:" . $meal_details->description . "\nAddress:" . $meal_details->address;
+        $msg = "Dear\nThank you for picking up " . $meal_details->meal_name .  "." . "\nWe appreciate your help to reduce food waste.\nHere are the details of your meal: \n" . $meal_details->picture . "\nFood type:" . $meal_details->type . "\nName:" . $meal_details->meal_name . "\nDescription:" . $meal_details->description . "\nAddress:" . $meal_details->address . "Be aware! You only have 1 hour to pick up your meal, before your reservation is canceled!\n\nWe hop to see you soon.\n\nEnjoy your meal!\nSincerely, your Meal4Real Team ;-)";
 
         // use wordwrap() if lines are longer than 70 characters
         $msg = wordwrap($msg, 70);
