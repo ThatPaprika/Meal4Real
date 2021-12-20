@@ -9,22 +9,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>Document</title>
+    <title>Add-food</title>
     <link rel="stylesheet" href="/css/sidebar.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
     <script src="./js/googleAPI.js"></script>
 </head>
 
-<body class="m-0 p-0" style="background-image: url(icon.jpg);">
-
+<body class="m-0" style="background-image: url(icon.jpg);">
     <div class="container-fluid">
-
         <div class="row">
             <div class="col p-0">
                 <?php include 'navbar.php'; ?>
             </div>
         </div>
+
         <div class="row">
             <div class="col p-0">
                 <div class="d-flex justify-content-center">
@@ -41,13 +40,13 @@
             </div>
         </div>
         <form method="POST" action="{{ route('add-food') }}" enctype="multipart/form-data">
-            <div class="row" style="margin-bottom:300px;">
+            <div class="row" style="margin-bottom:100px;">
 
                 @csrf
-                <div class="col-sx-12 col-sm-4 offset-sm-2 p-4">
+                <div class="col-sx-12 col-sm-4 offset-sm-2 p-4 d-flex flex-column align-items-center">
 
                     <div
-                        style="position: relative;background-color: #bbb1b1;border:0px;max-width:200px;height:200px;max-height:200px;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;s">
+                        style="position: relative;background-color: #bbb1b1;border:0px;width:100%; max-width:200px;height:200px;max-height:200px;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;s">
                         <img id="preview-image" src="" alt=""
                             style="max-width:500px;max-height:200px;border-radius: 30px;">
                         <i class="far fa-image pt-2 d-flex justify-content-center "
@@ -112,52 +111,8 @@
                 </div>
             </div>
         </form>
-        <div class="bg-light d-sm-none d-flex justify-content-evenly align-items-center"
-            style="background: lightgray; height:80px;position:fixed;bottom:0;width:100%">
-            <div><a href="./home"><i class="bi bi-house-door-fill" style="font-size: 25px; color:gray;"></i></a>
-            </div>
-            <div><a href="./add-food"><i class="bi bi-plus-circle" style="font-size: 25px; color:#FA4A0C;"></i></a>
-            </div>
-            <div><a href="./food_list"><i class="bi bi-list-check" style="font-size: 25px; color: gary;"></i></a>
-            </div>
-        </div>
-
-        <footer class="d-none d-sm-block bg-light"
-            style="position:fixed;bottom: 0;width:100%;border-top:1px solid gray; height:150px">
-
-            <div class="d-flex justify-content-evenly mt-3" style="height:120px;">
-
-                <div class="d-flex align-items-center">
-                    <div style="margin-right:10px">
-                        <img src="Logo.png" alt="" style="width:150px;">
-                    </div>
-                    <div>
-                        <h4>Meal4Real</h4>
-                        <span>Numericall</span><br>
-                        <span>14 Porte de france L-4360</span><br>
-                        <span>+352 691 123 456</span><br>
-                    </div>
-                </div>
-                <div>
-                    <h4>Follow Us</h4>
-                    <div class="d-flex flex-row justify-content-evenly">
-                        <i class="bi bi-facebook"></i>
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-twitter"></i>
-                    </div>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <h4>Visit Us</h4>
-                    <span>Maps & Directions</span>
-                    <span>About Us</span>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <h4>Support Us</h4>
-                    <span>Make a gift</span><br>
-                </div>
-            </div>
-        </footer>
     </div>
+    <?php include 'footer.php' ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>

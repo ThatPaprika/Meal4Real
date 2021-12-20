@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>Document</title>
+    <title>Food-list</title>
     <link rel="stylesheet" href="/css/sidebar.css">
     <script src="/js/googleAPI.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -17,27 +17,20 @@
 </head>
 
 <body style="background-color:#E5E5E5">
-    <div class="container-fluid p-0">
+    <?php include 'navbar.php'; ?>
+    <div class="container-fluid">
 
-        <div class="row">
-            <div class="col p-0">
-                <?php include 'navbar.php'; ?>
-            </div>
-        </div>
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <div class="p-5 d-flex flex-column align-items-center">
+        <div class="row p-5 d-flex flex-column align-items-center">
             <div class="d-flex justify-content-center">
-                <img src="Logo.png" alt="" style="width:400px;">
+                <img src="Logo.png" alt="" style="width:250px;">
 
             </div>
-            <div class="mb-5">
+            <div class="mb-5 p-5 d-flex flex-column align-items-center">
                 <h4>Heroes don't buy fast food</h4>
                 <h4>They share food</h4>
             </div>
-
+        </div>
+        <div class="row p-5 d-flex flex-column align-items-center">
             @if (!empty($meals))
                 @foreach ($meals as $meal)
                     <div id="meal-card" class="card mb-5" style="max-width:500px;width:100%;border-radius:30px">
@@ -71,11 +64,7 @@
         </div>
 
     </div>
-    <div class="row">
-        <div class="col p-0">
-            <?php include 'footer.php'; ?>
-        </div>
-    </div>
+    <?php include 'footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
