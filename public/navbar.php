@@ -18,7 +18,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/about" tabindex="-1" aria-disabled="true">About Us</a>
                 </li>
-              
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile" tabindex="-1" aria-disabled="true">My account</a>
+                </li>
+                <li class="nav-item" style="max-width:100px;background-color:#FA4A0C;border-radius:10px;font-weight:bold">
+                    <a class="nav-link" style="color:white; text-align:center;" href="/logout" tabindex="-1" aria-disabled="true">Log out</a>
+                </li>
+
             </ul>
         </div>
     </div>
