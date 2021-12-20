@@ -26,9 +26,11 @@
     <div class="row">
         <div class="col p-0" >
             <?php include 'navbar.php'; ?>
-            
         </div>
     </div>
+
+
+
     <div class="container-fluid p-2">
         <div class="d-flex flex-column align-items-center">
             <div class="p-3 d-flex flex-column justify-content-center align-items-center"><i class="far fa-user-circle"
@@ -56,6 +58,7 @@
             </div>
         </div>
     </div>
+
 
     <div class="row">
 
