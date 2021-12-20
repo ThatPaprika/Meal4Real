@@ -22,9 +22,11 @@
 
 <body style="background-color:#E5E5E5">
 
+
     <div class="row">
-        <div class="col p-0">
+        <div class="col p-0" >
             <?php include 'navbar.php'; ?>
+            
         </div>
     </div>
     <div class="container-fluid p-2">
@@ -49,7 +51,7 @@
             <div class="m-5 d-flex flex-column justify-content-center align-items-center">
                 <button type="button" class="m-5 btn btn-primary btn-lg"
                     style="background-color: #FA4A0C;width:203px;height:78px;">
-                    <a href="/edit-user" style="color:white;text-decoration: none;"> Edit user information </a>
+                    <a href="/edit-user/{{$users['id']}}" style="color:white;text-decoration: none;"> Edit user information </a>
                 </button>
             </div>
         </div>
