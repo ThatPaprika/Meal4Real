@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-bottom: 300px">
             <div class="col-sx-12 col-sm-4 offset-sm-2 p-4 ">
 
                 <div
