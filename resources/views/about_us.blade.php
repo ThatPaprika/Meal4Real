@@ -36,63 +36,103 @@
             </div>
 
             <div class=" d-flex flex-column align-items-center justify-content-center">
-                <h3> How we come to </h3>
-                <h3>this idea</h3>
-            </div>
-            <div class=" d-flex justify-content-center">
-                <h3>Team</h3>
+                <h3>About us </h3>
+                <h3>Welcome fellow foodie!</h3>
             </div>
 
-            <div class="row p-5">
-                <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
-                    <div class="d-flex justify-content-center align-items-center "
-                        style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                        <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
+            <div class="row p-5 d-flex justify-content-between align-items-center">
+                <div class=" d-flex flex-column justify-content-between align-items-center m-5">
+                    <p style="overflow-wrap:break-word">We hope you enjoy different kinds of food as much as we do. You
+                        don’t need to be the best
+                        homecook, that’s alright. If you only want to reduce food waste, that’s more than fine and
+                        you’ve come to the right place.</p>
+                    <p>
+                        Here at Meal4Real we offer you a solution to reduce the amount of food we just throw away when
+                        there’s leftovers. Instead of wasting food, whether raw or cooked, simply offer it to your
+                        neighborhood by using our platform.</p>
+
+                    <h5>
+                        <h4> How does it work?</h4>
+                        <ul>
+
+                            <li>Make an account</li>
+                            <li>Post a meal or the food you’d like to give away</li>
+
+                            <li>Get notified by email as soon as someone reserved your meal</li>
+
+                        </ul>
+                    </h5>
+                    </p>
+                </div>
+                <div class=" d-flex justify-content-center mb-5">
+                    <h2>Team</h2>
+                </div>
+
+                <div class="card mb-5" style="width: 20rem;border-radius:30px">
+                    <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Name:
+                        </h5>
+                        <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
+                            member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
+
 
                     </div>
+
                 </div>
-                <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                        dolor.Aenean massa. Cum sociis natoque</p>
-                </div>
-            </div>
-            <div class="row p-5">
-                <div
-                    class="d-block d-sm-none col-xs-12 col-sm-6 d-md-none  d-flex justify-content-center align-items-center ">
-                    <div class="d-flex justify-content-center align-items-center "
-                        style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                        <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
+                <div class="card mb-5" style="width: 20rem;border-radius:30px">
+                    <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Name:
+                        </h5>
+                        <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
+                            member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
+
 
                     </div>
+
                 </div>
-                <div class="d-block d-sm-none col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                        dolor.Aenean massa. Cum sociis natoque</p>
-                </div>
-            </div>
-            <div class="row p-5">
-                <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                        dolor.Aenean massa. Cum sociis natoque</p>
-                </div>
-                <div class="d-none d-sm-block col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
-                    <div class="d-flex justify-content-center align-items-center "
-                        style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                        <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
+                <div class="card mb-5" style="width: 20rem;border-radius:30px">
+                    <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Name:
+                        </h5>
+                        <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
+                            member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
+
 
                     </div>
-                </div>
 
+                </div>
+                <div class="card mb-5" style="width: 20rem;border-radius:30px;">
+                    <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Name:
+                        </h5>
+                        <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
+                            member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
+
+
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col p-0">
-            <?php include 'footer.php'; ?>
+        <div class="row">
+            <div class="col p-0">
+                <?php include 'footer.php'; ?>
+            </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-    <script src="/js/sidebars.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+        <script src="/js/sidebars.js"></script>
 </body>
