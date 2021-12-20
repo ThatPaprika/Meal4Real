@@ -104,7 +104,7 @@ class AddFoodController extends Controller
         $meal_details->user_id = Auth::id();
 
         if ($meal_details->save())
-            return back()->with('success', 'Updated in the DB');
+            return redirect('/food_list');
         else
             return back()->with('error', 'Something wrong with the DB');
     }

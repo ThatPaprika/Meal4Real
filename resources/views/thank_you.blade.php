@@ -19,51 +19,49 @@
 </head>
 
 <body style="background-color:lightgray">
-    <div class="container-fluid p-0">
+
+    <?php include 'navbar.php'; ?>
+    <div class="container-fluid">
+
+
+
 
         <div class="row">
-            <div class="col p-0">
-                <?php include 'navbar.php'; ?>
+            <div class="p-5 d-flex justify-content-center  col-sx-12 col-sm-4 offset-sm-2">
+
+                <img src="Logo.png" class="img-fluid" alt="Responsive image">
+            </div>
+
+            <div
+                class="p-3 col-sx-12 col-sm-4 offset-sm-2  d-flex flex-column align-items-center justify-content-center  ">
+                <h4>Your food was sucessfully added </h4>
+                <h4>thank you for saving the planet</h4>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center p-5">
+                <div class="d-flex justify-content-center align-items-center "
+                    style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-5 mb-5">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                    dolor.Aenean massa. Cum sociis natoque</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-5 mb-5"
+                style="height:calc(100vh - 20%)">
+
             </div>
         </div>
 
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <div class="p-0 d-flex flex-column align-items-center">
-
-            <div class="row">
-                <div class="p-5 d-flex justify-content-center  col-sx-12 col-sm-4 offset-sm-2">
-
-                    <img src="Logo.png" class="img-fluid" alt="Responsive image">
-                </div>
-
-                <div
-                    class="p-3 col-sx-12 col-sm-4 offset-sm-2  d-flex flex-column align-items-center justify-content-center  ">
-                    <h4>Your food was sucessfully added </h4>
-                    <h4>thank you for saving the planet</h4>
-
-                </div>
-            </div>
-            <div class="row p-5">
-                <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
-                    <div class="d-flex justify-content-center align-items-center "
-                        style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                        <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
-
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                        dolor.Aenean massa. Cum sociis natoque</p>
-                </div>
-            </div>
-        </div>
     </div>
-    <div class="row">
-        <div class="col p-0">
-            <?php include 'footer.php'; ?>
-        </div>
-    </div>
+    <?php include 'footer.php'; ?>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

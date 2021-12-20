@@ -21,7 +21,7 @@
 <body style="background-color:lightgray">
 
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
 
         <div class="row">
             <div class="col p-0">
@@ -82,13 +82,16 @@
 
                 </div>
             </div>
+            <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4" style="height:100px">
+                
+            </div>
 
         </div>
 
-    </div>
-    <div class="row">
-        <div class="col p-0">
-            <?php include 'footer.php'; ?>
+        <div class="row">
+            <div class="col p-0">
+                <?php include 'footer.php'; ?>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
