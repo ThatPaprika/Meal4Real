@@ -200,7 +200,9 @@ class AddFoodController extends Controller
         Meal::where('id', $id)->update(['reserved' => true]);
 
         $meal_details = Meal::find($id);
-        $email = Auth::user()->email;
+
+        return view('thank_you');
+        //$email = Auth::user()->email;
         //dd($email);
 
         /*

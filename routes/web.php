@@ -40,9 +40,9 @@ Route::get('/contact-form', [App\Http\Controllers\ContactController::class, 'con
 Route::post('/contact-form', [App\Http\Controllers\ContactController::class, 'storeContactForm'])->name('contact-form.store');
 
 
-Route::get('/thankyou', function () {
+Route::get('/thank_you', function () {
     return view('thank_you');
-});
+})->name('thank_you');
 Route::get('/edit-food', function () {
     return view('edit_food');
 });
@@ -67,7 +67,7 @@ Route::get('/detail_page', function () {
 
 Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
 
-Route::get('/detail_page/food_list', [AddFoodController::class, 'reservation'], [SendMailController::class, 'sendmail']);
+Route::get('/detail_page/{id}/reserve', [AddFoodController::class, 'reservation']);
 
 
 // Email routes

@@ -52,8 +52,8 @@
 
                 </div>
             </div>
-            <!--<div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">-->
-            <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
+            <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
+                <!--<div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">-->
                 <h5>
                     <h4> For the Homecooks</h4>
                     <ul>
@@ -70,7 +70,8 @@
                 class="d-block d-sm-none col-xs-12 col-sm-6 d-md-none  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
                     style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
+                    <img src="./pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg" class="img-fluid"
+                        alt="Responsive image" style="border-radius:30px">
 
                 </div>
             </div>
