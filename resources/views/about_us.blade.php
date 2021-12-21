@@ -69,11 +69,38 @@
                 </div>
 
                 <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
-                    <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
+                    <img src="Akram.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
                     <div class="card-body">
 
                         <h5 class="card-title">
-                            Name:
+                            Name : Akram NASSER ADEM
+                        </h5>
+                        <p class="card-text">Akram don’t like cooking but he want to taste everyone's food. </p>
+
+
+                    </div>
+
+                </div>
+                <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
+                    <img src="Stiven.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Name : Steven RIBEIRO
+                        </h5>
+                        <p class="card-text"> Steven is very creative and he loves to share his food inventions!!
+                        </p>
+
+
+                    </div>
+
+                </div>
+                <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
+                    <img src="Michel.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Name : Michel LAMBERT
                         </h5>
                         <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
                             member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
@@ -83,39 +110,11 @@
 
                 </div>
                 <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
-                    <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
+                    <img src="Mike.jpeg" class="card-img-top " alt="..." style="border-radius:30px;height:250px">
                     <div class="card-body">
 
                         <h5 class="card-title">
-                            Name:
-                        </h5>
-                        <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
-                            member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
-
-
-                    </div>
-
-                </div>
-                <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
-                    <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Name:
-                        </h5>
-                        <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
-                            member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
-
-
-                    </div>
-
-                </div>
-                <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
-                    <img src="givefood.jpeg" class="card-img-top " alt="..." style="border-radius:30px;height:250px">
-                    <div class="card-body">
-
-                        <h5 class="card-title">
-                            Name:
+                            Name : Mike FERNANDES CARDOSO
                         </h5>
                         <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
                             member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
