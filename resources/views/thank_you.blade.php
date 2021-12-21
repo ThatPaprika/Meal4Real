@@ -32,11 +32,8 @@
             </div>
         </div>
 
-        <div class="">
-            <div class="p-5 d-flex justify-content-center  col-sx-12 col-sm-4 offset-sm-2">
-
-                <img src="Logo.png" class="img-fluid" alt="Responsive image">
-            </div>
+        
+           
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center p-5">
