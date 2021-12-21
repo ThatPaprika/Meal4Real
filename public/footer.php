@@ -27,9 +27,9 @@
         <div>
             <h4>Follow Us</h4>
             <div class="d-flex flex-row justify-content-evenly">
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-twitter"></i>
+                <a href="https://www.facebook.com/"> <i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/"> <i class="bi bi-instagram"></i></a>
+                <a href="https://twitter.com/"> <i class="bi bi-twitter"></i></a>
             </div>
         </div>
         <div class="d-flex flex-column align-items-center">

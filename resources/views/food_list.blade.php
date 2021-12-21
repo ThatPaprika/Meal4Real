@@ -33,7 +33,7 @@
         <div class="row p-5 d-flex flex-column align-items-center">
             @if (!empty($meals))
                 @foreach ($meals as $meal)
-                    <div id="meal-card" class="card mb-5"
+                    <div id="meal-card" class="card mb-5 p-0"
                         style="max-width:500px;width:100%;border-radius:30px;color:black">
                         <img src="uploads/<?php echo $meal->picture; ?>" class="card-img-top" alt="..."
                             style="border-radius:30px">
