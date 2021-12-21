@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddFoodController;
-use App\Http\Controllers\MailerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SendMailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,13 +47,10 @@ Route::get('/edit-food', function () {
     return view('edit_food');
 });
 
-
-
-
-
 Route::get('/edit-user', function () {
     return view('edit-user');
 })->name('edit-user');
+
 
 // Food routes
 
@@ -70,9 +67,15 @@ Route::get('/detail_page', function () {
 
 Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
 
-Route::get('/detail_page/{id}/reserve', [AddFoodController::class, 'reservation']);
+Route::get('/detail_page/food_list', [AddFoodController::class, 'reservation'], [SendMailController::class, 'sendmail']);
 
 
+// Email routes
+Route::get('/send_mail', [SendMailController::class, 'showemail'])->name('contactMail');
+Route::post('/send_mail', [SendMailController::class, 'sendmail']);
+
+
+// User routes
 Route::get('/profile', [UserController::class, 'showUserInformation']);
 
 // Show the form :

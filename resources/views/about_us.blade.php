@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
-<body style=" background-image: linear-gradient(red, yellow);">
+<body style=" background-color:#f8df0086;">
     <div class="container-fluid">
 
         <div class="row">

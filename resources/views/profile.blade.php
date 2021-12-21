@@ -40,8 +40,8 @@
                 <h1>User's Information</h1>
             </div>
             <div class="d-flex flex-column align-items-start" style="width:300px;">
-                <span> Firstname : <?php echo $users['first_name']; ?></span>
-                <span> Laststname : <?php echo $users['last_name']; ?></span>
+                <span> First name : <?php echo $users['first_name']; ?></span>
+                <span> Last name : <?php echo $users['last_name']; ?></span>
                 <span> Email : <?php echo $users['email']; ?></span>
                 <span> N° : <?php echo $users['street_nr']; ?></span>
                 <span> Street name : <?php echo $users['street_name']; ?></span>

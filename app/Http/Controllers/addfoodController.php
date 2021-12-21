@@ -28,6 +28,8 @@ class AddFoodController extends Controller
 
         $reservedMeals = DB::table('meal_details')->where('reserved', true)->get();
 
+        // If the meal is not picked up after a certain time (60 minutes), the meal should dislay ind the food list again
+        // Time out timer set for 1 minute, demonstration pourpose only
         foreach ($reservedMeals as $reservedMeal) {
 
             $reservedTime = $reservedMeal->updated_at;
@@ -40,8 +42,21 @@ class AddFoodController extends Controller
             }
         }
 
+        // If the meal is not picked up after 72 hours, remove the meal from the food list
+
+        foreach ($reservedMeals as $reservedMeal) {
+
+            $postedTime = $reservedMeal->created_at;
+            $mealDeadline = strtotime($postedTime) + 60 * 2;
 
 
+            if ($mealDeadline < strtotime("now")) {
+
+                Meal::where('id', $reservedMeal->id)->update(['reserved' => true]);
+            }
+        }
+
+        // Display all the meals available
         $meals = DB::table('meal_details')->where('reserved', false)->get();
 
 
@@ -188,6 +203,7 @@ class AddFoodController extends Controller
         $email = Auth::user()->email;
         //dd($email);
 
+        /*
         // the message
         $msg = "Dear\nThank you for picking up " . $meal_details->meal_name .  "." . "\nWe appreciate your help to reduce food waste.\nHere are the details of your meal: \n" . $meal_details->picture . "\nFood type:" . $meal_details->type . "\nName:" . $meal_details->meal_name . "\nDescription:" . $meal_details->description . "\nAddress:" . $meal_details->address . "Be aware! You only have 1 hour to pick up your meal, before your reservation is canceled!\n\nWe hop to see you soon.\n\nEnjoy your meal!\nSincerely, your Meal4Real Team ;-)";
 
@@ -195,8 +211,10 @@ class AddFoodController extends Controller
         $msg = wordwrap($msg, 70);
 
         // send email
+     
         mail($email, "Your meal pick up ;-)", $msg);
 
         return view('thank_you');
+        */
     }
 }
