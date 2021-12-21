@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
-<body>
+<body style=" background-image: linear-gradient(#ceb006, green);color:white">
 
     <div class="container-fluid">
         <div class="row ">
@@ -24,7 +24,7 @@
             <div class="col-8 offset-2 mt-5">
 
                 <div class="card" style="border-radius: 20px">
-                    <div class="card-header" style="background-color: #FA4A0C">
+                    <div class="card-header" style="background-color: #ceb006;border-radius:20px">
                         <h3 class="text-white">Contact Us</h3>
                     </div>
                     <div class="card-body">
@@ -100,7 +100,7 @@
 
                             <div class="form-group text-center">
                                 <button class="btn btn-success btn-submit"
-                                    style="background-color: #FA4A0C">Send</button>
+                                    style="background-color: orange">Send</button>
                             </div>
                         </form>
                     </div>

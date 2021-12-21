@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body style="background-color:#E5E5E5">
+<body style=" background-image: linear-gradient(#ceb006, green);color:white">
     <div class="container-fluid p-4 d-flex flex-column align-items-center">
 
         <i class="bi bi-key" style="font-size:150px"></i>
@@ -27,31 +27,34 @@
 
             <!-- Email Address -->
             <div>
-                
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus placeholder="Email" style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;"/>
+
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email"
+                    :value="old('email', $request->email)" required autofocus placeholder="Email"
+                    style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;" />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                
 
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required placeholder="Password" style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;"/>
+
+                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                    placeholder="Password" style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;" />
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                    type="password"
-                                    name="password_confirmation" required  placeholder="Confirm Password" style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;"/>
+
+                <x-input id="password_confirmation" class="block mt-1 w-full" type="password"
+                    name="password_confirmation" required placeholder="Confirm Password"
+                    style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;" />
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 <button class="ml-3"
-                    style="width:100%;height:54px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
-                 
+                    style="width:100%;height:54px;background-color:orange; border:0; border-radius:30px;font-weight:bold;color:white;">
+
                     {{ __('Reset Password') }}
                 </button>
             </div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light " style="min-height:80px;width:100%;background-color:liteyellow">
+<nav class="navbar navbar-expand-lg navbar-light " style="min-height:80px;width:100%;">
     <div class="container-fluid" style="width:100%;">
         <a class="navbar-brand" href="#">Meal4Real</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
                     <a class="nav-link" href="/profile" tabindex="-1" aria-disabled="true">My account</a>
                 </li>
                 <div class="d-lg-none" style="width:100%;">
-                    <li class="nav-item" style="max-width:100px;background-color:#FA4A0C;border-radius:10px;font-weight:bold">
+                    <li class="nav-item" style="max-width:100px;background-color:orange;border-radius:10px;font-weight:bold">
                         <a class="nav-link" style="color:white; text-align:center;" href="/logout" tabindex="-1" aria-disabled="true">Log out</a>
                     </li>
                 </div>

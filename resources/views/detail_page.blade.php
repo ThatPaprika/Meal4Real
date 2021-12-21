@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
-<body style="background-color:#E5E5E5">
+<body style=" background-image: linear-gradient(#ceb006, green);color:white">
     <div class="container-fluid p-0">
 
 
@@ -45,7 +45,7 @@
                     <p class="card-text">{{ $meal_details->description }}</p>
                     <div class="d-flex justify-content-center">
                         <a href="/detail_page/{{ $meal_details->id }}/reserve" class="p-3 pt-2 pb-2 takeBtn"
-                            style="width:100px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;text-align:center">Take</a>
+                            style="width:100px;background-color:orange; border:0; border-radius:30px;font-weight:bold;color:white;text-align:center">Take</a>
                     </div>
 
                 </div>

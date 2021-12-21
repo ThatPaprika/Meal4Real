@@ -16,7 +16,7 @@
             <div class="d-flex flex-column justify-content-end"
                 style="width:100%;height:400px; background-color:white; box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);border-radius: 30px;top:-15px;position:absolute;top:-25px;">
                 <div class="d-flex justify-content-center">
-                    <div style="width:130px;border-bottom:3px solid #FA4A0C;text-align: center;font-weight:bold">Login
+                    <div style="width:130px;border-bottom:3px solid orange;text-align: center;font-weight:bold">Login
                     </div>
                     <div style="width:40px"></div>
                     <div style="width:130px;text-align: center;font-weight:bold">Sign Up</div>
@@ -75,7 +75,7 @@
                     @if (Route::has('password.request'))
                         <a class="underline text-sm text-gray-600 hover:text-gray-900"
                             href="{{ route('password.request') }}"
-                            style="color:#FA4A0C;font-weight:bold;font-size:16px; text-decoration: none;">
+                            style="color:orange;font-weight:bold;font-size:16px; text-decoration: none;">
                             {{ __('Forgot password ?') }}
                         </a><br>
                     @endif
@@ -83,7 +83,7 @@
 
                 <div class="flex items-center justify-end mt-4">
                     <button class="ml-3"
-                        style="width:100%;height:54px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
+                        style="width:100%;height:54px;background-color:orange; border:0; border-radius:30px;font-weight:bold;color:white;">
                         {{ __('Log in') }}
                     </button>
                 </div>
@@ -128,7 +128,7 @@
                             :value="old('email')" required autocomplete="current-password">
                     </div>
 
-                   
+
 
 
 
@@ -168,7 +168,7 @@
                         @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900"
                                 href="{{ route('password.request') }}"
-                                style="color:#FA4A0C;font-weight:bold;font-size:16px; text-decoration: none;">
+                                style="color:orange;font-weight:bold;font-size:16px; text-decoration: none;">
                                 {{ __('Forgot password ?') }}
                             </a><br>
                         @endif
@@ -181,7 +181,7 @@
 
                     <div class="flex items-center justify-end mt-4">
                         <button class="ml-3"
-                            style="width:100%;height:54px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
+                            style="width:100%;height:54px;background-color:orange; border:0; border-radius:30px;font-weight:bold;color:white;">
                             {{ __('Log in') }}
                         </button>
                     </div>

@@ -19,7 +19,7 @@
                     <div style="width:130px;text-align: center;font-weight:bold">Login
                     </div>
                     <div style="width:40px"></div>
-                    <div style="width:130px;text-align: center;font-weight:bold;border-bottom:3px solid #FA4A0C;">Sign
+                    <div style="width:130px;text-align: center;font-weight:bold;border-bottom:3px solid orange;">Sign
                         Up</div>
                 </div>
             </div>
@@ -71,14 +71,14 @@
 
                 <div class="flex items-center justify-end mt-4">
                     <a class="text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}"
-                        style="color:#FA4A0C;font-weight:bold;font-size:16px; text-decoration: none;">
+                        style="color:orange;font-weight:bold;font-size:16px; text-decoration: none;">
                         {{ __('Already registered?') }}
                     </a>
                 </div>
 
                 <div class="flex items-center justify-end mt-4">
                     <button class="ml-3"
-                        style="width:100%;height:54px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
+                        style="width:100%;height:54px;background-color:orange; border:0; border-radius:30px;font-weight:bold;color:white;">
                         {{ __('Sign Up') }}
                     </button>
                 </div>
@@ -91,82 +91,84 @@
         <div class="p-5" style="height:40%;background-color:lightgray">
             <div style="width:200px">
                 <h2>Sign in</h2>
-                <p>Bla dmlk lkhj mlkj mlkj mlkj mlkj mlkj dsf ds dsf sdf dsf sdf sdf sdf sdf sdf sdf  </p>
+                <p>Bla dmlk lkhj mlkj mlkj mlkj mlkj mlkj dsf ds dsf sdf dsf sdf sdf sdf sdf sdf sdf </p>
             </div>
         </div>
 
-        <div style="position: absolute; right:120px; top:60px;height:800px;width:500px;background-color:white;box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);border-radius: 30px;">
+        <div
+            style="position: absolute; right:120px; top:60px;height:800px;width:500px;background-color:white;box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);border-radius: 30px;">
             <div class="p-5">
                 <!-- Session Status -->
                 <x-auth-session-status class="mb-4" :status="session('status')" />
-    
+
                 <!-- Validation Errors -->
                 <x-auth-validation-errors class="mb-4" :errors="$errors" />
-    
+
                 <h3>Welcome to Mael4Real</h3>
                 <h1>Sign Up</h1>
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
-    
+
                     <!-- Name -->
                     <div class="mt-5 mb-3 ">
                         <label for="first_name" style="font-weight:bold">Enter your firstname</label><br>
-                        <input id="first_name" type="text" class="form-control" name="first_name" placeholder="First Name"
-                            aria-label="first_name" aria-describedby="basic-addon1" :value="old('first_name')" required
-                            autofocus>
+                        <input id="first_name" type="text" class="form-control" name="first_name"
+                            placeholder="First Name" aria-label="first_name" aria-describedby="basic-addon1"
+                            :value="old('first_name')" required autofocus>
                     </div>
-    
+
                     <!-- Name -->
                     <div class=" mb-3 ">
                         <label for="last_name" style="font-weight:bold">Enter your lastname</label><br>
-                        <input id="last_name" type="text" class="form-control" name="last_name" placeholder="Last Name"
-                            aria-label="last_name" aria-describedby="basic-addon1" :value="old('last_name')" required
-                            autofocus>
+                        <input id="last_name" type="text" class="form-control" name="last_name"
+                            placeholder="Last Name" aria-label="last_name" aria-describedby="basic-addon1"
+                            :value="old('last_name')" required autofocus>
                     </div>
-    
+
                     <!-- Email Address -->
                     <div class=" mb-3 ">
                         <label for="email" style="font-weight:bold">Enter your email</label><br>
                         <input id="email" type="email" class="form-control" name="email" placeholder="Email"
                             aria-label="email" aria-describedby="basic-addon1" :value="old('email')" required>
                     </div>
-    
-    
+
+
                     <!-- Password -->
                     <div class="mb-3 ">
                         <label for="password" style="font-weight:bold">Enter your password</label><br>
-                        <input id="password" type="password" class="form-control" name="password" placeholder="Password"
-                            aria-label="password" aria-describedby="basic-addon1" required autocomplete="new-password">
+                        <input id="password" type="password" class="form-control" name="password"
+                            placeholder="Password" aria-label="password" aria-describedby="basic-addon1" required
+                            autocomplete="new-password">
                     </div>
-    
-    
+
+
                     <!-- Confirm Password -->
-    
+
                     <div class="mb-3 ">
                         <label for="password_confirmation" style="font-weight:bold">Confirm your password</label><br>
                         <input id="password_confirmation" type="password" class="form-control"
                             name="password_confirmation" placeholder="Confirm password" aria-label="password"
                             aria-describedby="basic-addon1" required />
                     </div>
-    
-    
+
+
                     <div class="flex items-center justify-end mt-4">
                         <a class="text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}"
-                            style="color:#FA4A0C;font-weight:bold;font-size:16px; text-decoration: none;">
+                            style="color:orange;font-weight:bold;font-size:16px; text-decoration: none;">
                             {{ __('Already registered?') }}
                         </a>
                     </div>
-    
+
                     <div class="flex items-center justify-end mt-4">
                         <button class="ml-3"
-                            style="width:100%;height:54px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;">
+                            style="width:100%;height:54px;background-color:orange; border:0; border-radius:30px;font-weight:bold;color:white;">
                             {{ __('Sign Up') }}
                         </button>
                     </div>
-    
+
                 </form>
             </div>
-        
+
         </div>
 
 
