@@ -9,13 +9,19 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+use App\Models\Food;
+use App\Models\Meal;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 
 
 class SendMailController extends Controller
 {
     public function showemail()
     {
-        return view('contactMail');
+        return view('send_mail');
     }
 
     public function sendmail()

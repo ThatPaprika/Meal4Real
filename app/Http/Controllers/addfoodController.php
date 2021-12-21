@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use TCG\Voyager\Http\Controllers\ContentTypes\Timestamp;
+use Illuminate\Support\Facades\Mail;
 
 class AddFoodController extends Controller
 {
@@ -26,6 +27,8 @@ class AddFoodController extends Controller
     public function index()
     {
 
+        //$userEmail = 
+        //dd($userEmail);
         $reservedMeals = DB::table('meal_details')->where('reserved', true)->get();
 
         // If the meal is not picked up after a certain time (60 minutes), the meal should dislay ind the food list again
@@ -43,18 +46,18 @@ class AddFoodController extends Controller
         }
 
         // If the meal is not picked up after 72 hours, remove the meal from the food list
-
+        /*
         foreach ($reservedMeals as $reservedMeal) {
 
             $postedTime = $reservedMeal->created_at;
-            $mealDeadline = strtotime($postedTime) + 60 * 2;
+            $mealDeadline = strtotime($postedTime) + 60 * 2880;
 
 
             if ($mealDeadline < strtotime("now")) {
 
                 Meal::where('id', $reservedMeal->id)->update(['reserved' => true]);
             }
-        }
+        }*/
 
         // Display all the meals available
         $meals = DB::table('meal_details')->where('reserved', false)->get();
@@ -200,7 +203,31 @@ class AddFoodController extends Controller
         Meal::where('id', $id)->update(['reserved' => true]);
 
         $meal_details = Meal::find($id);
-        $email = Auth::user()->email;
+
+        $data = array('name' => "Meal4Real Team");
+        // Path or name to the blade template to be rendered
+        $template_path = 'email_template';
+
+        Mail::send(['text' => $template_path], $data, function ($message) {
+            // Set the receiver and subject of the mail.
+            $message->to('michel.lambert.90@gmail.com', 'Receiver Name')->subject('Your meal pick up details');
+            // Set the sender
+            $message->from('meal4realproject@gmail.com', 'Meal4Real Team');
+        });
+
+        $data = array('name' => "Meal4Real Team");
+        // Path or name to the blade template to be rendered
+        $template_path = 'email_template';
+
+        Mail::send(['text' => $template_path], $data, function ($message) {
+            // Set the receiver and subject of the mail.
+            $message->to('michel.lambert.90@gmail.com', 'Receiver Name')->subject('Someone will pick up your meal');
+            // Set the sender
+            $message->from('meal4realproject@gmail.com', 'Meal4Real Team');
+        });
+
+        return redirect('thank_you');
+        //$email = Auth::user()->email;
         //dd($email);
 
         /*

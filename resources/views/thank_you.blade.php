@@ -37,13 +37,6 @@
 
                 <img src="Logo.png" class="img-fluid" alt="Responsive image">
             </div>
-
-            <div
-                class="p-3 col-sx-12 col-sm-4 offset-sm-2  d-flex flex-column align-items-center justify-content-center  ">
-                <h4>Your food was sucessfully added </h4>
-                <h4>thank you for saving the planet</h4>
-
-            </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center p-5">
@@ -53,9 +46,9 @@
 
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-5 mb-5">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                    dolor.Aenean massa. Cum sociis natoque</p>
+            <div class="col-xs-12 col-sm-6 d-flex flex-column align-items-center justify-content-center p-5 mb-5">
+                <h4>You're a hero for picking up food from our Food List!</h4><br>
+                <h4>Thank you for saving the planet!</h4>
             </div>
             <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-5 mb-5"
                 style="height:calc(100vh - 20%)">

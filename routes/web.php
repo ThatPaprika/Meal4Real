@@ -5,6 +5,7 @@ use App\Http\Controllers\AddFoodController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SendMailController;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,9 +41,9 @@ Route::get('/contact-form', [App\Http\Controllers\ContactController::class, 'con
 Route::post('/contact-form', [App\Http\Controllers\ContactController::class, 'storeContactForm'])->name('contact-form.store');
 
 
-Route::get('/thankyou', function () {
+Route::get('/thank_you', function () {
     return view('thank_you');
-});
+})->name('thank_you');
 Route::get('/edit-food', function () {
     return view('edit_food');
 });
@@ -67,13 +68,27 @@ Route::get('/detail_page', function () {
 
 Route::get('/detail_page/{id}', [AddFoodController::class, 'show']);
 
-Route::get('/detail_page/food_list', [AddFoodController::class, 'reservation'], [SendMailController::class, 'sendmail']);
+Route::get('/detail_page/{id}/reserve', [AddFoodController::class, 'reservation']);
 
 
 // Email routes
-Route::get('/send_mail', [SendMailController::class, 'showemail'])->name('contactMail');
-Route::post('/send_mail', [SendMailController::class, 'sendmail']);
+//Route::get('/send_mail', [SendMailController::class, 'showemail'])->name('send_mail');
+//Route::post('/send_mail', [SendMailController::class, 'sendmail']);
 
+Route::get('/test', function () {
+    $data = array('name' => "Our Code World");
+    // Path or name to the blade template to be rendered
+    $template_path = 'email_template';
+
+    Mail::send(['text' => $template_path], $data, function ($message) {
+        // Set the receiver and subject of the mail.
+        $message->to('michel.lambert.90@gmail.com', 'Receiver Name')->subject('Laravel First Mail');
+        // Set the sender
+        $message->from('meal4realproject@gmail.com', 'Our Code World');
+    });
+
+    return "Basic email sent, check your inbox.";
+});
 
 // User routes
 Route::get('/profile', [UserController::class, 'showUserInformation']);
