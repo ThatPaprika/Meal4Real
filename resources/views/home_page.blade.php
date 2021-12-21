@@ -47,13 +47,22 @@
             <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
                     style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
+                    <img src="./jason-briscoe-n4ymhyyFY7A-unsplash.jpg" class="img-fluid" alt="Responsive image"
+                        style="border-radius:30px">
 
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                    dolor.Aenean massa. Cum sociis natoque</p>
+            <!--<div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">-->
+            <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
+                <h5>
+                    <h4> For the Homecooks</h4>
+                    <ul>
+                        <li>Make an account</li>
+                        <li>Post a meal or the food you’d like to give away</li>
+                        <li>Get notified by email as soon as someone reserved your meal</li>
+
+                    </ul>
+                </h5>
             </div>
         </div>
         <div class="row p-5">
@@ -66,24 +75,46 @@
                 </div>
             </div>
             <div class="d-block d-sm-none col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                    dolor.Aenean massa. Cum sociis natoque</p>
+                <h5>
+                    <h4> For the Foodies</h4>
+                    <ul>
+                        <li>Make an account</li>
+                        <li>Browse the Food list</li>
+                        <li>Choose your desired meal and make a reservation</li>
+                        <li>Get notified by email with the full address</li>
+                        <li>Grab your reusable lunchbox or tupperware and be on your way</li>
+                        <li>ATTENTION: You ONLY have 1 hour to pick up your food!</li>
+
+                    </ul>
+                </h5>
             </div>
         </div>
         <div class="row p-5">
             <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                    dolor.Aenean massa. Cum sociis natoque</p>
+                <h5>
+                    <h4> For the Foodies</h4>
+                    <ul>
+                        <li>Make an account</li>
+                        <li>Browse the Food list</li>
+                        <li>Choose your desired meal and make a reservation</li>
+                        <li>Get notified by email with the full address</li>
+                        <li>Grab your reusable lunchbox or tupperware and be on your way</li>
+                        <li>ATTENTION: You ONLY have 1 hour to pick up your food!</li>
+
+                    </ul>
+                </h5>
             </div>
             <div class="d-none d-sm-block col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
                 <div class="d-flex justify-content-center align-items-center "
                     style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
+                    <img src="./pablo-merchan-montes-Orz90t6o0e4-unsplash.jpg" class="img-fluid"
+                        alt="Responsive image" style="border-radius:30px">
 
                 </div>
             </div>
-            <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4" style="height:100px">
-                
+            <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4"
+                style="height:100px">
+
             </div>
 
         </div>
