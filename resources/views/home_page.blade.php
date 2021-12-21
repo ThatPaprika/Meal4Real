@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
-<body style="background-color:lightgray">
+<body style=" background-image: linear-gradient(#FA4A0C, rgb(192, 192, 44));">
 
 
     <div class="container-fluid">
@@ -37,7 +37,7 @@
             <div class="d-flex justify-content-center" style="width:100%">
 
                 <div class="col-sx-12 col-sm-4 offset-sm-2 d-flex flex-column align-items-center justify-content-center">
-                    <h1 style="width:100%">Respect for food</h1>
+                    <h1 style="width:100%;font-family: SF Pro Rounded;font-style: normal;">Respect for food</h1>
                     <h1 style="width:100%">is a respect for life</h1>
                 </div>
             </div>
@@ -52,7 +52,10 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                <p style="font-family: 'Dancing Script', cursive;font-style: normal;font-weight: 800;color:#FFFFFF">Lorem ipsum dolor
+                    sit amet,
+                    consectetuer
+                    adipiscing elit. Aenean commodo ligula eget
                     dolor.Aenean massa. Cum sociis natoque</p>
             </div>
         </div>
@@ -66,13 +69,15 @@
                 </div>
             </div>
             <div class="d-block d-sm-none col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                <p style="font-family: 'Dancing Script', cursive;font-style: normal;">Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit. Aenean commodo ligula eget
                     dolor.Aenean massa. Cum sociis natoque</p>
             </div>
         </div>
         <div class="row p-5">
             <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                <p style="font-family: 'Dancing Script', cursive;font-style: normal;">Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit. Aenean commodo ligula eget
                     dolor.Aenean massa. Cum sociis natoque</p>
             </div>
             <div class="d-none d-sm-block col-xs-12 col-sm-6  d-flex justify-content-center align-items-center ">
@@ -82,8 +87,9 @@
 
                 </div>
             </div>
-            <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4" style="height:100px">
-                
+            <div class="d-none d-sm-block col-xs-12 col-sm-6 d-flex align-items-center justify-content-center p-4"
+                style="height:100px">
+
             </div>
 
         </div>

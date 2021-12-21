@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
-<body style="background-color:#E5E5E5">
-    <div class="container-fluid p-0">
+<body style=" background-image: linear-gradient(red, yellow);">
+    <div class="container-fluid">
 
         <div class="row">
             <div class="col p-0">
