@@ -44,20 +44,20 @@ class UserController extends Controller
     public function show($id)
     {
         if (is_numeric($id)) {
-            //$books = DB::select('SELECT b.*, a.first_name, a.last_name FROM books b JOIN authors a ON b.author_id = a.id  WHERE b.id = ?', [$id]);
+
             $user = CustomUser::where('id', $id)->first();
 
             return view('profile', ['users' => $user]);
         }
     }
 
-    public function showUserInformation() {
+    public function showUserInformation()
+    {
 
         $user = CustomUser::where('id', Auth::id())->first();
         $pickups = Meal::where('user_id', Auth::id())->limit(5)->get();
 
         return view('profile', ['users' => $user, 'pickups' => $pickups]);
-
     }
 
     /**
@@ -70,7 +70,7 @@ class UserController extends Controller
     public function edit()
     {
         $user = CustomUser::find(Auth::id());
-        
+
         return view('edit-user', ['user' => $user]);
     }
 
@@ -106,11 +106,11 @@ class UserController extends Controller
         $user = CustomUser::find(Auth::id());
         return view('profile', ['users' => $user]);
 
-    
+
         //$user = CustomUser::find(Auth::id());
 
         //$user->first_name = $request->first_name;
-        
+
         /*
         $user->last_name = $request->last_name;
 

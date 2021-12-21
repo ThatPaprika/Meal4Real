@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\StoreFoodRequest;
 use App\Models\Food;
 use App\Models\Meal;
+use App\Models\CustomUser;
+use App\Models\User;
 use DateInterval;
 use DateTime;
 use Illuminate\Support\Facades\DB;
@@ -203,21 +205,27 @@ class AddFoodController extends Controller
         Meal::where('id', $id)->update(['reserved' => true]);
 
         $meal_details = Meal::find($id);
+        $mealAddress = $meal_details->address;
 
-        $data = array('name' => "Meal4Real Team");
+        $user = CustomUser::where('id', Auth::id())->first();
+
+        // send the emails
+        $data = array('name' => "Meal4Real Team%");
         // Path or name to the blade template to be rendered
-        $template_path = 'email_template';
+        $template_path = 'email_template_pick_up';
 
-        Mail::send(['text' => $template_path], $data, function ($message) {
+        Mail::send([], $data, function ($message) use ($mealAddress, $user) {
+
             // Set the receiver and subject of the mail.
-            $message->to('michel.lambert.90@gmail.com', 'Receiver Name')->subject('Your meal pick up details');
+            $message->to($user->email, 'Receiver Name')->subject('Your meal pick up details');
             // Set the sender
             $message->from('meal4realproject@gmail.com', 'Meal4Real Team');
+            $message->setBody($mealAddress);
         });
 
         $data = array('name' => "Meal4Real Team");
         // Path or name to the blade template to be rendered
-        $template_path = 'email_template';
+        $template_path = 'email_template_meal_gone';
 
         Mail::send(['text' => $template_path], $data, function ($message) {
             // Set the receiver and subject of the mail.

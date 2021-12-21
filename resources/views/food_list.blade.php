@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script>
 </head>
 
-<body style=" background-image: linear-gradient(#ceb006, green);color:black">
+<body style=" background-image: linear-gradient(#ceb006, green);color:white">
     <?php include 'navbar.php'; ?>
     <div class="container-fluid">
 
