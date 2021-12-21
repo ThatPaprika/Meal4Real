@@ -94,10 +94,7 @@
     </div>
     <div class="d-none d-sm-block container-fluid p-0" style="height:100vh;position:relative;background-color:white">
         <div class="p-5" style="height:40%;background-color:lightgray">
-            <div style="width:200px">
-                <h2>Sign in</h2>
-                <p>Bla dmlk lkhj mlkj mlkj mlkj mlkj mlkj dsf ds dsf sdf dsf sdf sdf sdf sdf sdf sdf </p>
-            </div>
+
         </div>
 
         <div
