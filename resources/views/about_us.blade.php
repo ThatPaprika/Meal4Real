@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
-<body style=" background-color:#f8df0086;">
+<body style=" background-image: linear-gradient(#ceb006, green);color:white">
     <div class="container-fluid">
 
         <div class="row">
@@ -68,7 +68,7 @@
                     <h2>Team</h2>
                 </div>
 
-                <div class="card mb-5" style="width: 20rem;border-radius:30px">
+                <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
                     <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
                     <div class="card-body">
 
@@ -82,7 +82,7 @@
                     </div>
 
                 </div>
-                <div class="card mb-5" style="width: 20rem;border-radius:30px">
+                <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
                     <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
                     <div class="card-body">
 
@@ -96,7 +96,7 @@
                     </div>
 
                 </div>
-                <div class="card mb-5" style="width: 20rem;border-radius:30px">
+                <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
                     <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
                     <div class="card-body">
 
@@ -110,8 +110,8 @@
                     </div>
 
                 </div>
-                <div class="card mb-5" style="width: 20rem;border-radius:30px;">
-                    <img src="givefood.jpeg" class="card-img-top" alt="..." style="border-radius:30px;height:250px">
+                <div class="card mb-5 p-0" style="width: 20rem;border-radius:30px;background-color:#f8df0086">
+                    <img src="givefood.jpeg" class="card-img-top " alt="..." style="border-radius:30px;height:250px">
                     <div class="card-body">
 
                         <h5 class="card-title">

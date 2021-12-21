@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>Detail page</title>
+    <title>Document</title>
     <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
-<body style=" background-image: linear-gradient(#ceb006, green);color:white">
+<body style="background-color:#E5E5E5">
     <div class="container-fluid p-0">
 
 
@@ -32,7 +32,7 @@
             </div>
             <div class="mb-5">
                 <h4></h4>
-                <h4>Details page</h4>
+                <h4>Send Mail</h4>
             </div>
             <div class="card mb-5" style="max-width:500px;width:100%;border-radius:30px">
                 <img src="/uploads/<?php echo $meal_details->picture; ?>" class="card-img-top" alt="..." style="border-radius:30px">

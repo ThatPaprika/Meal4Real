@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
-<body style="background-color:#E5E5E5">
+<body style=" background-image: linear-gradient(#ceb006, green);color:white">
 
 
     <div class="row">
@@ -52,7 +52,7 @@
             </div>
             <div class="m-5 d-flex flex-column justify-content-center align-items-center">
                 <button type="button" class="m-5 btn btn-primary btn-lg"
-                    style="background-color: #FA4A0C;width:203px;height:78px;">
+                    style="background-color: orange;width:203px;height:78px;">
                     <a href="/edit-user/{{ $users['id'] }}" style="color:white;text-decoration: none;"> Edit user
                         information </a>
                 </button>

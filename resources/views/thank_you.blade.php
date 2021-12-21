@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/css/sidebar.css">
 </head>
 
-<body style="background-color:lightgray">
+<body style=" background-image: linear-gradient(#ceb006, green);color:white">
 
     <?php include 'navbar.php'; ?>
     <div class="container-fluid">

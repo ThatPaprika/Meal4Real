@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></script>
 </head>
 
-<body style="background-color:#E5E5E5">
+<body style=" background-image: linear-gradient(#ceb006, green);color:white">
     <?php include 'navbar.php'; ?>
     <div class="container-fluid">
 
@@ -50,7 +50,7 @@
                             </span>
                             <div class="d-flex justify-content-center">
                                 <a href="detail_page/{{ $meal->id }}" class="p-3 pt-2 pb-2"
-                                    style="width:100px;background-color:#FA4A0C; border:0; border-radius:30px;font-weight:bold;color:white;text-align:center">Take</a>
+                                    style="width:100px;background-color:orange; border:0; border-radius:30px;font-weight:bold;color:white;text-align:center">Take</a>
                             </div>
                         </div>
                     </div>
