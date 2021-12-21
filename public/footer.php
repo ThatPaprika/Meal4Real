@@ -15,7 +15,7 @@
 
         <div class="d-flex align-items-center">
             <div style="margin-right:10px">
-                <img src="Logo.png" alt="" style="width:150px;">
+                <img src="white-logo.png" alt="" style="width:150px;">
             </div>
             <div>
                 <h4>Meal4Real</h4>

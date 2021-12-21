@@ -71,24 +71,25 @@
 
                     <div class="mt-1 ">
                         <i class="fas fa-utensils"
-                            style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
+                            style="width:10px;font-size: 20px; color: black;margin-right:15px"></i>
                         <input type="text" name="type" placeholder="Type"
                             style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
                     </div>
                     <div class="mt-3">
                         <i class="fas fa-file-signature"
-                            style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
+                            style="width:10px;font-size: 20px; color: black;margin-right:15px"></i>
                         <input type="text" name="meal_name" placeholder="Meal Name"
                             style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
                     </div>
                     <div class="mt-3">
                         <i class="fas fa-pizza-slice"
-                            style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
+                            style="width:10px;font-size: 20px; color: black;margin-right:15px"></i>
                         <input type="text" name="description" placeholder="Description"
                             style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
                     </div>
                     <div class="mt-3">
-                        <i class="fas fa-map-pin" style="width:10px;font-size: 20px; color: gray;margin-right:15px"></i>
+                        <i class="fas fa-map-pin"
+                            style="width:10px;font-size: 20px; color: black;margin-right:15px"></i>
                         <input id="my-input-searchbox" type="text" placeholder="Address" name="address"
                             style="border:0;border-bottom:1px solid black;background-color:#E5E5E5;">
                         <div id="map"></div>

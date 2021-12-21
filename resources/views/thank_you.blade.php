@@ -24,19 +24,22 @@
     <div class="container-fluid">
 
 
-
-
         <div class="row">
-            <div class="p-5 d-flex justify-content-center  col-sx-12 col-sm-4 offset-sm-2">
-
-                <img src="Logo.png" class="img-fluid" alt="Responsive image">
+            <div class="col p-0">
+                <div class="d-flex justify-content-center">
+                    <img src="Logo.png" alt="" style="width:400px;">
+                </div>
             </div>
+        </div>
+
+        
+           
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-6  d-flex justify-content-center align-items-center p-5">
                 <div class="d-flex justify-content-center align-items-center "
-                    style="width:100%;height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
-                    <img src="./foods.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
+                    style="height:auto;background: #FFFFFF;box-shadow: 0px 30px 60px rgba(57, 57, 57, 0.1);border-radius: 30px;">
+                    <img src="./thank-you.jpg" class="img-fluid" alt="Responsive image" style="border-radius:30px">
 
                 </div>
             </div>
