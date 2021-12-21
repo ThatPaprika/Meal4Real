@@ -204,37 +204,81 @@ class AddFoodController extends Controller
 
         Meal::where('id', $id)->update(['reserved' => true]);
 
+        $user = CustomUser::where('id', Auth::id())->first();
+        $userFirstName = $user->first_name;
+        //dd($userFirstName);
+
+        $homeCook = DB::table('meal_details')
+            ->join('users', 'user_id', '=', 'users.id')
+            ->select('email')
+            ->get();
+        //dd($homeCook);
+
         $meal_details = Meal::find($id);
         $mealAddress = $meal_details->address;
-        //$pickUpMessage = ;
-        //$homeCookMessage = ;
+        $pickUpMessage = '
+            Hey !' . '<br>' .
 
-        $user = CustomUser::where('id', Auth::id())->first();
+            'Dear ' . $userFirstName . ',
+            You chose the following meal to pick up: '
+
+            . $meal_details->type . ', ' . $meal_details->meal_name . ', ' . $meal_details->description .
+
+            ' Please pick your meal up at the following address: '
+
+            . $mealAddress .
+
+            ' Thank you very much for picking up ' . $meal_details->meal_name . '!
+            Hope to see you again Foodie!';
+
+
+        /*
+        $homeCookMessage = '
+            Hey ! '
+
+            . $userFirstName .  ' has reserved your meal and will pick it up in the next 60 minutes.
+        
+            If ' . $userFirstName . ' won\'t show up, your meal will go back to the "Food List".
+        
+            We would just like to inform you:
+            That your meal won\'t show up in the "Food List" 48 hours after it\'s first
+            appearence on our site.
+        
+            Thank you very much for sharing your meal!
+            Hope to see you again Chef ' . $homeCook->first_name . '!';
+            */
+
 
         // send the emails
+
+        // email to pick up food
         $data = array('name' => "Meal4Real Team%");
         // Path or name to the blade template to be rendered
         $template_path = 'email_template_pick_up';
 
-        Mail::send([], $data, function ($message) use ($mealAddress, $user) {
+        Mail::send([], $data, function ($message) use ($user, $userFirstName, $pickUpMessage) {
 
             // Set the receiver and subject of the mail.
-            $message->to($user->email, 'Receiver Name')->subject('Your meal pick up details');
+            $message->to($user->email, $userFirstName)->subject('Your meal pick up details');
             // Set the sender
             $message->from('meal4realproject@gmail.com', 'Meal4Real Team');
-            $message->setBody($mealAddress);
+            $message->setBody($pickUpMessage);
         });
 
+        /*
+        // email for the homecook
         $data = array('name' => "Meal4Real Team");
         // Path or name to the blade template to be rendered
         $template_path = 'email_template_meal_gone';
 
-        Mail::send(['text' => $template_path], $data, function ($message) {
+        Mail::send(['text' => $template_path], $data, function ($message) use ($homeCook, $homeCookMessage) {
             // Set the receiver and subject of the mail.
-            $message->to('michel.lambert.90@gmail.com', 'Receiver Name')->subject('Someone will pick up your meal');
+            $message->to($homeCook->email, 'Receiver Name')->subject('Someone will pick up your meal');
             // Set the sender
             $message->from('meal4realproject@gmail.com', 'Meal4Real Team');
+            $message->setBody($homeCookMessage);
         });
+        */
 
         return redirect('thank_you');
         //$email = Auth::user()->email;
