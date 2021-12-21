@@ -206,8 +206,8 @@ class AddFoodController extends Controller
 
         $meal_details = Meal::find($id);
         $mealAddress = $meal_details->address;
-        $pickUpMessage = ;
-        $homeCookMessage = ;
+        //$pickUpMessage = ;
+        //$homeCookMessage = ;
 
         $user = CustomUser::where('id', Auth::id())->first();
 

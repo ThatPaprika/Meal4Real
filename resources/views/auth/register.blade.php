@@ -88,7 +88,11 @@
 
     </div>
     <div class="d-none d-sm-block container-fluid p-0" style="height:100vh;position:relative;background-color:white">
+<<<<<<< HEAD
         <div class="p-5" style="height:40%;background-color:lightgray">
+=======
+        <div class="p-5" style="height:100%;background-image: linear-gradient(#ceb006, green)">
+>>>>>>> 4c690d74929fd928012be3ff367b73d9951aec32
 
         </div>
 

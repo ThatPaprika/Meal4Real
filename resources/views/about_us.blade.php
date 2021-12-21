@@ -102,8 +102,8 @@
                         <h5 class="card-title">
                             Name : Michel LAMBERT
                         </h5>
-                        <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
-                            member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
+                        <p class="card-text">Michel Loves cooking and thinks he is a better cook than he actually
+                            is.</p>
 
 
                     </div>
@@ -117,7 +117,7 @@
                             Name : Mike FERNANDES CARDOSO
                         </h5>
                         <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
-                            member.Meal4Real group member.Meal4Real group member.Meal4Real group member.</p>
+                            member.</p>
 
 
                     </div>
