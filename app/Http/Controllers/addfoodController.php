@@ -48,39 +48,31 @@ class AddFoodController extends Controller
         }
 
         // If the meal is not picked up after 72 hours, remove the meal from the food list
-        /*
+
         foreach ($reservedMeals as $reservedMeal) {
 
             $postedTime = $reservedMeal->created_at;
-            $mealDeadline = strtotime($postedTime) + 60 * 2880;
+            $mealDeadline = strtotime($postedTime) + 60 * 20;
 
 
             if ($mealDeadline < strtotime("now")) {
 
                 Meal::where('id', $reservedMeal->id)->update(['reserved' => true]);
             }
-        }*/
+        }
 
         // Display all the meals available
         $meals = DB::table('meal_details')->where('reserved', false)->get();
 
 
-        $addresses = array();
+
         foreach ($meals as $key => $meal) {
             $address = $meal->address;
             $response = Http::get("https://maps.googleapis.com/maps/api/distancematrix/json?origins=Belval%2Luxembourg&destinations={$address}&departure_time=now&key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA");
-            //$addresses[$key] = $response;
+
             $meal->distance =  $response->object()->rows[0]->elements[0]->distance->text;
             $meal->time =  $response->object()->rows[0]->elements[0]->duration_in_traffic->text;
         }
-        //dd($meals);
-        //dd($meals[0]->address);
-        // origin : Belval 
-        $response = Http::get('https://maps.googleapis.com/maps/api/distancematrix/json?origins=Belval%2Luxembourg&destinations=Kayl%2Luxembourg&departure_time=now&key=AIzaSyBHA9Ke8jAvquu2NgeobB2S2NSToZFs_WA');
-        //dd($response->object());
-        //dd($response->object()->rows[0]->elements[0]->distance->text);
-
-        $distance = $response->object()->rows[0]->elements[0]->distance->text;
 
         return view('food_list', ['meals' => $meals]);
     }
@@ -217,9 +209,9 @@ class AddFoodController extends Controller
         $meal_details = Meal::find($id);
         $mealAddress = $meal_details->address;
         $pickUpMessage = '
-            Hey !' . '<br>' .
+            Hey !
 
-            'Dear ' . $userFirstName . ',
+            Dear ' . $userFirstName . ',
             You chose the following meal to pick up: '
 
             . $meal_details->type . ', ' . $meal_details->meal_name . ', ' . $meal_details->description .
