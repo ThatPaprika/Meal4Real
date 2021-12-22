@@ -48,7 +48,7 @@ class AddFoodController extends Controller
         }
 
         // If the meal is not picked up after 72 hours, remove the meal from the food list
-
+        /*
         foreach ($reservedMeals as $reservedMeal) {
 
             $postedTime = $reservedMeal->created_at;
@@ -59,7 +59,7 @@ class AddFoodController extends Controller
 
                 Meal::where('id', $reservedMeal->id)->update(['reserved' => true]);
             }
-        }
+        }*/
 
         // Display all the meals available
         $meals = DB::table('meal_details')->where('reserved', false)->get();
