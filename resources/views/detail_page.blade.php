@@ -34,7 +34,7 @@
                 <h4></h4>
                 <h4>Details page</h4>
             </div>
-            <div class="card mb-5" style="max-width:500px;width:100%;border-radius:30px">
+            <div class="card mb-5" style="max-width:500px;width:100%;border-radius:30px;color:black;">
                 <img src="/uploads/<?php echo $meal_details->picture; ?>" class="card-img-top" alt="..." style="border-radius:30px">
                 <div class="card-body">
                     <h5 class="card-title">
@@ -57,11 +57,9 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col p-0">
-            <?php include 'footer.php'; ?>
-        </div>
-    </div>
+
+    <?php include 'footer.php'; ?>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">

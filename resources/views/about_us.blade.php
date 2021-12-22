@@ -116,8 +116,7 @@
                         <h5 class="card-title">
                             Name : Mike FERNANDES CARDOSO
                         </h5>
-                        <p class="card-text">Meal4Real group member.Meal4Real group member.Meal4Real group
-                            member.</p>
+                        <p class="card-text">Mike don’t like cooking but he want to taste everyone's food.</p>
 
 
                     </div>
